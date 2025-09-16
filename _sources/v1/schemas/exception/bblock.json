@@ -1,0 +1,21 @@
+{
+  "name": "Schema for exception",
+  "status": "under-development",
+  "dateTimeAddition": "2024-03-22T11:40:00+01:00",
+  "itemClass": "schema",
+  "register": "ogcapi-features",
+  "version": "0.1",
+  "dateOfLastChange": "2024-03-22",
+  "sources": [
+    {
+      "title": "OGC API Features - Part 1 - Core corrigendum",
+      "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-features",
+    "features"
+  ],
+  "schema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/exception.yaml",
+  "abstract": "This building block corresponds to the schema for an OGC API Features exception"
+}

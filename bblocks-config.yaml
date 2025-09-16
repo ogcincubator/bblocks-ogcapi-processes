@@ -1,18 +1,16 @@
 # A short, descriptive name of this building block collection
-name: My OGC Building Blocks repository
+name: OGC API Processes
 
 # Short abstract for this collection (optional)
 abstract: |
-  This is an example text for the abstract. It should be short and to the point.
-  A "Tell me more" link will appear if there is an additional description with a longer explanation.
+  Schemas for the OGC API Processes standard
 
 # Description for this collection (optional)
 description: |
-  The description can be longer. Both **the abstract** *and the description* support Markdown,
-  including [links](https://google.es).
+  Adds a flexible, JSON schema version agnostic documentation to the OGC API Processes standard, supporting further profiling by combining with other Building Blocks.
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.bbr.template.
+identifier-prefix: ogc.api.processes.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:

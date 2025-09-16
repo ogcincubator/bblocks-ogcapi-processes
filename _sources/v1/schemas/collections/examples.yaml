@@ -1,4 +1,0 @@
-- title: Object containing 3 collections
-  snippets:
-    - language: json
-      ref: https://github.com/opengeospatial/ogcapi-features/raw/master/core/examples/json/Collections.json

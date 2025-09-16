@@ -1,4 +1,0 @@
-- title: Road collection
-  snippets:
-    - language: json
-      ref: examples/roads.json

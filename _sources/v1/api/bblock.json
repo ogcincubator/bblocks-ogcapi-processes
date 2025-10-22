@@ -1,5 +1,5 @@
 {
-  "name": "OGC API Features",
+  "name": "OGC API - Processes: Part 1",
   "status": "under-development",
   "dateTimeAddition": "2024-03-22T11:40:00+01:00",
   "itemClass": "api",
@@ -17,5 +17,6 @@
     "features"
   ],
   "highlighted": true,
-  "abstract": "This building block corresponds to OGC API Features"
+  "abstract": "This building block corresponds to OGC API Features",
+  "openAPIDocument": "https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/ogcapi-processes-1.yaml"
 }

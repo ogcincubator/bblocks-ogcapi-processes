@@ -14,6 +14,6 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "binaryInputValue",
+  "name": "binaryInputValue schema",
   "itemClass": "schema"
 }

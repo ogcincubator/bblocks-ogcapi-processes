@@ -14,6 +14,6 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "output",
+  "name": "output schema",
   "itemClass": "schema"
 }

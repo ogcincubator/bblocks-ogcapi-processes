@@ -14,6 +14,6 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "Status",
+  "name": "Status response",
   "itemClass": "response"
 }

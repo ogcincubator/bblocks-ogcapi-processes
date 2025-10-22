@@ -14,6 +14,6 @@
     "ogcapi-processes",
     "parameter"
   ],
-  "name": "type",
+  "name": "type parameter",
   "itemClass": "parameter"
 }

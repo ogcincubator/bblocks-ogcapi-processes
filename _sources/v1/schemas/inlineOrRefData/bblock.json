@@ -14,6 +14,6 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "inlineOrRefData",
+  "name": "inlineOrRefData schema",
   "itemClass": "schema"
 }

@@ -14,7 +14,7 @@
     "ogcapi-processes",
     "parameter"
   ],
-  "name": "jobId",
+  "name": "jobId parameter",
   "itemClass": "parameter",
   "description": "local identifier of a job"
 }

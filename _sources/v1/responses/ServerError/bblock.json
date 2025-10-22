@@ -14,6 +14,6 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "ServerError",
+  "name": "ServerError response",
   "itemClass": "response"
 }

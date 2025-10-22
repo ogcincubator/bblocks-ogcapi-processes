@@ -15,6 +15,5 @@
     "schema"
   ],
   "name": "schema",
-  "schema": "https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/schema.yaml",
   "itemClass": "schema"
 }

@@ -1,0 +1,2 @@
+additionalProperties:
+  $ref: bblocks://ogc.api.processes.v1.schemas.inlineOrRefData

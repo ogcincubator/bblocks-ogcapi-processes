@@ -1,0 +1,18 @@
+allOf:
+- $ref: bblocks://ogc.api.processes.v1.schemas.descriptionType
+- properties:
+    maxOccurs:
+      oneOf:
+      - default: 1
+        type: integer
+      - enum:
+        - unbounded
+        type: string
+    minOccurs:
+      default: 1
+      type: integer
+    schema:
+      $ref: bblocks://ogc.api.processes.v1.schemas.schema
+  required:
+  - schema
+  type: object

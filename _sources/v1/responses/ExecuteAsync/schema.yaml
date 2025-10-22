@@ -1,0 +1,15 @@
+content:
+  application/json:
+    schema:
+      $ref: bblocks://ogc.api.processes.v1.schemas.statusInfo
+description: Started asynchronous execution. Created job.
+headers:
+  Location:
+    description: URL to check the status of the execution/job.
+    schema:
+      type: string
+  Preference-Applied:
+    description: The preference applied to execute the process asynchronously (see.
+      RFC 2740).
+    schema:
+      type: string

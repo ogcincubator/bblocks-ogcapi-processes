@@ -1,6 +1,6 @@
 {
   "status": "under-development",
-  "dateTimeAddition": "2025-10-22T14:20:51.434785",
+  "dateTimeAddition": "2025-10-22T15:29:12.118638",
   "register": "ogcapi-processes",
   "version": "0.1",
   "dateOfLastChange": "2025-10-22",
@@ -15,6 +15,5 @@
     "response"
   ],
   "name": "ExecuteAsync",
-  "schema": "https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ExecuteAsync.yaml",
   "itemClass": "response"
 }

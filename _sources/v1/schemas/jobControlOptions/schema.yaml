@@ -1,0 +1,5 @@
+enum:
+- sync-execute
+- async-execute
+- dismiss
+type: string

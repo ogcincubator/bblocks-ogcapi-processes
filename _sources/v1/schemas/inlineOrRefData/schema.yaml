@@ -1,0 +1,4 @@
+oneOf:
+- $ref: bblocks://ogc.api.processes.v1.schemas.inputValueNoObject
+- $ref: bblocks://ogc.api.processes.v1.schemas.qualifiedInputValue
+- $ref: bblocks://ogc.api.processes.v1.schemas.link

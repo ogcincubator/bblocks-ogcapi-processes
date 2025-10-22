@@ -1,99 +1,99 @@
 oneOf:
-  - $ref: bblocks://ogc.api.processes.v1.schemas.reference
-  - type: object
+- $ref: bblocks://ogc.api.processes.v1.schemas.reference
+- additionalProperties: false
+  properties:
+    additionalProperties:
+      default: true
+      type: boolean
+    contentEncoding:
+      type: string
+    contentMediaType:
+      type: string
+    contentSchema:
+      type: string
+    default: {}
+    deprecated:
+      default: false
+      type: boolean
+    description:
+      type: string
+    enum:
+      items: {}
+      minItems: 1
+      type: array
+      uniqueItems: false
+    example: {}
+    exclusiveMaximum:
+      default: false
+      type: boolean
+    exclusiveMinimum:
+      default: false
+      type: boolean
+    format:
+      type: string
+    maxItems:
+      minimum: 0
+      type: integer
+    maxLength:
+      minimum: 0
+      type: integer
+    maxProperties:
+      minimum: 0
+      type: integer
+    maximum:
+      type: number
+    minItems:
+      default: 0
+      minimum: 0
+      type: integer
+    minLength:
+      default: 0
+      minimum: 0
+      type: integer
+    minProperties:
+      default: 0
+      minimum: 0
+      type: integer
+    minimum:
+      type: number
+    multipleOf:
+      exclusiveMinimum: 0
+      type: number
+    nullable:
+      default: false
+      type: boolean
+    pattern:
+      format: regex
+      type: string
     properties:
-      title:
-        type: string
-      multipleOf:
-        type: number
-        exclusiveMinimum: 0 # updated from original schema
-      maximum:
-        type: number
-      exclusiveMaximum:
-        type: boolean
-        default: false
-      minimum:
-        type: number
-      exclusiveMinimum:
-        type: boolean
-        default: false
-      maxLength:
-        type: integer
-        minimum: 0
-      minLength:
-        type: integer
-        minimum: 0
-        default: 0
-      pattern:
-        type: string
-        format: regex
-      maxItems:
-        type: integer
-        minimum: 0
-      minItems:
-        type: integer
-        minimum: 0
-        default: 0
-      uniqueItems:
-        type: boolean
-        default: false
-      maxProperties:
-        type: integer
-        minimum: 0
-      minProperties:
-        type: integer
-        minimum: 0
-        default: 0
-      required:
-        type: array
-        items:
-          type: string
-        minItems: 1
-        uniqueItems: true
-      enum:
-        type: array
-        items: {}
-        minItems: 1
-        uniqueItems: false
-      type:
-        type: string
-        enum:
-          - array
-          - boolean
-          - integer
-          - number
-          - object
-          - string
-      properties:
-        type: object
-        additionalProperties:
-          type: boolean
-          default: true
       additionalProperties:
-        type: boolean
         default: true
-      description:
-        type: string
-      format:
-        type: string
-      default: {}
-      nullable:
         type: boolean
-        default: false
-      readOnly:
-        type: boolean
-        default: false
-      writeOnly:
-        type: boolean
-        default: false
-      example: {}
-      deprecated:
-        type: boolean
-        default: false
-      contentMediaType:
+      type: object
+    readOnly:
+      default: false
+      type: boolean
+    required:
+      items:
         type: string
-      contentEncoding:
-        type: string
-      contentSchema:
-        type: string
-    additionalProperties: false
+      minItems: 1
+      type: array
+      uniqueItems: true
+    title:
+      type: string
+    type:
+      enum:
+      - array
+      - boolean
+      - integer
+      - number
+      - object
+      - string
+      type: string
+    uniqueItems:
+      default: false
+      type: boolean
+    writeOnly:
+      default: false
+      type: boolean
+  type: object

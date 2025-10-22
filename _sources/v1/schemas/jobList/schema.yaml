@@ -1,0 +1,13 @@
+properties:
+  jobs:
+    items:
+      $ref: bblocks://ogc.api.processes.v1.schemas.statusInfo
+    type: array
+  links:
+    items:
+      $ref: bblocks://ogc.api.processes.v1.schemas.link
+    type: array
+required:
+- jobs
+- links
+type: object

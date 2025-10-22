@@ -1,0 +1,6 @@
+properties:
+  format:
+    $ref: bblocks://ogc.api.processes.v1.schemas.format
+  transmissionMode:
+    $ref: bblocks://ogc.api.processes.v1.schemas.transmissionMode
+type: object

@@ -1,0 +1,8 @@
+allOf:
+- $ref: bblocks://ogc.api.processes.v1.schemas.descriptionType
+- properties:
+    schema:
+      $ref: bblocks://ogc.api.processes.v1.schemas.swagger.schema
+  required:
+  - schema
+  type: object

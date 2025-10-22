@@ -1,0 +1,13 @@
+properties:
+  links:
+    items:
+      $ref: bblocks://ogc.api.processes.v1.schemas.link
+    type: array
+  processes:
+    items:
+      $ref: bblocks://ogc.api.processes.v1.schemas.processSummary
+    type: array
+required:
+- processes
+- links
+type: object

@@ -1,0 +1,10 @@
+allOf:
+- $ref: bblocks://ogc.api.processes.v1.schemas.processSummary
+- properties:
+    inputs:
+      additionalProperties:
+        $ref: bblocks://ogc.api.processes.v1.schemas.inputDescription
+    outputs:
+      additionalProperties:
+        $ref: bblocks://ogc.api.processes.v1.schemas.outputDescription
+  type: object

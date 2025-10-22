@@ -1,0 +1,9 @@
+in: query
+name: type
+required: false
+schema:
+  items:
+    enum:
+    - process
+    type: string
+  type: array

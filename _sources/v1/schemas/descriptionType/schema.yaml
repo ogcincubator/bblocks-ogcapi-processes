@@ -1,0 +1,23 @@
+properties:
+  additionalParameters:
+    allOf:
+    - $ref: bblocks://ogc.api.processes.v1.schemas.metadata
+    - properties:
+        parameters:
+          items:
+            $ref: bblocks://ogc.api.processes.v1.schemas.additionalParameter
+          type: array
+      type: object
+  description:
+    type: string
+  keywords:
+    items:
+      type: string
+    type: array
+  metadata:
+    items:
+      $ref: bblocks://ogc.api.processes.v1.schemas.metadata
+    type: array
+  title:
+    type: string
+type: object

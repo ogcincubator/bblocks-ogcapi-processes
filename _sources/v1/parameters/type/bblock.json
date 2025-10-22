@@ -1,6 +1,6 @@
 {
   "status": "under-development",
-  "dateTimeAddition": "2025-10-22T14:20:58.221661",
+  "dateTimeAddition": "2025-10-22T15:29:12.178084",
   "register": "ogcapi-processes",
   "version": "0.1",
   "dateOfLastChange": "2025-10-22",
@@ -15,6 +15,5 @@
     "parameter"
   ],
   "name": "type",
-  "openAPIDocument": "https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/parameters/type.yaml",
   "itemClass": "parameter"
 }

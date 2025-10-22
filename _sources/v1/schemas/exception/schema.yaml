@@ -1,0 +1,17 @@
+additionalProperties: true
+description: JSON schema for exceptions based on RFC 7807
+properties:
+  detail:
+    type: string
+  instance:
+    type: string
+  status:
+    type: integer
+  title:
+    type: string
+  type:
+    type: string
+required:
+- type
+title: Exception Schema
+type: object

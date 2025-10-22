@@ -1,0 +1,7 @@
+in: query
+name: status
+required: false
+schema:
+  items:
+    $ref: bblocks://ogc.api.processes.v1.schemas.statusCode
+  type: array

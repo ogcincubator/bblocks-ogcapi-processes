@@ -1,0 +1,9 @@
+content:
+  application/json:
+    examples:
+      processDecription:
+        externalValue: ../../examples/json/ProcessDescription.json
+        summary: A Process Description example
+    schema:
+      $ref: bblocks://ogc.api.processes.v1.schemas.process
+description: A process description.

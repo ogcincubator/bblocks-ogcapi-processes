@@ -1,0 +1,8 @@
+allOf:
+- $ref: bblocks://ogc.api.processes.v1.schemas.format
+- properties:
+    value:
+      $ref: bblocks://ogc.api.processes.v1.schemas.inputValue
+  required:
+  - value
+  type: object

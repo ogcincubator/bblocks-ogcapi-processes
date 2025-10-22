@@ -1,0 +1,8 @@
+enum:
+- accepted
+- running
+- successful
+- failed
+- dismissed
+nullable: false
+type: string

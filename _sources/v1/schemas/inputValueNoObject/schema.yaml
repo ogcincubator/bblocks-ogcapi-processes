@@ -1,0 +1,8 @@
+oneOf:
+- type: string
+- type: number
+- type: integer
+- type: boolean
+- type: array
+- $ref: bblocks://ogc.api.processes.v1.schemas.binaryInputValue
+- $ref: bblocks://ogc.api.processes.v1.schemas.bbox

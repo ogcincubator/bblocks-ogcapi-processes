@@ -1,0 +1,21 @@
+properties:
+  inputs:
+    additionalProperties:
+      oneOf:
+      - $ref: bblocks://ogc.api.processes.v1.schemas.inlineOrRefData
+      - items:
+          $ref: bblocks://ogc.api.processes.v1.schemas.inlineOrRefData
+        type: array
+  outputs:
+    additionalProperties:
+      $ref: bblocks://ogc.api.processes.v1.schemas.output
+  response:
+    default:
+    - raw
+    enum:
+    - raw
+    - document
+    type: string
+  subscriber:
+    $ref: bblocks://ogc.api.processes.v1.schemas.subscriber
+type: object

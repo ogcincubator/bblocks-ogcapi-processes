@@ -1,0 +1,23 @@
+allOf:
+- $ref: bblocks://ogc.api.processes.v1.schemas.descriptionType
+- properties:
+    id:
+      type: string
+    jobControlOptions:
+      items:
+        $ref: bblocks://ogc.api.processes.v1.schemas.jobControlOptions
+      type: array
+    links:
+      items:
+        $ref: bblocks://ogc.api.processes.v1.schemas.link
+      type: array
+    outputTransmission:
+      items:
+        $ref: bblocks://ogc.api.processes.v1.schemas.transmissionMode
+      type: array
+    version:
+      type: string
+  required:
+  - id
+  - version
+  type: object

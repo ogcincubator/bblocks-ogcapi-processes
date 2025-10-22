@@ -17,6 +17,5 @@
     "features"
   ],
   "highlighted": true,
-  "abstract": "This building block corresponds to OGC API Features",
-  "openAPIDocument": "https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/ogcapi-processes-1.yaml"
+  "abstract": "This building block corresponds to OGC API Features"
 }

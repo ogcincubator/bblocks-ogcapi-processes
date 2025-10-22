@@ -1,0 +1,5 @@
+content:
+  application/json:
+    schema:
+      $ref: bblocks://ogc.api.processes.v1.schemas.jobList
+description: A list of jobs for this process.

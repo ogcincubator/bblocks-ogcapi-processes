@@ -1,0 +1,38 @@
+properties:
+  created:
+    format: date-time
+    type: string
+  finished:
+    format: date-time
+    type: string
+  jobID:
+    type: string
+  links:
+    items:
+      $ref: bblocks://ogc.api.processes.v1.schemas.link
+    type: array
+  message:
+    type: string
+  processID:
+    type: string
+  progress:
+    maximum: 100
+    minimum: 0
+    type: integer
+  started:
+    format: date-time
+    type: string
+  status:
+    $ref: bblocks://ogc.api.processes.v1.schemas.statusCode
+  type:
+    enum:
+    - process
+    type: string
+  updated:
+    format: date-time
+    type: string
+required:
+- jobID
+- status
+- type
+type: object

@@ -2,7 +2,7 @@
   "name": "OGC API Processes",
   "abstract": "Schemas for the OGC API Processes standard\n",
   "description": "Adds a flexible, JSON schema version agnostic documentation to the OGC API Processes standard, supporting further profiling by combining with other Building Blocks.\n",
-  "modified": "2025-10-22T13:31:12.313175",
+  "modified": "2025-10-22T14:51:35.618945",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"0834bcc055075708e98a7500bea7bc0f59b4b1bd",
@@ -36,7 +36,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "jobId",
+      "name": "jobId parameter",
       "itemClass": "parameter",
       "description": "local identifier of a job",
       "shaclShapes": {},
@@ -77,7 +77,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "processIdPathParam",
+      "name": "processIdPathParam parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/openapi.yaml",
@@ -117,7 +117,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "datetime",
+      "name": "datetime parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/datetime/openapi.yaml",
@@ -157,7 +157,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "limit",
+      "name": "limit parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/limit/openapi.yaml",
@@ -197,7 +197,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "maxDuration",
+      "name": "maxDuration parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/maxDuration/openapi.yaml",
@@ -237,7 +237,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "minDuration",
+      "name": "minDuration parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/minDuration/openapi.yaml",
@@ -277,7 +277,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "processIdQueryParam",
+      "name": "processIdQueryParam parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdQueryParam/openapi.yaml",
@@ -317,7 +317,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "statusCode",
+      "name": "statusCode schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -360,7 +360,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "type",
+      "name": "type parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/type/openapi.yaml",
@@ -400,7 +400,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "confClasses",
+      "name": "confClasses schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -443,7 +443,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ExecuteSyncRawRef",
+      "name": "ExecuteSyncRawRef response",
       "itemClass": "response",
       "shaclShapes": {},
       "schema": {
@@ -486,7 +486,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "exception",
+      "name": "exception schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -529,7 +529,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "additionalParameter",
+      "name": "additionalParameter schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -572,7 +572,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "bbox",
+      "name": "bbox schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -615,7 +615,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "binaryInputValue",
+      "name": "binaryInputValue schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -643,7 +643,7 @@
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.common-core.confClasses",
-      "name": "Schema for confClasses",
+      "name": "Schema for confClasses schema",
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "schema",
@@ -689,7 +689,7 @@
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.common-core.exception",
-      "name": "Schema for exception",
+      "name": "Schema for exception schema",
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "schema",
@@ -749,7 +749,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "metadata",
+      "name": "metadata schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -792,7 +792,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "subscriber",
+      "name": "subscriber schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -835,7 +835,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "format",
+      "name": "format schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -878,7 +878,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "link",
+      "name": "link schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -921,7 +921,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "jobControlOptions",
+      "name": "jobControlOptions schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -964,7 +964,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "transmissionMode",
+      "name": "transmissionMode schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -1007,7 +1007,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "reference",
+      "name": "reference schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "schema": {
@@ -1035,7 +1035,7 @@
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.timeStamp",
-      "name": "Schema for timeStamp",
+      "name": "Schema for timeStamp schema",
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "datatype",
@@ -1080,7 +1080,7 @@
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.common-core.landingPage",
-      "name": "Schema for landingPage",
+      "name": "Schema for landingPage schema",
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "schema",
@@ -1143,7 +1143,7 @@
         "ogcapi-processes",
         "parameter"
       ],
-      "name": "status",
+      "name": "status parameter",
       "itemClass": "parameter",
       "shaclShapes": {},
       "dependsOn": [
@@ -1186,7 +1186,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ConformanceDeclaration",
+      "name": "ConformanceDeclaration response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1232,7 +1232,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "InvalidParameter",
+      "name": "InvalidParameter response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1278,7 +1278,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "NotAllowed",
+      "name": "NotAllowed response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1324,7 +1324,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "NotFound",
+      "name": "NotFound response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1370,7 +1370,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "NotSupported",
+      "name": "NotSupported response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1416,7 +1416,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ServerError",
+      "name": "ServerError response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1462,7 +1462,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "inputValueNoObject",
+      "name": "inputValueNoObject schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1509,7 +1509,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "descriptionType",
+      "name": "descriptionType schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1556,7 +1556,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "landingPage",
+      "name": "landingPage schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1602,7 +1602,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "statusInfo",
+      "name": "statusInfo schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1649,7 +1649,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "output",
+      "name": "output schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1696,7 +1696,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "schema",
+      "name": "schema schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1742,7 +1742,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "schema",
+      "name": "schema schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1788,7 +1788,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "inputValue",
+      "name": "inputValue schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -1834,14 +1834,14 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "processSummary",
+      "name": "processSummary schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
         "ogc.api.processes.v1.schemas.descriptionType",
         "ogc.api.processes.v1.schemas.transmissionMode",
-        "ogc.api.processes.v1.schemas.jobControlOptions",
-        "ogc.api.processes.v1.schemas.link"
+        "ogc.api.processes.v1.schemas.link",
+        "ogc.api.processes.v1.schemas.jobControlOptions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.yaml",
@@ -1883,7 +1883,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "LandingPage",
+      "name": "LandingPage response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1929,7 +1929,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ExecuteAsync",
+      "name": "ExecuteAsync response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -1975,7 +1975,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "Status",
+      "name": "Status response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -2021,12 +2021,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "jobList",
+      "name": "jobList schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.statusInfo",
-        "ogc.api.processes.v1.schemas.link"
+        "ogc.api.processes.v1.schemas.link",
+        "ogc.api.processes.v1.schemas.statusInfo"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobList/schema.yaml",
@@ -2068,12 +2068,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "inputDescription",
+      "name": "inputDescription schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.descriptionType",
-        "ogc.api.processes.v1.schemas.schema"
+        "ogc.api.processes.v1.schemas.schema",
+        "ogc.api.processes.v1.schemas.descriptionType"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml",
@@ -2115,12 +2115,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "outputDescription",
+      "name": "outputDescription schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.descriptionType",
-        "ogc.api.processes.v1.schemas.schema"
+        "ogc.api.processes.v1.schemas.schema",
+        "ogc.api.processes.v1.schemas.descriptionType"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.yaml",
@@ -2162,12 +2162,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "inputDescription",
+      "name": "inputDescription schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.descriptionType",
-        "ogc.api.processes.v1.schemas.swagger.schema"
+        "ogc.api.processes.v1.schemas.swagger.schema",
+        "ogc.api.processes.v1.schemas.descriptionType"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/inputDescription/schema.yaml",
@@ -2209,12 +2209,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "outputDescription",
+      "name": "outputDescription schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.descriptionType",
-        "ogc.api.processes.v1.schemas.swagger.schema"
+        "ogc.api.processes.v1.schemas.swagger.schema",
+        "ogc.api.processes.v1.schemas.descriptionType"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.yaml",
@@ -2256,12 +2256,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "qualifiedInputValue",
+      "name": "qualifiedInputValue schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.format",
-        "ogc.api.processes.v1.schemas.inputValue"
+        "ogc.api.processes.v1.schemas.inputValue",
+        "ogc.api.processes.v1.schemas.format"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/qualifiedInputValue/schema.yaml",
@@ -2303,12 +2303,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "processList",
+      "name": "processList schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.processSummary",
-        "ogc.api.processes.v1.schemas.link"
+        "ogc.api.processes.v1.schemas.link",
+        "ogc.api.processes.v1.schemas.processSummary"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.yaml",
@@ -2350,7 +2350,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "JobList",
+      "name": "JobList response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -2396,13 +2396,13 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "process",
+      "name": "process schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.outputDescription",
+        "ogc.api.processes.v1.schemas.processSummary",
         "ogc.api.processes.v1.schemas.inputDescription",
-        "ogc.api.processes.v1.schemas.processSummary"
+        "ogc.api.processes.v1.schemas.outputDescription"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml",
@@ -2444,13 +2444,13 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "process",
+      "name": "process schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.swagger.outputDescription",
         "ogc.api.processes.v1.schemas.swagger.inputDescription",
-        "ogc.api.processes.v1.schemas.processSummary"
+        "ogc.api.processes.v1.schemas.processSummary",
+        "ogc.api.processes.v1.schemas.swagger.outputDescription"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/schema.yaml",
@@ -2492,12 +2492,12 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "inlineOrRefData",
+      "name": "inlineOrRefData schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.qualifiedInputValue",
         "ogc.api.processes.v1.schemas.inputValueNoObject",
+        "ogc.api.processes.v1.schemas.qualifiedInputValue",
         "ogc.api.processes.v1.schemas.link"
       ],
       "schema": {
@@ -2540,7 +2540,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ProcessList",
+      "name": "ProcessList response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -2586,7 +2586,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ProcessDescription",
+      "name": "ProcessDescription response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -2632,7 +2632,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ProcessDescription",
+      "name": "ProcessDescription response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -2678,13 +2678,13 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "execute",
+      "name": "execute schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.subscriber",
         "ogc.api.processes.v1.schemas.output",
-        "ogc.api.processes.v1.schemas.inlineOrRefData"
+        "ogc.api.processes.v1.schemas.inlineOrRefData",
+        "ogc.api.processes.v1.schemas.subscriber"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml",
@@ -2726,7 +2726,7 @@
         "ogcapi-processes",
         "schema"
       ],
-      "name": "results",
+      "name": "results schema",
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
@@ -2772,7 +2772,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "ExecuteSync",
+      "name": "ExecuteSync response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -2818,7 +2818,7 @@
         "ogcapi-processes",
         "response"
       ],
-      "name": "Results",
+      "name": "Results response",
       "itemClass": "response",
       "shaclShapes": {},
       "dependsOn": [
@@ -2870,21 +2870,21 @@
       "abstract": "This building block corresponds to OGC API Features",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.parameters.jobId",
-        "ogc.api.processes.v1.responses.Results",
-        "ogc.api.processes.v1.responses.ServerError",
-        "ogc.api.processes.v1.responses.NotFound",
         "ogc.api.processes.v1.responses.ConformanceDeclaration",
-        "ogc.api.processes.v1.responses.ExecuteAsync",
+        "ogc.api.processes.v1.responses.Results",
+        "ogc.api.processes.v1.responses.ProcessList",
         "ogc.api.processes.v1.responses.ExecuteSync",
         "ogc.api.processes.v1.schemas.execute",
-        "ogc.api.processes.v1.schemas.results",
+        "ogc.api.processes.v1.responses.Status",
+        "ogc.api.processes.v1.parameters.jobId",
         "ogc.api.processes.v1.parameters.processIdPathParam",
-        "ogc.api.processes.v1.responses.ProcessDescription",
-        "ogc.api.processes.v1.responses.JobList",
-        "ogc.api.processes.v1.responses.ProcessList",
+        "ogc.api.processes.v1.schemas.results",
+        "ogc.api.processes.v1.responses.NotFound",
         "ogc.api.processes.v1.responses.LandingPage",
-        "ogc.api.processes.v1.responses.Status"
+        "ogc.api.processes.v1.responses.ProcessDescription",
+        "ogc.api.processes.v1.responses.ExecuteAsync",
+        "ogc.api.processes.v1.responses.ServerError",
+        "ogc.api.processes.v1.responses.JobList"
       ],
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/api/openapi.yaml",
       "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/api/openapi.yaml",

@@ -1,5 +1,5 @@
 
-# jobId (Parameter)
+# jobId parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.jobId` *v0.1*
 

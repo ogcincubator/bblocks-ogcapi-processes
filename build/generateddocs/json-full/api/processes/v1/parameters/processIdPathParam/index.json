@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "parameter"
   ],
-  "name": "processIdPathParam",
+  "name": "processIdPathParam parameter",
   "itemClass": "parameter",
   "shaclShapes": {},
   "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/openapi.yaml",

@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "ExecuteSync",
+  "name": "ExecuteSync response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

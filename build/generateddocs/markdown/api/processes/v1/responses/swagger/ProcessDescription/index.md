@@ -1,5 +1,5 @@
 
-# ProcessDescription (Response)
+# ProcessDescription response (Response)
 
 `ogc.api.processes.v1.responses.swagger.ProcessDescription` *v0.1*
 

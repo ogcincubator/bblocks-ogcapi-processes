@@ -9,18 +9,18 @@
 
 <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N19b9ed4d9d354274ae684ed6e82a9ca7 ;
+    prov:wasAttributedTo _:Ndcacdaae4b5044228952c9fc148889b6 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-10-22T13:31:19.351744"^^xsd:dateTime ;
-            prov:startedAtTime "2025-10-22T13:31:19.163235"^^xsd:dateTime ;
+            prov:endedAtTime "2025-10-22T14:51:42.920412"^^xsd:dateTime ;
+            prov:startedAtTime "2025-10-22T14:51:42.724845"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:69d6992cb36b07283d9d396e7f8c8c4eb1bf35c0" ;
+                    dct:hasVersion "git:43228085d06e89e1da076959d86e23401d7be2cc" ;
                     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:N19b9ed4d9d354274ae684ed6e82a9ca7 ] .
+            prov:wasAssociatedWith _:Ndcacdaae4b5044228952c9fc148889b6 ] .
 
 <https://ogcincubator.github.io/ogc.api.processes.v1.api> a skos:Concept,
         dcat:Dataset,
@@ -28,12 +28,12 @@
     rdfs:label "OGC API - Processes: Part 1" ;
     dct:abstract "This building block corresponds to OGC API Features"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/api/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.api" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/api/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/api/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/api/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -60,7 +60,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.datetime> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "datetime" ;
+    rdfs:label "datetime parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/datetime/index.md" ],
@@ -79,7 +79,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.limit> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "limit" ;
+    rdfs:label "limit parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.limit" ],
@@ -98,14 +98,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.maxDuration> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "maxDuration" ;
+    rdfs:label "maxDuration parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/maxDuration/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.maxDuration" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/maxDuration/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/maxDuration/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/maxDuration/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -117,14 +117,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.minDuration> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "minDuration" ;
+    rdfs:label "minDuration parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.minDuration" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/minDuration/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/minDuration/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/minDuration/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.minDuration" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -136,12 +136,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.processIdQueryParam> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "processIdQueryParam" ;
+    rdfs:label "processIdQueryParam parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdQueryParam/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdQueryParam" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdQueryParam/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/processIdQueryParam/index.md" ] ;
     dct:hasVersion "0.1" ;
@@ -155,14 +155,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.status> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "status" ;
+    rdfs:label "status parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/status/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.status" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/status/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/status/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.status" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -175,14 +175,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.type> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "type" ;
+    rdfs:label "type parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.type" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/type/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/type/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/type/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.type" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -194,12 +194,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.ExecuteSyncRawRef> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ExecuteSyncRawRef" ;
+    rdfs:label "ExecuteSyncRawRef response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteSyncRawRef/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ExecuteSyncRawRef/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteSyncRawRef/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteSyncRawRef" ] ;
     dct:hasVersion "0.1" ;
@@ -215,7 +215,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.InvalidParameter> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "InvalidParameter" ;
+    rdfs:label "InvalidParameter response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.InvalidParameter" ],
@@ -237,14 +237,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.NotAllowed> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "NotAllowed" ;
+    rdfs:label "NotAllowed response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotAllowed" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotAllowed/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotAllowed/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotAllowed" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotAllowed/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -259,12 +259,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.NotSupported> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "NotSupported" ;
+    rdfs:label "NotSupported response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotSupported" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotSupported/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotSupported" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotSupported/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -281,14 +281,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.swagger.ProcessDescription> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ProcessDescription" ;
+    rdfs:label "ProcessDescription response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/swagger/ProcessDescription/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.swagger.ProcessDescription" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/swagger/ProcessDescription/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/swagger/ProcessDescription/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/swagger/ProcessDescription/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -303,15 +303,15 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.common-core.confClasses> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "Schema for confClasses" ;
+    rdfs:label "Schema for confClasses schema" ;
     dct:abstract "This building block corresponds to the schema for an OGC API Features confClasses"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.confClasses" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/confClasses/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/confClasses/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/confClasses/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.confClasses" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -325,15 +325,15 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.common-core.exception> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "Schema for exception" ;
+    rdfs:label "Schema for exception schema" ;
     dct:abstract "This building block corresponds to the schema for an OGC API Features exception"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/exception/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/exception/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.exception" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.exception" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/exception/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -347,15 +347,15 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.common-core.landingPage> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "Schema for landingPage" ;
+    rdfs:label "Schema for landingPage schema" ;
     dct:abstract "This building block corresponds to the schema for an OGC API Features landingPage"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.landingPage" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/landingPage/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/landingPage/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/landingPage/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.landingPage" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -371,15 +371,15 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.timeStamp> a skos:Concept,
         dcat:Dataset,
         bblocks:Datatype ;
-    rdfs:label "Schema for timeStamp" ;
+    rdfs:label "Schema for timeStamp schema" ;
     dct:abstract "This property indicates the time and date when the response was generated"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/timeStamp/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/timeStamp/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.timeStamp" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.timeStamp" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/timeStamp/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -393,14 +393,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.jobId> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "jobId" ;
+    rdfs:label "jobId parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.jobId" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/jobId/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/jobId/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/jobId/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.jobId" ],
         "local identifier of a job"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
@@ -413,14 +413,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.parameters.processIdPathParam> a skos:Concept,
         dcat:Dataset,
         bblocks:Parameter ;
-    rdfs:label "processIdPathParam" ;
+    rdfs:label "processIdPathParam parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdPathParam/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/processIdPathParam/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdPathParam" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdPathParam" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdPathParam/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -432,14 +432,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.ConformanceDeclaration> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ConformanceDeclaration" ;
+    rdfs:label "ConformanceDeclaration response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ConformanceDeclaration/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ConformanceDeclaration" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ConformanceDeclaration/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ConformanceDeclaration/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ConformanceDeclaration" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -454,14 +454,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.ExecuteAsync> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ExecuteAsync" ;
+    rdfs:label "ExecuteAsync response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ExecuteAsync/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteAsync" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteAsync/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteAsync" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ExecuteAsync/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -476,14 +476,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.ExecuteSync> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ExecuteSync" ;
+    rdfs:label "ExecuteSync response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteSync" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteSync/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ExecuteSync/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteSync/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteSync" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -498,14 +498,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.JobList> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "JobList" ;
+    rdfs:label "JobList response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/JobList/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.JobList" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/JobList/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/JobList/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/JobList/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -520,14 +520,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.LandingPage> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "LandingPage" ;
+    rdfs:label "LandingPage response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.LandingPage" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/LandingPage/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/LandingPage/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/LandingPage/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.LandingPage" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -542,14 +542,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.NotFound> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "NotFound" ;
+    rdfs:label "NotFound response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotFound/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotFound/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotFound" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotFound/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotFound/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -564,14 +564,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.ProcessDescription> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ProcessDescription" ;
+    rdfs:label "ProcessDescription response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ProcessDescription/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessDescription" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessDescription/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ProcessDescription/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessDescription/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -586,14 +586,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.ProcessList> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ProcessList" ;
+    rdfs:label "ProcessList response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessList" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ProcessList/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessList/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessList" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessList/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -608,14 +608,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.Results> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "Results" ;
+    rdfs:label "Results response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/Results/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Results" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/Results/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Results" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/Results/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -630,12 +630,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.ServerError> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "ServerError" ;
+    rdfs:label "ServerError response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ServerError/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ServerError" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ServerError/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ServerError/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -652,14 +652,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.responses.Status> a skos:Concept,
         dcat:Dataset,
         bblocks:Response ;
-    rdfs:label "Status" ;
+    rdfs:label "Status response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/Status/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/Status/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Status" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Status" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/Status/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -674,14 +674,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.additionalParameter> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "additionalParameter" ;
+    rdfs:label "additionalParameter schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/additionalParameter/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.additionalParameter" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/additionalParameter/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/additionalParameter/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/additionalParameter/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -695,14 +695,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.bbox> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "bbox" ;
+    rdfs:label "bbox schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/bbox/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.bbox" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/bbox/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.bbox" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/bbox/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -716,7 +716,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.binaryInputValue> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "binaryInputValue" ;
+    rdfs:label "binaryInputValue schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/binaryInputValue/index.md" ],
@@ -737,14 +737,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.confClasses> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "confClasses" ;
+    rdfs:label "confClasses schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/confClasses/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.confClasses" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/confClasses/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/confClasses/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/confClasses/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -758,12 +758,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.execute> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "execute" ;
+    rdfs:label "execute schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/execute/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/execute/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/execute/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.execute" ] ;
     dct:hasVersion "0.1" ;
@@ -782,14 +782,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.inputDescription> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "inputDescription" ;
+    rdfs:label "inputDescription schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inputDescription/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputDescription" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputDescription/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputDescription/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputDescription" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -805,12 +805,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.inputValue> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "inputValue" ;
+    rdfs:label "inputValue schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValue/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValue" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValue/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inputValue/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -827,7 +827,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.jobControlOptions> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "jobControlOptions" ;
+    rdfs:label "jobControlOptions schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/jobControlOptions/index.json" ],
@@ -848,12 +848,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.jobList> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "jobList" ;
+    rdfs:label "jobList schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/jobList/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.jobList" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/jobList/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/jobList/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -871,12 +871,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.landingPage> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "landingPage" ;
+    rdfs:label "landingPage schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/landingPage/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.landingPage" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/landingPage/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/landingPage/index.md" ] ;
     dct:hasVersion "0.1" ;
@@ -893,12 +893,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.metadata> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "metadata" ;
+    rdfs:label "metadata schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.metadata" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/metadata/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.metadata" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/metadata/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -914,14 +914,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.output> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "output" ;
+    rdfs:label "output schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/output/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/output/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.output" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.output" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/output/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -937,14 +937,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.outputDescription> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "outputDescription" ;
+    rdfs:label "outputDescription schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/outputDescription/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.outputDescription" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/outputDescription/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.outputDescription" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/outputDescription/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -960,14 +960,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.process> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "process" ;
+    rdfs:label "process schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/process/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.process" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/process/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/process/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/process/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -984,14 +984,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.processList> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "processList" ;
+    rdfs:label "processList schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/processList/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processList" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/processList/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/processList/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processList" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1007,14 +1007,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.qualifiedInputValue> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "qualifiedInputValue" ;
+    rdfs:label "qualifiedInputValue schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/qualifiedInputValue/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/qualifiedInputValue/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.qualifiedInputValue" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.qualifiedInputValue" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/qualifiedInputValue/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1030,14 +1030,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.subscriber> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "subscriber" ;
+    rdfs:label "subscriber schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/subscriber/index.json" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/subscriber/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.subscriber" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/subscriber/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.subscriber" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1051,7 +1051,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.swagger.inputDescription> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "inputDescription" ;
+    rdfs:label "inputDescription schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/inputDescription/index.json" ],
@@ -1074,12 +1074,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.swagger.outputDescription> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "outputDescription" ;
+    rdfs:label "outputDescription schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/outputDescription/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.outputDescription" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/outputDescription/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/outputDescription/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -1097,12 +1097,12 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.swagger.process> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "process" ;
+    rdfs:label "process schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/process/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/process/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/process/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.process" ] ;
     dct:hasVersion "0.1" ;
@@ -1121,14 +1121,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.format> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "format" ;
+    rdfs:label "format schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.format" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/format/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/format/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/format/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/format/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1142,14 +1142,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.inlineOrRefData> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "inlineOrRefData" ;
+    rdfs:label "inlineOrRefData schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inlineOrRefData" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inlineOrRefData/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inlineOrRefData/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inlineOrRefData" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inlineOrRefData/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1166,14 +1166,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.inputValueNoObject> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "inputValueNoObject" ;
+    rdfs:label "inputValueNoObject schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inputValueNoObject/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValueNoObject" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValueNoObject/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValueNoObject/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValueNoObject" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1189,14 +1189,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.reference> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "reference" ;
+    rdfs:label "reference schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/reference/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.reference" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/reference/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/reference/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.reference" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1210,14 +1210,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.schema> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "schema" ;
+    rdfs:label "schema schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.schema" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/schema/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/schema/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/schema/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.schema" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1232,14 +1232,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.statusCode> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "statusCode" ;
+    rdfs:label "statusCode schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/statusCode/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/statusCode/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.statusCode" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/statusCode/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/statusCode/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1253,14 +1253,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.swagger.schema> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "schema" ;
+    rdfs:label "schema schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/schema/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.schema" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/schema/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/schema/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/schema/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1275,14 +1275,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.transmissionMode> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "transmissionMode" ;
+    rdfs:label "transmissionMode schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.transmissionMode" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/transmissionMode/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/transmissionMode/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/transmissionMode/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.transmissionMode" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1296,7 +1296,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.processSummary> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "processSummary" ;
+    rdfs:label "processSummary schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processSummary" ],
@@ -1321,14 +1321,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.results> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "results" ;
+    rdfs:label "results schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.results" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/results/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/results/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/results/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/results/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1343,14 +1343,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.statusInfo> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "statusInfo" ;
+    rdfs:label "statusInfo schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/statusInfo/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.statusInfo" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/statusInfo/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/statusInfo/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/statusInfo/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1366,7 +1366,7 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.descriptionType> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "descriptionType" ;
+    rdfs:label "descriptionType schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/descriptionType/index.json" ],
@@ -1389,14 +1389,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.exception> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "exception" ;
+    rdfs:label "exception schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.exception" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/exception/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/exception/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/exception/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.exception" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1410,14 +1410,14 @@
 <https://ogcincubator.github.io/ogc.api.processes.v1.schemas.link> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "link" ;
+    rdfs:label "link schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/link/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.link" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/link/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/link/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/link/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-10-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1441,7 +1441,7 @@
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/report.html> ;
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
-_:N19b9ed4d9d354274ae684ed6e82a9ca7 a prov:Agent,
+_:Ndcacdaae4b5044228952c9fc148889b6 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.4.6" ;

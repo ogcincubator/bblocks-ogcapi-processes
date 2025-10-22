@@ -1,5 +1,5 @@
 
-# maxDuration (Parameter)
+# maxDuration parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.maxDuration` *v0.1*
 

@@ -1,5 +1,5 @@
 
-# Schema for landingPage (Schema)
+# Schema for landingPage schema (Schema)
 
 `ogc.api.processes.v1.schemas.common-core.landingPage` *v0.1*
 

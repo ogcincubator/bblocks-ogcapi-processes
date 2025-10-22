@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "parameter"
   ],
-  "name": "minDuration",
+  "name": "minDuration parameter",
   "itemClass": "parameter",
   "shaclShapes": {},
   "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/minDuration/openapi.yaml",

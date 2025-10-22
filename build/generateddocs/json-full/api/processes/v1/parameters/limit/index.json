@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "parameter"
   ],
-  "name": "limit",
+  "name": "limit parameter",
   "itemClass": "parameter",
   "shaclShapes": {},
   "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/limit/openapi.yaml",

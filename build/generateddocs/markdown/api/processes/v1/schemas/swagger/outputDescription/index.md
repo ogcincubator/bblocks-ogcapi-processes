@@ -1,5 +1,5 @@
 
-# outputDescription (Schema)
+# outputDescription schema (Schema)
 
 `ogc.api.processes.v1.schemas.swagger.outputDescription` *v0.1*
 

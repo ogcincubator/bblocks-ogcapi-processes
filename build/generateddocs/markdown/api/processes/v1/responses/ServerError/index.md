@@ -1,5 +1,5 @@
 
-# ServerError (Response)
+# ServerError response (Response)
 
 `ogc.api.processes.v1.responses.ServerError` *v0.1*
 

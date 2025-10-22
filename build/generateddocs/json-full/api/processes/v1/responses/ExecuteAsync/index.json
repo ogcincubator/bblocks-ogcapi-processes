@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "ExecuteAsync",
+  "name": "ExecuteAsync response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

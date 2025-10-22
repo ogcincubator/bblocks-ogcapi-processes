@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "results",
+  "name": "results schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [

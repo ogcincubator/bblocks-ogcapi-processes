@@ -1,5 +1,5 @@
 
-# type (Parameter)
+# type parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.type` *v0.1*
 

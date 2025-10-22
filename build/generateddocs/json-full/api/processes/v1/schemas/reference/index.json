@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "reference",
+  "name": "reference schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "schema": {

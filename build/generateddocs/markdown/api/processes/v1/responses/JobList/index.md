@@ -1,5 +1,5 @@
 
-# JobList (Response)
+# JobList response (Response)
 
 `ogc.api.processes.v1.responses.JobList` *v0.1*
 

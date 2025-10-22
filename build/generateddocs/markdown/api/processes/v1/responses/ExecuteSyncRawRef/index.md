@@ -1,5 +1,5 @@
 
-# ExecuteSyncRawRef (Response)
+# ExecuteSyncRawRef response (Response)
 
 `ogc.api.processes.v1.responses.ExecuteSyncRawRef` *v0.1*
 

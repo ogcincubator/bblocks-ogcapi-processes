@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "NotSupported",
+  "name": "NotSupported response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

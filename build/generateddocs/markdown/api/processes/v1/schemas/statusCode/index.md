@@ -1,5 +1,5 @@
 
-# statusCode (Schema)
+# statusCode schema (Schema)
 
 `ogc.api.processes.v1.schemas.statusCode` *v0.1*
 

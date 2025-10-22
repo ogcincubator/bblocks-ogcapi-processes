@@ -1,5 +1,5 @@
 
-# Status (Response)
+# Status response (Response)
 
 `ogc.api.processes.v1.responses.Status` *v0.1*
 

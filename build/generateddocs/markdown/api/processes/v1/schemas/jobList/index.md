@@ -1,5 +1,5 @@
 
-# jobList (Schema)
+# jobList schema (Schema)
 
 `ogc.api.processes.v1.schemas.jobList` *v0.1*
 

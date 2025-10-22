@@ -1,5 +1,5 @@
 
-# subscriber (Schema)
+# subscriber schema (Schema)
 
 `ogc.api.processes.v1.schemas.subscriber` *v0.1*
 

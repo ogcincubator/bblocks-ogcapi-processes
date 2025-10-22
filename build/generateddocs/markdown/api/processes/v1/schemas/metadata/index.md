@@ -1,5 +1,5 @@
 
-# metadata (Schema)
+# metadata schema (Schema)
 
 `ogc.api.processes.v1.schemas.metadata` *v0.1*
 

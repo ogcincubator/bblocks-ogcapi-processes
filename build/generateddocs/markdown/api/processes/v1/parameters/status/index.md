@@ -1,5 +1,5 @@
 
-# status (Parameter)
+# status parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.status` *v0.1*
 

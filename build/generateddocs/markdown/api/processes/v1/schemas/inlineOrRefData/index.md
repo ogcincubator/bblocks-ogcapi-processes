@@ -1,5 +1,5 @@
 
-# inlineOrRefData (Schema)
+# inlineOrRefData schema (Schema)
 
 `ogc.api.processes.v1.schemas.inlineOrRefData` *v0.1*
 

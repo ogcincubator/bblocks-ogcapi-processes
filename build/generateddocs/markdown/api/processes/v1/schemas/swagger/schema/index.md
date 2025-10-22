@@ -1,5 +1,5 @@
 
-# schema (Schema)
+# schema schema (Schema)
 
 `ogc.api.processes.v1.schemas.swagger.schema` *v0.1*
 

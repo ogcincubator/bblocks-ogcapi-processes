@@ -1,5 +1,5 @@
 
-# results (Schema)
+# results schema (Schema)
 
 `ogc.api.processes.v1.schemas.results` *v0.1*
 

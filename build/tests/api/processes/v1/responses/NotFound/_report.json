@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.api.processes.v1.responses.NotFound - NotFound",
-  "bblockName": "NotFound",
+  "title": "Validation report for ogc.api.processes.v1.responses.NotFound - NotFound response",
+  "bblockName": "NotFound response",
   "bblockId": "ogc.api.processes.v1.responses.NotFound",
-  "generated": "2025-10-22T13:31:18.927060+00:00",
+  "generated": "2025-10-22T14:51:42.483954+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

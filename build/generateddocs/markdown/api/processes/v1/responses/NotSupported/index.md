@@ -1,5 +1,5 @@
 
-# NotSupported (Response)
+# NotSupported response (Response)
 
 `ogc.api.processes.v1.responses.NotSupported` *v0.1*
 

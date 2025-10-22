@@ -1,5 +1,5 @@
 
-# ProcessList (Response)
+# ProcessList response (Response)
 
 `ogc.api.processes.v1.responses.ProcessList` *v0.1*
 

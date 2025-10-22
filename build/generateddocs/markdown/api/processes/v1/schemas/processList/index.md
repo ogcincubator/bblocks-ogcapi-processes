@@ -1,5 +1,5 @@
 
-# processList (Schema)
+# processList schema (Schema)
 
 `ogc.api.processes.v1.schemas.processList` *v0.1*
 

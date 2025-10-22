@@ -1,5 +1,5 @@
 
-# minDuration (Parameter)
+# minDuration parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.minDuration` *v0.1*
 

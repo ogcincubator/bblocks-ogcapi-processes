@@ -1,5 +1,5 @@
 
-# inputValue (Schema)
+# inputValue schema (Schema)
 
 `ogc.api.processes.v1.schemas.inputValue` *v0.1*
 

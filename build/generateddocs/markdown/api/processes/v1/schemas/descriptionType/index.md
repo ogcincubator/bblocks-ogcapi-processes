@@ -1,5 +1,5 @@
 
-# descriptionType (Schema)
+# descriptionType schema (Schema)
 
 `ogc.api.processes.v1.schemas.descriptionType` *v0.1*
 

@@ -1,5 +1,5 @@
 
-# ExecuteAsync (Response)
+# ExecuteAsync response (Response)
 
 `ogc.api.processes.v1.responses.ExecuteAsync` *v0.1*
 

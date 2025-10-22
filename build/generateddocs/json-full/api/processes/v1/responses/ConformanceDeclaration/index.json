@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "ConformanceDeclaration",
+  "name": "ConformanceDeclaration response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

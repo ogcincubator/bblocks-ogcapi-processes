@@ -1,5 +1,5 @@
 
-# inputValueNoObject (Schema)
+# inputValueNoObject schema (Schema)
 
 `ogc.api.processes.v1.schemas.inputValueNoObject` *v0.1*
 

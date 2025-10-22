@@ -17,12 +17,12 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "inlineOrRefData",
+  "name": "inlineOrRefData schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.qualifiedInputValue",
     "ogc.api.processes.v1.schemas.inputValueNoObject",
+    "ogc.api.processes.v1.schemas.qualifiedInputValue",
     "ogc.api.processes.v1.schemas.link"
   ],
   "schema": {

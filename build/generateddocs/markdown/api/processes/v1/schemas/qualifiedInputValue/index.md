@@ -1,5 +1,5 @@
 
-# qualifiedInputValue (Schema)
+# qualifiedInputValue schema (Schema)
 
 `ogc.api.processes.v1.schemas.qualifiedInputValue` *v0.1*
 

@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.api.processes.v1.schemas.common-core.exception - Schema for exception",
-  "bblockName": "Schema for exception",
+  "title": "Validation report for ogc.api.processes.v1.schemas.common-core.exception - Schema for exception schema",
+  "bblockName": "Schema for exception schema",
   "bblockId": "ogc.api.processes.v1.schemas.common-core.exception",
-  "generated": "2025-10-22T13:31:18.855235+00:00",
+  "generated": "2025-10-22T14:51:42.410565+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

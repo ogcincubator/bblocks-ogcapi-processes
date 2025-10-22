@@ -1,5 +1,5 @@
 
-# LandingPage (Response)
+# LandingPage response (Response)
 
 `ogc.api.processes.v1.responses.LandingPage` *v0.1*
 

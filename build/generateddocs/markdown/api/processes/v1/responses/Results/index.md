@@ -1,5 +1,5 @@
 
-# Results (Response)
+# Results response (Response)
 
 `ogc.api.processes.v1.responses.Results` *v0.1*
 

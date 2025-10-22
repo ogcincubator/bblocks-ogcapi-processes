@@ -1,5 +1,5 @@
 
-# Schema for confClasses (Schema)
+# Schema for confClasses schema (Schema)
 
 `ogc.api.processes.v1.schemas.common-core.confClasses` *v0.1*
 

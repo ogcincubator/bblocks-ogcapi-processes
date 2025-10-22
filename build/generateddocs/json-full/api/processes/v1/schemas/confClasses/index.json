@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "confClasses",
+  "name": "confClasses schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "schema": {

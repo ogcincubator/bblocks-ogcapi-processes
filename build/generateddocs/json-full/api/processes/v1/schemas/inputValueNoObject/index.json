@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "inputValueNoObject",
+  "name": "inputValueNoObject schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [

@@ -1,5 +1,5 @@
 
-# limit (Parameter)
+# limit parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.limit` *v0.1*
 

@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "statusInfo",
+  "name": "statusInfo schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [

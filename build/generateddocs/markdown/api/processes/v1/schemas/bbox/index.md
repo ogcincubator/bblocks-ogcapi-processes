@@ -1,5 +1,5 @@
 
-# bbox (Schema)
+# bbox schema (Schema)
 
 `ogc.api.processes.v1.schemas.bbox` *v0.1*
 

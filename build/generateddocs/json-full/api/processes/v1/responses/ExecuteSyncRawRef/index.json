@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "ExecuteSyncRawRef",
+  "name": "ExecuteSyncRawRef response",
   "itemClass": "response",
   "shaclShapes": {},
   "schema": {

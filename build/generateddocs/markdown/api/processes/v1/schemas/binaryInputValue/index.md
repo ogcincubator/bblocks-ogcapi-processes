@@ -1,5 +1,5 @@
 
-# binaryInputValue (Schema)
+# binaryInputValue schema (Schema)
 
 `ogc.api.processes.v1.schemas.binaryInputValue` *v0.1*
 

@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.api.processes.v1.parameters.processIdPathParam - processIdPathParam",
-  "bblockName": "processIdPathParam",
+  "title": "Validation report for ogc.api.processes.v1.parameters.processIdPathParam - processIdPathParam parameter",
+  "bblockName": "processIdPathParam parameter",
   "bblockId": "ogc.api.processes.v1.parameters.processIdPathParam",
-  "generated": "2025-10-22T13:31:18.782012+00:00",
+  "generated": "2025-10-22T14:51:42.333720+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

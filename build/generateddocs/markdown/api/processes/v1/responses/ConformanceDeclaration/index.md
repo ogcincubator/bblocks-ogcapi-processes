@@ -1,5 +1,5 @@
 
-# ConformanceDeclaration (Response)
+# ConformanceDeclaration response (Response)
 
 `ogc.api.processes.v1.responses.ConformanceDeclaration` *v0.1*
 

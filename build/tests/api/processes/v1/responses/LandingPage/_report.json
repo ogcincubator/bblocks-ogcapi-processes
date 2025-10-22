@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.api.processes.v1.responses.LandingPage - LandingPage",
-  "bblockName": "LandingPage",
+  "title": "Validation report for ogc.api.processes.v1.responses.LandingPage - LandingPage response",
+  "bblockName": "LandingPage response",
   "bblockId": "ogc.api.processes.v1.responses.LandingPage",
-  "generated": "2025-10-22T13:31:19.027307+00:00",
+  "generated": "2025-10-22T14:51:42.582060+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

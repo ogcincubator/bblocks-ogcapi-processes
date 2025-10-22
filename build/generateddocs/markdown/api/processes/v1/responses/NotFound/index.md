@@ -1,5 +1,5 @@
 
-# NotFound (Response)
+# NotFound response (Response)
 
 `ogc.api.processes.v1.responses.NotFound` *v0.1*
 

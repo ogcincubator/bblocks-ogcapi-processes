@@ -1,5 +1,5 @@
 
-# processIdPathParam (Parameter)
+# processIdPathParam parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.processIdPathParam` *v0.1*
 

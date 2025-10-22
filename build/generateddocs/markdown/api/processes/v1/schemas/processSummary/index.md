@@ -1,5 +1,5 @@
 
-# processSummary (Schema)
+# processSummary schema (Schema)
 
 `ogc.api.processes.v1.schemas.processSummary` *v0.1*
 

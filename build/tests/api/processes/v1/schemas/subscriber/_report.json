@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.api.processes.v1.schemas.subscriber - subscriber",
-  "bblockName": "subscriber",
+  "title": "Validation report for ogc.api.processes.v1.schemas.subscriber - subscriber schema",
+  "bblockName": "subscriber schema",
   "bblockId": "ogc.api.processes.v1.schemas.subscriber",
-  "generated": "2025-10-22T13:31:18.866316+00:00",
+  "generated": "2025-10-22T14:51:42.421970+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

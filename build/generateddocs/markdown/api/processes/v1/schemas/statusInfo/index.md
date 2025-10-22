@@ -1,5 +1,5 @@
 
-# statusInfo (Schema)
+# statusInfo schema (Schema)
 
 `ogc.api.processes.v1.schemas.statusInfo` *v0.1*
 

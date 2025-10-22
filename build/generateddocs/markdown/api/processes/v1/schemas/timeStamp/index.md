@@ -1,5 +1,5 @@
 
-# Schema for timeStamp (Datatype)
+# Schema for timeStamp schema (Datatype)
 
 `ogc.api.processes.v1.schemas.timeStamp` *v0.1*
 

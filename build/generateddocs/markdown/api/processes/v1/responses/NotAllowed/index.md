@@ -1,5 +1,5 @@
 
-# NotAllowed (Response)
+# NotAllowed response (Response)
 
 `ogc.api.processes.v1.responses.NotAllowed` *v0.1*
 

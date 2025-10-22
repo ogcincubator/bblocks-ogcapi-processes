@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "InvalidParameter",
+  "name": "InvalidParameter response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

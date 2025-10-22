@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "subscriber",
+  "name": "subscriber schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "schema": {

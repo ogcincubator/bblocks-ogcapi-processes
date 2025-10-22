@@ -1,5 +1,5 @@
 
-# additionalParameter (Schema)
+# additionalParameter schema (Schema)
 
 `ogc.api.processes.v1.schemas.additionalParameter` *v0.1*
 

@@ -1,5 +1,5 @@
 
-# processIdQueryParam (Parameter)
+# processIdQueryParam parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.processIdQueryParam` *v0.1*
 

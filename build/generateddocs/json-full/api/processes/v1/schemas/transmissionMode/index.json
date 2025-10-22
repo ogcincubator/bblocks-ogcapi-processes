@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "schema"
   ],
-  "name": "transmissionMode",
+  "name": "transmissionMode schema",
   "itemClass": "schema",
   "shaclShapes": {},
   "schema": {

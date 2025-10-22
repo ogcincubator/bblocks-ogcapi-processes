@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.api.processes.v1.schemas.process - process",
-  "bblockName": "process",
+  "title": "Validation report for ogc.api.processes.v1.schemas.process - process schema",
+  "bblockName": "process schema",
   "bblockId": "ogc.api.processes.v1.schemas.process",
-  "generated": "2025-10-22T13:31:19.093063+00:00",
+  "generated": "2025-10-22T14:51:42.651512+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

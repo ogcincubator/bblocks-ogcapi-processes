@@ -1,5 +1,5 @@
 
-# datetime (Parameter)
+# datetime parameter (Parameter)
 
 `ogc.api.processes.v1.parameters.datetime` *v0.1*
 

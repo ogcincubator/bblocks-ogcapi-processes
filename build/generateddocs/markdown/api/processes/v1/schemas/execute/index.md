@@ -1,5 +1,5 @@
 
-# execute (Schema)
+# execute schema (Schema)
 
 `ogc.api.processes.v1.schemas.execute` *v0.1*
 

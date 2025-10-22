@@ -1,5 +1,5 @@
 
-# Schema for exception (Schema)
+# Schema for exception schema (Schema)
 
 `ogc.api.processes.v1.schemas.common-core.exception` *v0.1*
 

@@ -1,5 +1,5 @@
 
-# reference (Schema)
+# reference schema (Schema)
 
 `ogc.api.processes.v1.schemas.reference` *v0.1*
 

@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "parameter"
   ],
-  "name": "status",
+  "name": "status parameter",
   "itemClass": "parameter",
   "shaclShapes": {},
   "dependsOn": [

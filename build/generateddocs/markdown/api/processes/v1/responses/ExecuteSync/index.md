@@ -1,5 +1,5 @@
 
-# ExecuteSync (Response)
+# ExecuteSync response (Response)
 
 `ogc.api.processes.v1.responses.ExecuteSync` *v0.1*
 

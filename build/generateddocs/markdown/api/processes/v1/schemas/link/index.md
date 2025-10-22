@@ -1,5 +1,5 @@
 
-# link (Schema)
+# link schema (Schema)
 
 `ogc.api.processes.v1.schemas.link` *v0.1*
 

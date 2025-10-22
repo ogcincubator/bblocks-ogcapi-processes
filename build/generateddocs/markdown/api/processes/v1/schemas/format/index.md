@@ -1,5 +1,5 @@
 
-# format (Schema)
+# format schema (Schema)
 
 `ogc.api.processes.v1.schemas.format` *v0.1*
 

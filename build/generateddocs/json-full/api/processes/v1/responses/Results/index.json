@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "Results",
+  "name": "Results response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

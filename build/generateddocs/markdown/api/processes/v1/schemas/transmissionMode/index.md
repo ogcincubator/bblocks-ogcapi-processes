@@ -1,5 +1,5 @@
 
-# transmissionMode (Schema)
+# transmissionMode schema (Schema)
 
 `ogc.api.processes.v1.schemas.transmissionMode` *v0.1*
 

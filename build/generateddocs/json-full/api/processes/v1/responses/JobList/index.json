@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "JobList",
+  "name": "JobList response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

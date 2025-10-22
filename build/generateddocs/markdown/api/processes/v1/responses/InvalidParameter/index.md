@@ -1,5 +1,5 @@
 
-# InvalidParameter (Response)
+# InvalidParameter response (Response)
 
 `ogc.api.processes.v1.responses.InvalidParameter` *v0.1*
 

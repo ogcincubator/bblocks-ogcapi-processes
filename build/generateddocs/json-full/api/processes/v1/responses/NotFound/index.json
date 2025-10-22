@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "NotFound",
+  "name": "NotFound response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

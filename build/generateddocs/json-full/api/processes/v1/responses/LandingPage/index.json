@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "response"
   ],
-  "name": "LandingPage",
+  "name": "LandingPage response",
   "itemClass": "response",
   "shaclShapes": {},
   "dependsOn": [

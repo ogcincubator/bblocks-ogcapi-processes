@@ -17,7 +17,7 @@
     "ogcapi-processes",
     "parameter"
   ],
-  "name": "type",
+  "name": "type parameter",
   "itemClass": "parameter",
   "shaclShapes": {},
   "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/type/openapi.yaml",

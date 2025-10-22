@@ -1,5 +1,5 @@
 
-# jobControlOptions (Schema)
+# jobControlOptions schema (Schema)
 
 `ogc.api.processes.v1.schemas.jobControlOptions` *v0.1*
 

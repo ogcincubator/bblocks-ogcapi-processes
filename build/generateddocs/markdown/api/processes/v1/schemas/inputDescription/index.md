@@ -1,5 +1,5 @@
 
-# inputDescription (Schema)
+# inputDescription schema (Schema)
 
 `ogc.api.processes.v1.schemas.inputDescription` *v0.1*
 

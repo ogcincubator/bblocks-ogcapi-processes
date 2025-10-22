@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "$ref": {
+      "format": "uri-reference",
+      "type": "string"
+    }
+  },
+  "required": [
+    "$ref"
+  ],
+  "type": "object"
+}

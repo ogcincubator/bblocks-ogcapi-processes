@@ -1,0 +1,18 @@
+{
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.json"
+    },
+    {
+      "properties": {
+        "schema": {
+          "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json"
+        }
+      },
+      "required": [
+        "schema"
+      ],
+      "type": "object"
+    }
+  ]
+}

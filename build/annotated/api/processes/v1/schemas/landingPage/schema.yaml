@@ -1,0 +1,14 @@
+properties:
+  description:
+    example: Example server implementing the OGC API - Processes 1.0 Standard
+    type: string
+  links:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.yaml
+    type: array
+  title:
+    example: Example processing server
+    type: string
+required:
+- links
+type: object

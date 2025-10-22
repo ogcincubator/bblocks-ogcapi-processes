@@ -1,0 +1,21 @@
+{
+  "description": "Optional URIs for callbacks for this job.\n\nSupport for this parameter is not required and the parameter may be\nremoved from the API definition, if conformance class **'callback'**\nis not listed in the conformance declaration under `/conformance`.",
+  "properties": {
+    "failedUri": {
+      "format": "uri",
+      "type": "string"
+    },
+    "inProgressUri": {
+      "format": "uri",
+      "type": "string"
+    },
+    "successUri": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "successUrl"
+  ],
+  "type": "object"
+}

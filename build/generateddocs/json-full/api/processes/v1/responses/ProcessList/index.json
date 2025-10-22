@@ -1,0 +1,37 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.v1.responses.ProcessList",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-22T15:29:12.118638",
+  "register": "ogcapi-processes",
+  "version": "0.1",
+  "dateOfLastChange": "2025-10-22",
+  "sources": [
+    {
+      "title": "OGC API Features - Part 1 - Core corrigendum",
+      "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "response"
+  ],
+  "name": "ProcessList",
+  "itemClass": "response",
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.v1.schemas.processList"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessList/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessList/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ProcessList/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ProcessList/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "content:\n  application/json:\n    schema:\n      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.yaml\ndescription: Information about the available processes\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-ogcapi-processes",
+  "gitPath": "_sources/v1/responses/ProcessList"
+}

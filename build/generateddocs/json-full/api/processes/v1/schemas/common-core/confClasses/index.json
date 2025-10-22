@@ -1,0 +1,49 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.v1.schemas.common-core.confClasses",
+  "name": "Schema for confClasses",
+  "status": "under-development",
+  "dateTimeAddition": "2024-03-22T11:40:00+01:00",
+  "itemClass": "schema",
+  "register": "ogcapi-features",
+  "version": "0.1",
+  "dateOfLastChange": "2025-10-22",
+  "sources": [
+    {
+      "title": "OGC API Features - Part 1 - Core corrigendum",
+      "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-features",
+    "features"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/schema.json"
+  },
+  "abstract": "This building block corresponds to the schema for an OGC API Features confClasses",
+  "shaclShapes": {},
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/remote_cache/",
+  "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/confClasses.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/common-core/confClasses/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-ogcapi-processes/blob/master/build/tests/api/processes/v1/schemas/common-core/confClasses/",
+  "examples": [
+    {
+      "title": "Example of conformance class declaration",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n   \"conformsTo\": [\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/gmlsf0\"\n   ]\n}\n",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/common-core/confClasses/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "type: object\nrequired:\n- conformsTo\nproperties:\n  conformsTo:\n    type: array\n    items:\n      type: string\n      example: http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-ogcapi-processes",
+  "gitPath": "_sources/v1/schemas/common-core/confClasses"
+}

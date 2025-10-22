@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.api.processes.v1.schemas.statusCode - statusCode",
+  "bblockName": "statusCode",
+  "bblockId": "ogc.api.processes.v1.schemas.statusCode",
+  "generated": "2025-10-22T13:31:18.804779+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

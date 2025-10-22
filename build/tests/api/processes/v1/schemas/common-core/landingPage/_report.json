@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.api.processes.v1.schemas.common-core.landingPage - Schema for landingPage",
+  "bblockName": "Schema for landingPage",
+  "bblockId": "ogc.api.processes.v1.schemas.common-core.landingPage",
+  "generated": "2025-10-22T13:31:18.904538+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

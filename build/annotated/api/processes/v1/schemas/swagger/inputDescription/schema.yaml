@@ -1,0 +1,18 @@
+allOf:
+- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml
+- properties:
+    maxOccurs:
+      oneOf:
+      - default: 1
+        type: integer
+      - enum:
+        - unbounded
+        type: string
+    minOccurs:
+      default: 1
+      type: integer
+    schema:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/schema/schema.yaml
+  required:
+  - schema
+  type: object

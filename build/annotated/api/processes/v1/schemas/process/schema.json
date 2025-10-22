@@ -1,0 +1,22 @@
+{
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.json"
+    },
+    {
+      "properties": {
+        "inputs": {
+          "additionalProperties": {
+            "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.json"
+          }
+        },
+        "outputs": {
+          "additionalProperties": {
+            "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.json"
+          }
+        }
+      },
+      "type": "object"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+properties:
+  additionalParameters:
+    allOf:
+    - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.yaml
+    - properties:
+        parameters:
+          items:
+            $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/additionalParameter/schema.yaml
+          type: array
+      type: object
+  description:
+    type: string
+  keywords:
+    items:
+      type: string
+    type: array
+  metadata:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.yaml
+    type: array
+  title:
+    type: string
+type: object

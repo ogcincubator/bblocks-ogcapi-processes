@@ -1,0 +1,7 @@
+in: query
+name: minDuration
+required: false
+schema:
+  items:
+    type: integer
+  type: array

@@ -1,0 +1,5 @@
+content:
+  application/json:
+    schema:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.yaml
+description: The results of a job.

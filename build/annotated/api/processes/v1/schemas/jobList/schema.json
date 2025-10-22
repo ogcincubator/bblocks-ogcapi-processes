@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "jobs": {
+      "items": {
+        "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "jobs",
+    "links"
+  ],
+  "type": "object"
+}

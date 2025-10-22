@@ -1,0 +1,13 @@
+properties:
+  links:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.yaml
+    type: array
+  processes:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.yaml
+    type: array
+required:
+- processes
+- links
+type: object

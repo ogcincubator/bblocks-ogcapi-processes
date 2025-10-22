@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "href": {
+      "type": "string"
+    },
+    "hreflang": {
+      "example": "en",
+      "type": "string"
+    },
+    "rel": {
+      "example": "service",
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "example": "application/json",
+      "type": "string"
+    }
+  },
+  "required": [
+    "href"
+  ],
+  "type": "object"
+}

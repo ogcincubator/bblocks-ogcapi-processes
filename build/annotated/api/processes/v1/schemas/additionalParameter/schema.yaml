@@ -1,0 +1,17 @@
+properties:
+  name:
+    type: string
+  value:
+    items:
+      oneOf:
+      - type: string
+      - type: number
+      - type: integer
+      - items: {}
+        type: array
+      - type: object
+    type: array
+required:
+- name
+- value
+type: object

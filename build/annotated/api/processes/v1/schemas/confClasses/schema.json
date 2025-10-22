@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "conformsTo": {
+      "items": {
+        "example": "http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/core",
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "conformsTo"
+  ],
+  "type": "object"
+}

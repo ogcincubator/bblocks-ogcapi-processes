@@ -1,0 +1,38 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.v1.schemas.inputDescription",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-22T15:29:12.046535",
+  "register": "ogcapi-processes",
+  "version": "0.1",
+  "dateOfLastChange": "2025-10-22",
+  "sources": [
+    {
+      "title": "OGC API Features - Part 1 - Core corrigendum",
+      "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "schema"
+  ],
+  "name": "inputDescription",
+  "itemClass": "schema",
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.v1.schemas.descriptionType",
+    "ogc.api.processes.v1.schemas.schema"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml\n- properties:\n    maxOccurs:\n      oneOf:\n      - default: 1\n        type: integer\n      - enum:\n        - unbounded\n        type: string\n    minOccurs:\n      default: 1\n      type: integer\n    schema:\n      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml\n  required:\n  - schema\n  type: object\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-ogcapi-processes",
+  "gitPath": "_sources/v1/schemas/inputDescription"
+}

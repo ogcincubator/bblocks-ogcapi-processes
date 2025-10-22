@@ -1,0 +1,15 @@
+{
+  "content": {
+    "application/json": {
+      "schema": {
+        "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.json"
+      }
+    },
+    "text/html": {
+      "schema": {
+        "type": "string"
+      }
+    }
+  },
+  "description": "The landing page provides links to the API definition\n(link relations `service-desc` and `service-doc`),\nthe Conformance declaration (path `/conformance`,\nlink relation `http://www.opengis.net/def/rel/ogc/1.0/conformance`), and to other resources."
+}

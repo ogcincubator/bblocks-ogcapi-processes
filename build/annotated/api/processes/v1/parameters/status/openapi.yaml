@@ -1,0 +1,7 @@
+in: query
+name: status
+required: false
+schema:
+  items:
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusCode/schema.yaml
+  type: array

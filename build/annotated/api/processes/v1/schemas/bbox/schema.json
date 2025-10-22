@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "bbox": {
+      "items": {
+        "type": "number"
+      },
+      "oneOf": [
+        {
+          "maxItems": 4,
+          "minItems": 4
+        },
+        {
+          "maxItems": 6,
+          "minItems": 6
+        }
+      ],
+      "type": "array"
+    },
+    "crs": {
+      "default": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+      "enum": [
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+        "http://www.opengis.net/def/crs/OGC/0/CRS84h"
+      ],
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "bbox"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+default:
+- value
+enum:
+- value
+- reference
+type: string

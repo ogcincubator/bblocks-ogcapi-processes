@@ -1,0 +1,23 @@
+allOf:
+- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml
+- properties:
+    id:
+      type: string
+    jobControlOptions:
+      items:
+        $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobControlOptions/schema.yaml
+      type: array
+    links:
+      items:
+        $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.yaml
+      type: array
+    outputTransmission:
+      items:
+        $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.yaml
+      type: array
+    version:
+      type: string
+  required:
+  - id
+  - version
+  type: object

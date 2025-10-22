@@ -1,0 +1,36 @@
+{
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.json"
+    },
+    {
+      "properties": {
+        "maxOccurs": {
+          "oneOf": [
+            {
+              "default": 1,
+              "type": "integer"
+            },
+            {
+              "enum": [
+                "unbounded"
+              ],
+              "type": "string"
+            }
+          ]
+        },
+        "minOccurs": {
+          "default": 1,
+          "type": "integer"
+        },
+        "schema": {
+          "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json"
+        }
+      },
+      "required": [
+        "schema"
+      ],
+      "type": "object"
+    }
+  ]
+}

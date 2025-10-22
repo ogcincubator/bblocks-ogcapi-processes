@@ -1,0 +1,9 @@
+content:
+  application/json:
+    examples:
+      processDecription:
+        externalValue: ../../examples/json/ProcessDescription.json
+        summary: A Process Description example
+    schema:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml
+description: A process description.

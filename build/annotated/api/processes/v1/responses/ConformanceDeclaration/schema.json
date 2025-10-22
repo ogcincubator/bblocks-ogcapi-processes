@@ -1,0 +1,20 @@
+{
+  "content": {
+    "application/json": {
+      "example": {
+        "conformsTo": [
+          "http://www.opengis.net/spec/ogcapi-processes/1.0/conf/core"
+        ]
+      },
+      "schema": {
+        "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/confClasses/schema.json"
+      }
+    },
+    "text/html": {
+      "schema": {
+        "type": "string"
+      }
+    }
+  },
+  "description": "The URIs of all conformance classes supported by the server.\n\nTo support \"generic\" clients that want to access multiple\nOGC API - Processes implementations - and not \"just\" a specific\nAPI / server, the server declares the conformance\nclasses it implements and conforms to."
+}

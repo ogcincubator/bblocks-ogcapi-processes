@@ -1,0 +1,38 @@
+{
+  "content": {
+    "/*": {
+      "schema": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "nullable": true,
+            "type": "object"
+          },
+          {
+            "type": "array"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "format": "binary",
+            "type": "string"
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.json",
+            "description": "Negotiate synchronous execution, response=document,any txMode and no. outputs"
+          }
+        ]
+      }
+    }
+  },
+  "description": "Result of synchronous execution"
+}

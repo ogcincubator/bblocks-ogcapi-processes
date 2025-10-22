@@ -1,0 +1,11 @@
+{
+  "description": "Response when negotiate synchronous execution, response=raw, transmissionMode=reference and for any number of output values.",
+  "headers": {
+    "Link": {
+      "description": "One or more Link headers pointing to each raw output.",
+      "schema": {
+        "type": "string"
+      }
+    }
+  }
+}

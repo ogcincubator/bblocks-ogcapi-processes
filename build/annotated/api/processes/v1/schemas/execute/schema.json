@@ -1,0 +1,38 @@
+{
+  "properties": {
+    "inputs": {
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.json"
+          },
+          {
+            "items": {
+              "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.json"
+            },
+            "type": "array"
+          }
+        ]
+      }
+    },
+    "outputs": {
+      "additionalProperties": {
+        "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/output/schema.json"
+      }
+    },
+    "response": {
+      "default": [
+        "raw"
+      ],
+      "enum": [
+        "raw",
+        "document"
+      ],
+      "type": "string"
+    },
+    "subscriber": {
+      "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/subscriber/schema.json"
+    }
+  },
+  "type": "object"
+}

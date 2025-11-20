@@ -21,9 +21,9 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.output",
+    "ogc.api.processes.v1.schemas.subscriber",
     "ogc.api.processes.v1.schemas.inlineOrRefData",
-    "ogc.api.processes.v1.schemas.subscriber"
+    "ogc.api.processes.v1.schemas.output"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml",

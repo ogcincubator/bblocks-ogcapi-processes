@@ -1,5 +1,5 @@
 Validation report for ogc.api.processes.v1.schemas.common-core.confClasses - Schema for confClasses schema
-Generated 2025-10-22T14:51:42.404667+00:00
+Generated 2025-11-20T10:35:09.011578+00:00
 === Files ===
 Using example_1_1.json from examples
 === End Files ===

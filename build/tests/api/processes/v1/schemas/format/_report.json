@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.format - format schema",
   "bblockName": "format schema",
   "bblockId": "ogc.api.processes.v1.schemas.format",
-  "generated": "2025-10-22T14:51:42.428262+00:00",
+  "generated": "2025-11-20T10:35:09.035730+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

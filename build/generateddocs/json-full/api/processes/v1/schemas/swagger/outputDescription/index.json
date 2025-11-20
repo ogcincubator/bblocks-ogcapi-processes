@@ -21,8 +21,8 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.swagger.schema",
-    "ogc.api.processes.v1.schemas.descriptionType"
+    "ogc.api.processes.v1.schemas.descriptionType",
+    "ogc.api.processes.v1.schemas.swagger.schema"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.yaml",

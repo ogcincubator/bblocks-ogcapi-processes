@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.jobList - jobList schema",
   "bblockName": "jobList schema",
   "bblockId": "ogc.api.processes.v1.schemas.jobList",
-  "generated": "2025-10-22T14:51:42.598661+00:00",
+  "generated": "2025-11-20T10:35:09.201163+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

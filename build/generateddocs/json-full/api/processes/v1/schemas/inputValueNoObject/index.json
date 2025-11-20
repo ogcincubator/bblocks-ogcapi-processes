@@ -21,8 +21,8 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.bbox",
-    "ogc.api.processes.v1.schemas.binaryInputValue"
+    "ogc.api.processes.v1.schemas.binaryInputValue",
+    "ogc.api.processes.v1.schemas.bbox"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.yaml",

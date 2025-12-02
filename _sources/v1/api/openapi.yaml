@@ -13,63 +13,14 @@ info:
     url: "http://www.ogc.org/legal/"
 paths:
   /:
-    get:
-      summary: landing page of this API
-      description: >-
-         The landing page provides links to the:
-           * The APIDefinition (no fixed path),
-           * The Conformance statements (path /conformance),
-           * The processes metadata (path /processes),
-           * The endpoint for job monitoring (path /jobs).
+    $ref: "bblocks://ogc.api.processes.v1.paths.LandingPage"
 
-         For more information, see [Section 7.2](https://docs.ogc.org/is/18-062/18-062.html#sc_landing_page).
-      operationId: getLandingPage
-      tags:
-        - Capabilities
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.LandingPage"
-        500:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
   /conformance:
-    get:
-      summary: information about standards that this API conforms to
-      description: |
-         A list of all conformance classes, specified in a standard, that the server conforms to.
+    $ref: "bblocks://ogc.api.processes.v1.paths.Conformance"
 
-         | Conformance class | URI |
-         |-----------|-------|
-         |Core|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/core|
-         |OGC Process Description|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/ogc-process-description|
-         |JSON|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/json|
-         |HTML|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/html|
-         |OpenAPI Specification 3.0|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/oas30|
-         |Job list|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/job-list|
-         |Callback|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/callback|
-         |Dismiss|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/dismiss|
-
-         For more information, see [Section 7.4](https://docs.ogc.org/is/18-062/18-062.html#sc_conformance_classes).
-      operationId: getConformanceClasses
-      tags:
-        - ConformanceDeclaration
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ConformanceDeclaration"
-        500:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
   /processes:
-    get:
-      summary: retrieve the list of available processes
-      description: |
-         The list of processes contains a summary of each process the OGC API - Processes offers, including the link to a more detailed description of the process.
+    $ref: "bblocks://ogc.api.processes.v1.paths.ProcessList"
 
-         For more information, see [Section 7.9](https://docs.ogc.org/is/18-062/18-062.html#sc_process_list).
-      operationId: getProcesses
-      tags:
-        - ProcessList
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ProcessList"
   /processes/{processID}:
     get:
       summary: retrieve a process description
@@ -90,20 +41,8 @@ paths:
         404:
           $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
   /jobs:
-    get:
-      summary: retrieve the list of jobs.
-      description: |
-        Lists available jobs.
+    $ref: "bblocks://ogc.api.processes.v1.paths.JobList"
 
-        For more information, see [Section 11](https://docs.ogc.org/is/18-062/18-062.html#sc_job_list).
-      operationId: getJobs
-      tags:
-        - JobList
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.JobList"
-        404:
-          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
   /processes/{processID}/execution:
     post:
       summary: execute a process.
@@ -144,6 +83,7 @@ paths:
               responses:
                 200:
                   description: Results received successfully
+
   /jobs/{jobId}:
     get:
       summary: retrieve the status of a job
@@ -181,6 +121,7 @@ paths:
           $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
         500:
           $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+
   /jobs/{jobId}/results:
     get:
       summary: retrieve the result(s) of a job
@@ -200,6 +141,7 @@ paths:
           $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
         500:
           $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+
 servers:
   - description: Example server
     url: http://example.org/ogcapi

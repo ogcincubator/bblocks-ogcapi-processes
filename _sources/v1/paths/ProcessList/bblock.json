@@ -1,0 +1,19 @@
+{
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-02T09:00:00.000000",
+  "register": "ogcapi-processes",
+  "version": "0.1",
+  "dateOfLastChange": "2025-10-22",
+  "sources": [
+    {
+      "title": "OGC API Features - Part 1 - Core corrigendum",
+      "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "path"
+  ],
+  "name": "ProcessList path",
+  "itemClass": "path"
+}

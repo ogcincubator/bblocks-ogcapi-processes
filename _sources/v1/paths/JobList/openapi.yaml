@@ -1,0 +1,14 @@
+get:
+  summary: retrieve the list of jobs.
+  description: |
+    Lists available jobs.
+
+    For more information, see [Section 11](https://docs.ogc.org/is/18-062/18-062.html#sc_job_list).
+  operationId: getJobs
+  tags:
+    - JobList
+  responses:
+    200:
+      $ref: "bblocks://ogc.api.processes.v1.responses.JobList"
+    404:
+      $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"

@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.common-core.landingPage - Schema for landingPage schema",
   "bblockName": "Schema for landingPage schema",
   "bblockId": "ogc.api.processes.v1.schemas.common-core.landingPage",
-  "generated": "2025-11-20T10:35:09.069464+00:00",
+  "generated": "2025-12-02T08:50:50.814329+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

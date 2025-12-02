@@ -1,7 +1,12 @@
 Validation report for ogc.api.processes.v1.schemas.common-core.confClasses - Schema for confClasses schema
-Generated 2025-11-20T10:35:09.011578+00:00
+Generated 2025-12-02T08:50:50.752715+00:00
 === Files ===
 Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+
+** Validation error **
+**Empty** output Turtle example_1_1.ttl created
 === End Files ===
 
 === JSON Schema ===

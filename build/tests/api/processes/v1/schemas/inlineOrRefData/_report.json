@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.inlineOrRefData - inlineOrRefData schema",
   "bblockName": "inlineOrRefData schema",
   "bblockId": "ogc.api.processes.v1.schemas.inlineOrRefData",
-  "generated": "2025-11-20T10:35:09.263346+00:00",
+  "generated": "2025-12-02T08:50:51.033416+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

@@ -1,0 +1,14 @@
+get:
+  summary: landing page of this API
+  description: "The landing page provides links to the:\n  * The APIDefinition (no
+    fixed path),\n  * The Conformance statements (path /conformance),\n  * The processes
+    metadata (path /processes),\n  * The endpoint for job monitoring (path /jobs).\n\nFor
+    more information, see [Section 7.2](https://docs.ogc.org/is/18-062/18-062.html#sc_landing_page)."
+  operationId: getLandingPage
+  tags:
+  - Capabilities
+  responses:
+    200:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.yaml
+    500:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml

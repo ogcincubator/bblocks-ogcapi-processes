@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "href": {},
+    "role": {},
+    "title": {},
+    "name": {},
+    "value": {},
+    "parameters": {},
+    "additionalParameters": {},
+    "description": {},
+    "keywords": {},
+    "metadata": {},
+    "@version": 1.1
+  }
+}

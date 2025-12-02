@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "created": {},
+    "finished": {},
+    "jobID": {},
+    "links": {},
+    "message": {},
+    "processID": {},
+    "progress": {},
+    "started": {},
+    "status": {},
+    "type": {},
+    "updated": {},
+    "jobs": {},
+    "href": {},
+    "hreflang": {},
+    "rel": {},
+    "title": {},
+    "@version": 1.1
+  }
+}

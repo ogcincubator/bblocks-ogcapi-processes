@@ -8,7 +8,7 @@
   "itemClass": "schema",
   "register": "ogcapi-features",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-22",
+  "dateOfLastChange": "2025-12-02",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -27,6 +27,7 @@
   "shaclShapes": {},
   "remoteCacheDir": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/remote_cache/",
   "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/exception.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/common-core/exception/",
   "rdfData": [],
   "validationPassed": true,

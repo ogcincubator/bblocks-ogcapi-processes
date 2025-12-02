@@ -8,7 +8,7 @@
   "itemClass": "datatype",
   "register": "ogcapi-features",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-22",
+  "dateOfLastChange": "2025-12-02",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",

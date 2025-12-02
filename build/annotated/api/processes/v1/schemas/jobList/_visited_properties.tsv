@@ -1,0 +1,24 @@
+path	@id
+/jobs	
+/jobs/created	
+/jobs/finished	
+/jobs/jobID	
+/jobs/links	
+/jobs/links/href	
+/jobs/links/hreflang	
+/jobs/links/rel	
+/jobs/links/title	
+/jobs/links/type	
+/jobs/message	
+/jobs/processID	
+/jobs/progress	
+/jobs/started	
+/jobs/status	
+/jobs/type	
+/jobs/updated	
+/links	
+/links/href	
+/links/hreflang	
+/links/rel	
+/links/title	
+/links/type	

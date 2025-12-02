@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "additionalParameters": {
+      "@context": {
+        "href": {},
+        "role": {},
+        "parameters": {
+          "@context": {
+            "name": {},
+            "value": {}
+          }
+        }
+      }
+    },
+    "description": {},
+    "keywords": {},
+    "metadata": {
+      "@context": {
+        "href": {},
+        "role": {}
+      }
+    },
+    "title": {},
+    "id": {},
+    "jobControlOptions": {},
+    "links": {
+      "@context": {
+        "href": {},
+        "hreflang": {},
+        "rel": {},
+        "type": {}
+      }
+    },
+    "outputTransmission": {},
+    "version": {},
+    "maxOccurs": {},
+    "minOccurs": {},
+    "schema": {
+      "@context": {
+        "$ref": {},
+        "additionalProperties": {},
+        "contentEncoding": {},
+        "contentMediaType": {},
+        "contentSchema": {},
+        "default": {},
+        "deprecated": {},
+        "enum": {},
+        "example": {},
+        "exclusiveMaximum": {},
+        "exclusiveMinimum": {},
+        "format": {},
+        "maxItems": {},
+        "maxLength": {},
+        "maxProperties": {},
+        "maximum": {},
+        "minItems": {},
+        "minLength": {},
+        "minProperties": {},
+        "minimum": {},
+        "multipleOf": {},
+        "nullable": {},
+        "pattern": {},
+        "properties": {},
+        "readOnly": {},
+        "required": {},
+        "type": {},
+        "uniqueItems": {},
+        "writeOnly": {}
+      }
+    },
+    "inputs": {},
+    "outputs": {},
+    "@version": 1.1
+  }
+}

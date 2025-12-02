@@ -12,7 +12,11 @@
       "prof": "http://www.w3.org/ns/dx/prof/",
       "dcat": "http://www.w3.org/ns/dcat#",
       "modspec": "http://www.opengis.net/def/ont/modspec/",
-      "itemIdentifier": "@id",
+      "void": "http://rdfs.org/ns/void#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "role": "http://www.w3.org/ns/dx/prof/role/",
+      "shacl": "https://www.w3.org/TR/shacl/",
+      "owl": "http://www.w3.org/2002/07/owl#",
       "baseURL": "@id",
       "name": "rdfs:label",
       "abstract": {
@@ -39,6 +43,10 @@
         "@id": "dct:modified",
         "@type": "xsd:date"
       },
+      "modified": {
+        "@id": "dct:modified",
+        "@type": "xsd:dateTime"
+      },
       "scope": {
         "@id": "bblocks:scope",
         "@type": "@id",
@@ -54,13 +62,11 @@
         }
       },
       "schema": {
-        "@id": "bblocks:hasSchema",
-        "@type": "@id",
-        "@container": "@index",
-        "@index": "dct:format"
+        "@id": "prof:hasResource",
+        "@type": "@id"
       },
       "ldContext": {
-        "@id": "bblocks:hasJsonLdContext",
+        "@id": "prof:hasResource",
         "@type": "@id"
       },
       "sourceLdContext": {
@@ -74,8 +80,14 @@
         "@index": "dct:identifier",
         "@context": {
           "mediatype": "dct:format",
-          "url": "rdfs:isDefinedBy"
+          "url": {
+            "@id": "rdfs:isDefinedBy",
+            "@type": "@id"
+          }
         }
+      },
+      "rdfs:isDefinedBy": {
+        "@type": "@id"
       },
       "hasConcepts": {
         "@reverse": "skos:inScheme"
@@ -90,21 +102,44 @@
       },
       "tags": "dcat:keyword",
       "shaclShapes": {
-        "@id": "bblocks:hasShaclRule",
-        "@type": "@id",
-        "@container": "@index",
-        "@index": "rdfs:seeAlso"
+        "@id": "prof:hasResource",
+        "@type": "@id"
       },
       "validationReport": {
         "@id": "bblocks:hasValidationReport",
         "@type": "@id"
       },
+      "validationPassed": "bblocks:validationPassed",
       "imports": {
-        "@id": "bblocks:imports",
+        "@id": "owl:imports",
         "@type": "@id"
       },
       "conformanceClasses": {
         "@id": "modspec:class",
+        "@type": "@id"
+      },
+      "requirementClasses": {
+        "@id": "modspec:requirementsClass",
+        "@type": "@id"
+      },
+      "sparqlEndpoint": {
+        "@id": "void:sparqlEndpoint",
+        "@type": "@id"
+      },
+      "viewerURL": {
+        "@id": "foaf:homepage",
+        "@type": "@id"
+      },
+      "dct:conformsTo": {
+        "@type": "@id"
+      },
+      "prof:hasRole": {
+        "@type": "@id"
+      },
+      "prof:hasArtifact": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
         "@type": "@id"
       }
     }
@@ -112,12 +147,12 @@
   "name": "Building Blocks - OGC API Processes",
   "abstract": "Schemas for the OGC API Processes standard\n",
   "description": "Adds a flexible, JSON schema version agnostic documentation to the OGC API Processes standard, supporting further profiling by combining with other Building Blocks.\n",
-  "modified": "2025-11-20T10:35:01.601985",
+  "modified": "2025-12-02T08:50:38.345970",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"4fa4cc94cf7d37823107d163051f795337c61afb",
-      "shortCommitId": "\"4fa4cc",
-      "date": "2025-11-20T10:01:04+00:00\""
+      "commitId": "\"07a1a91baa1dbde1a32d8591bc63333f7c57a9b9",
+      "shortCommitId": "\"07a1a9",
+      "date": "2025-11-29T00:51:03+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-ogcapi-processes",
@@ -142,7 +177,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -155,9 +190,14 @@
       ],
       "name": "processIdPathParam parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdPathParam/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdPathParam/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/",
       "rdfData": [],
       "validationPassed": true,
@@ -175,11 +215,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdPathParam"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.processIdPathParam",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "processIdPathParam parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.jobId",
@@ -187,7 +236,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -201,9 +250,14 @@
       "name": "jobId parameter",
       "itemClass": "parameter",
       "description": "local identifier of a job",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/jobId/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/jobId/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/jobId/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/jobId/",
       "rdfData": [],
       "validationPassed": true,
@@ -221,11 +275,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.jobId"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.jobId",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "jobId parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.datetime",
@@ -233,7 +296,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -246,9 +309,14 @@
       ],
       "name": "datetime parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/datetime/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/datetime/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/datetime/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/datetime/",
       "rdfData": [],
       "validationPassed": true,
@@ -266,11 +334,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.datetime"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.datetime",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "datetime parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.limit",
@@ -278,7 +355,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -291,9 +368,14 @@
       ],
       "name": "limit parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/limit/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/limit/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/limit/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/limit/",
       "rdfData": [],
       "validationPassed": true,
@@ -311,11 +393,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.limit"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.limit",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "limit parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.maxDuration",
@@ -323,7 +414,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -336,9 +427,14 @@
       ],
       "name": "maxDuration parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/maxDuration/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/maxDuration/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/maxDuration/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/maxDuration/",
       "rdfData": [],
       "validationPassed": true,
@@ -356,11 +452,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.maxDuration"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.maxDuration",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "maxDuration parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.minDuration",
@@ -368,7 +473,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -381,9 +486,14 @@
       ],
       "name": "minDuration parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/minDuration/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/minDuration/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/minDuration/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/minDuration/",
       "rdfData": [],
       "validationPassed": true,
@@ -401,11 +511,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.minDuration"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.minDuration",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "minDuration parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.processIdQueryParam",
@@ -413,7 +532,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -426,9 +545,14 @@
       ],
       "name": "processIdQueryParam parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdQueryParam/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdQueryParam/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdQueryParam/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdQueryParam/",
       "rdfData": [],
       "validationPassed": true,
@@ -446,11 +570,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdQueryParam"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.processIdQueryParam",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "processIdQueryParam parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.statusCode",
@@ -458,7 +591,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -471,11 +604,21 @@
       ],
       "name": "statusCode schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusCode/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusCode/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusCode/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusCode/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/statusCode/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/statusCode/",
       "rdfData": [],
@@ -494,11 +637,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.statusCode"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.statusCode",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "statusCode schema",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.type",
@@ -506,7 +658,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -519,9 +671,14 @@
       ],
       "name": "type parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/type/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/type/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/type/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/type/",
       "rdfData": [],
       "validationPassed": true,
@@ -539,11 +696,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.type"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.type",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "type parameter",
+      "ldContext": null,
+      "schema": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.confClasses",
@@ -551,7 +717,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -564,12 +730,28 @@
       ],
       "name": "confClasses schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/confClasses/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/confClasses/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/confClasses/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/confClasses/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/confClasses/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/confClasses/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/confClasses/",
       "rdfData": [],
       "validationPassed": true,
@@ -587,11 +769,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.confClasses"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.confClasses",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "confClasses schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.ExecuteSyncRawRef",
@@ -599,7 +789,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -612,11 +802,21 @@
       ],
       "name": "ExecuteSyncRawRef response",
       "itemClass": "response",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSyncRawRef/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSyncRawRef/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSyncRawRef/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSyncRawRef/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ExecuteSyncRawRef/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ExecuteSyncRawRef/",
       "rdfData": [],
@@ -635,11 +835,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteSyncRawRef"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.ExecuteSyncRawRef",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ExecuteSyncRawRef response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.exception",
@@ -647,7 +856,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -660,12 +869,28 @@
       ],
       "name": "exception schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/exception/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/exception/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/exception/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/exception/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/exception/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/exception/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/exception/",
       "rdfData": [],
       "validationPassed": true,
@@ -683,11 +908,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.exception"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.exception",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "exception schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.additionalParameter",
@@ -695,7 +928,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -708,12 +941,28 @@
       ],
       "name": "additionalParameter schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/additionalParameter/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/additionalParameter/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/additionalParameter/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/additionalParameter/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/additionalParameter/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/additionalParameter/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/additionalParameter/",
       "rdfData": [],
       "validationPassed": true,
@@ -731,11 +980,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.additionalParameter"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.additionalParameter",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "additionalParameter schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.bbox",
@@ -743,7 +1000,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -756,12 +1013,28 @@
       ],
       "name": "bbox schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/bbox/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/bbox/",
       "rdfData": [],
       "validationPassed": true,
@@ -779,11 +1052,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.bbox"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.bbox",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "bbox schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.binaryInputValue",
@@ -791,7 +1072,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -804,11 +1085,21 @@
       ],
       "name": "binaryInputValue schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/binaryInputValue/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/binaryInputValue/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/binaryInputValue/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/binaryInputValue/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/binaryInputValue/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/binaryInputValue/",
       "rdfData": [],
@@ -827,11 +1118,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.binaryInputValue"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.binaryInputValue",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "binaryInputValue schema",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.common-core.confClasses",
@@ -841,7 +1141,7 @@
       "itemClass": "schema",
       "register": "ogcapi-features",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -852,17 +1152,33 @@
         "ogcapi-features",
         "features"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "abstract": "This building block corresponds to the schema for an OGC API Features confClasses",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "remoteCacheDir": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/remote_cache/",
       "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/confClasses.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/common-core/confClasses/",
       "rdfData": [],
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/bblocks-ogcapi-processes/blob/master/build/tests/api/processes/v1/schemas/common-core/confClasses/",
       "documentation": {
         "markdown": {
@@ -878,11 +1194,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.confClasses"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.common-core.confClasses",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "Schema for confClasses schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.common-core.exception",
@@ -892,7 +1216,7 @@
       "itemClass": "schema",
       "register": "ogcapi-features",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -903,14 +1227,30 @@
         "ogcapi-features",
         "features"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "abstract": "This building block corresponds to the schema for an OGC API Features exception",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "remoteCacheDir": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/remote_cache/",
       "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/exception.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/common-core/exception/",
       "rdfData": [],
       "validationPassed": true,
@@ -928,11 +1268,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.exception"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.common-core.exception",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "Schema for exception schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.metadata",
@@ -940,7 +1288,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -953,12 +1301,28 @@
       ],
       "name": "metadata schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/metadata/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/metadata/",
       "rdfData": [],
       "validationPassed": true,
@@ -976,11 +1340,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.metadata"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.metadata",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "metadata schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.subscriber",
@@ -988,7 +1360,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1001,12 +1373,28 @@
       ],
       "name": "subscriber schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/subscriber/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/subscriber/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/subscriber/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/subscriber/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/subscriber/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/subscriber/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/subscriber/",
       "rdfData": [],
       "validationPassed": true,
@@ -1024,11 +1412,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.subscriber"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.subscriber",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "subscriber schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.format",
@@ -1036,7 +1432,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1049,12 +1445,28 @@
       ],
       "name": "format schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/format/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/format/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/format/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/format/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/format/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/format/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/format/",
       "rdfData": [],
       "validationPassed": true,
@@ -1072,11 +1484,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.format"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.format",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "format schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.link",
@@ -1084,7 +1504,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1097,12 +1517,28 @@
       ],
       "name": "link schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/link/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/link/",
       "rdfData": [],
       "validationPassed": true,
@@ -1120,11 +1556,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.link"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.link",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "link schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.jobControlOptions",
@@ -1132,7 +1576,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1145,11 +1589,21 @@
       ],
       "name": "jobControlOptions schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobControlOptions/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobControlOptions/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobControlOptions/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobControlOptions/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/jobControlOptions/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/jobControlOptions/",
       "rdfData": [],
@@ -1168,11 +1622,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.jobControlOptions"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.jobControlOptions",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "jobControlOptions schema",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.transmissionMode",
@@ -1180,7 +1643,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1193,11 +1656,21 @@
       ],
       "name": "transmissionMode schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/transmissionMode/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/transmissionMode/",
       "rdfData": [],
@@ -1216,11 +1689,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.transmissionMode"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.transmissionMode",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "transmissionMode schema",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.reference",
@@ -1228,7 +1710,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1241,12 +1723,28 @@
       ],
       "name": "reference schema",
       "itemClass": "schema",
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/reference/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/reference/schema.json"
-      },
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/reference/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/reference/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/reference/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/reference/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/reference/",
       "rdfData": [],
       "validationPassed": true,
@@ -1264,11 +1762,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.reference"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.reference",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "reference schema",
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.timeStamp",
@@ -1278,7 +1784,7 @@
       "itemClass": "datatype",
       "register": "ogcapi-features",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1289,12 +1795,22 @@
         "ogcapi-features",
         "features"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "abstract": "This property indicates the time and date when the response was generated",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "remoteCacheDir": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/remote_cache/",
       "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/timeStamp.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/timeStamp/",
@@ -1314,11 +1830,20 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.timeStamp"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.timeStamp",
       "@type": [
         "bblocks:Datatype",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "Schema for timeStamp schema",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "dependsOn": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.common-core.landingPage",
@@ -1328,7 +1853,7 @@
       "itemClass": "schema",
       "register": "ogcapi-features",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1340,16 +1865,31 @@
         "features"
       ],
       "abstract": "This building block corresponds to the schema for an OGC API Features landingPage",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.ogc-utils.json-link"
+        "bblocks://ogc.ogc-utils.json-link"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/common-core/landingPage/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/context.jsonld",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/common-core/landingPage/",
       "rdfData": [],
       "validationPassed": true,
@@ -1367,11 +1907,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.landingPage"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.common-core.landingPage",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "Schema for landingPage schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.parameters.status",
@@ -1379,7 +1926,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1392,12 +1939,17 @@
       ],
       "name": "status parameter",
       "itemClass": "parameter",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.statusCode"
+        "bblocks://ogc.api.processes.v1.schemas.statusCode"
       ],
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/status/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/status/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/status/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/status/",
       "rdfData": [],
       "validationPassed": true,
@@ -1415,11 +1967,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.status"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.parameters.status",
       "@type": [
         "bblocks:Parameter",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "status parameter",
+      "ldContext": null,
+      "schema": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.ConformanceDeclaration",
@@ -1427,7 +1987,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1440,14 +2000,24 @@
       ],
       "name": "ConformanceDeclaration response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.confClasses"
+        "bblocks://ogc.api.processes.v1.schemas.confClasses"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ConformanceDeclaration/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ConformanceDeclaration/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ConformanceDeclaration/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ConformanceDeclaration/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ConformanceDeclaration/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ConformanceDeclaration/",
       "rdfData": [],
@@ -1466,11 +2036,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ConformanceDeclaration"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.ConformanceDeclaration",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ConformanceDeclaration response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.InvalidParameter",
@@ -1478,7 +2056,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1491,14 +2069,24 @@
       ],
       "name": "InvalidParameter response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.exception"
+        "bblocks://ogc.api.processes.v1.schemas.exception"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/InvalidParameter/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/InvalidParameter/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/InvalidParameter/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/InvalidParameter/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/InvalidParameter/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/InvalidParameter/",
       "rdfData": [],
@@ -1517,11 +2105,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.InvalidParameter"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.InvalidParameter",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "InvalidParameter response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.NotAllowed",
@@ -1529,7 +2125,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1542,14 +2138,24 @@
       ],
       "name": "NotAllowed response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.exception"
+        "bblocks://ogc.api.processes.v1.schemas.exception"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotAllowed/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotAllowed/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotAllowed/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotAllowed/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/NotAllowed/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/NotAllowed/",
       "rdfData": [],
@@ -1568,11 +2174,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotAllowed"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.NotAllowed",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "NotAllowed response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.NotFound",
@@ -1580,7 +2194,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1593,14 +2207,24 @@
       ],
       "name": "NotFound response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.exception"
+        "bblocks://ogc.api.processes.v1.schemas.exception"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/NotFound/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/NotFound/",
       "rdfData": [],
@@ -1619,11 +2243,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotFound"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.NotFound",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "NotFound response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.NotSupported",
@@ -1631,7 +2263,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1644,14 +2276,24 @@
       ],
       "name": "NotSupported response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.exception"
+        "bblocks://ogc.api.processes.v1.schemas.exception"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotSupported/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotSupported/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotSupported/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotSupported/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/NotSupported/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/NotSupported/",
       "rdfData": [],
@@ -1670,11 +2312,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotSupported"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.NotSupported",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "NotSupported response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.ServerError",
@@ -1682,7 +2332,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1695,14 +2345,24 @@
       ],
       "name": "ServerError response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.exception"
+        "bblocks://ogc.api.processes.v1.schemas.exception"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ServerError/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ServerError/",
       "rdfData": [],
@@ -1721,11 +2381,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ServerError"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.ServerError",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ServerError response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.inputValueNoObject",
@@ -1733,7 +2401,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1746,16 +2414,32 @@
       ],
       "name": "inputValueNoObject schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.binaryInputValue",
-        "ogc.api.processes.v1.schemas.bbox"
+        "bblocks://ogc.api.processes.v1.schemas.binaryInputValue",
+        "bblocks://ogc.api.processes.v1.schemas.bbox"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputValueNoObject/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputValueNoObject/",
       "rdfData": [],
       "validationPassed": true,
@@ -1773,11 +2457,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValueNoObject"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inputValueNoObject",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "inputValueNoObject schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.descriptionType",
@@ -1785,7 +2476,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1798,16 +2489,32 @@
       ],
       "name": "descriptionType schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.additionalParameter",
-        "ogc.api.processes.v1.schemas.metadata"
+        "bblocks://ogc.api.processes.v1.schemas.metadata",
+        "bblocks://ogc.api.processes.v1.schemas.additionalParameter"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/descriptionType/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/descriptionType/",
       "rdfData": [],
       "validationPassed": true,
@@ -1825,11 +2532,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.descriptionType"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.descriptionType",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "descriptionType schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.landingPage",
@@ -1837,7 +2551,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1850,15 +2564,31 @@
       ],
       "name": "landingPage schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.link"
+        "bblocks://ogc.api.processes.v1.schemas.link"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/landingPage/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/landingPage/",
       "rdfData": [],
       "validationPassed": true,
@@ -1876,11 +2606,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.landingPage"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.landingPage",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "landingPage schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.statusInfo",
@@ -1888,7 +2625,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1901,16 +2638,32 @@
       ],
       "name": "statusInfo schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.link",
-        "ogc.api.processes.v1.schemas.statusCode"
+        "bblocks://ogc.api.processes.v1.schemas.link",
+        "bblocks://ogc.api.processes.v1.schemas.statusCode"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/statusInfo/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/statusInfo/",
       "rdfData": [],
       "validationPassed": true,
@@ -1928,11 +2681,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.statusInfo"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.statusInfo",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "statusInfo schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.output",
@@ -1940,7 +2700,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1953,16 +2713,32 @@
       ],
       "name": "output schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.transmissionMode",
-        "ogc.api.processes.v1.schemas.format"
+        "bblocks://ogc.api.processes.v1.schemas.format",
+        "bblocks://ogc.api.processes.v1.schemas.transmissionMode"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/output/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/output/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/output/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/output/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/output/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/output/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/output/",
       "rdfData": [],
       "validationPassed": true,
@@ -1980,11 +2756,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.output"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.output",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "output schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.schema",
@@ -1992,7 +2775,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2005,15 +2788,31 @@
       ],
       "name": "schema schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.reference"
+        "bblocks://ogc.api.processes.v1.schemas.reference"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/schema/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/schema/",
       "rdfData": [],
       "validationPassed": true,
@@ -2031,11 +2830,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.schema"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.schema",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "schema schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.swagger.schema",
@@ -2043,7 +2849,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2056,15 +2862,31 @@
       ],
       "name": "schema schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.reference"
+        "bblocks://ogc.api.processes.v1.schemas.reference"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/schema/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/schema/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/schema/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/schema/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/schema/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/schema/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/schema/",
       "rdfData": [],
       "validationPassed": true,
@@ -2082,11 +2904,80 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.schema"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.schema",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "schema schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.processes.v1.paths.Conformance",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-02T09:00:00.000000",
+      "register": "ogcapi-processes",
+      "version": "0.1",
+      "dateOfLastChange": "2025-12-02",
+      "sources": [
+        {
+          "title": "OGC API Features - Part 1 - Core corrigendum",
+          "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+        }
+      ],
+      "tags": [
+        "ogcapi-processes",
+        "path"
+      ],
+      "name": "Conformance path",
+      "itemClass": "path",
+      "shaclShapes": null,
+      "dependsOn": [
+        "bblocks://ogc.api.processes.v1.responses.ServerError",
+        "bblocks://ogc.api.processes.v1.responses.ConformanceDeclaration"
+      ],
+      "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/Conformance/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/Conformance/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/Conformance/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/Conformance/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/Conformance/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.Conformance"
+        }
+      },
+      "@id": "bblocks://ogc.api.processes.v1.paths.Conformance",
+      "@type": [
+        "bblocks:Path",
+        "skos:Concept",
+        "dcat:Dataset"
+      ],
+      "skos:prefLabel": "Conformance path",
+      "ldContext": null,
+      "schema": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.inputValue",
@@ -2094,7 +2985,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2107,15 +2998,31 @@
       ],
       "name": "inputValue schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.inputValueNoObject"
+        "bblocks://ogc.api.processes.v1.schemas.inputValueNoObject"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputValue/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputValue/",
       "rdfData": [],
       "validationPassed": true,
@@ -2133,11 +3040,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValue"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inputValue",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "inputValue schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.processSummary",
@@ -2145,7 +3059,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2158,18 +3072,34 @@
       ],
       "name": "processSummary schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.link",
-        "ogc.api.processes.v1.schemas.descriptionType",
-        "ogc.api.processes.v1.schemas.jobControlOptions",
-        "ogc.api.processes.v1.schemas.transmissionMode"
+        "bblocks://ogc.api.processes.v1.schemas.descriptionType",
+        "bblocks://ogc.api.processes.v1.schemas.link",
+        "bblocks://ogc.api.processes.v1.schemas.jobControlOptions",
+        "bblocks://ogc.api.processes.v1.schemas.transmissionMode"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/processSummary/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/processSummary/",
       "rdfData": [],
       "validationPassed": true,
@@ -2187,11 +3117,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processSummary"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.processSummary",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "processSummary schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.LandingPage",
@@ -2199,7 +3136,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2212,14 +3149,24 @@
       ],
       "name": "LandingPage response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.landingPage"
+        "bblocks://ogc.api.processes.v1.schemas.landingPage"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/LandingPage/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/LandingPage/",
       "rdfData": [],
@@ -2238,11 +3185,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.LandingPage"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.LandingPage",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "LandingPage response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.ExecuteAsync",
@@ -2250,7 +3205,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2263,14 +3218,24 @@
       ],
       "name": "ExecuteAsync response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.statusInfo"
+        "bblocks://ogc.api.processes.v1.schemas.statusInfo"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ExecuteAsync/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ExecuteAsync/",
       "rdfData": [],
@@ -2289,11 +3254,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteAsync"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ExecuteAsync response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.Status",
@@ -2301,7 +3274,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2314,14 +3287,24 @@
       ],
       "name": "Status response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.statusInfo"
+        "bblocks://ogc.api.processes.v1.schemas.statusInfo"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/Status/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/Status/",
       "rdfData": [],
@@ -2340,11 +3323,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Status"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.Status",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "Status response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.jobList",
@@ -2352,7 +3343,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2365,16 +3356,32 @@
       ],
       "name": "jobList schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.link",
-        "ogc.api.processes.v1.schemas.statusInfo"
+        "bblocks://ogc.api.processes.v1.schemas.link",
+        "bblocks://ogc.api.processes.v1.schemas.statusInfo"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobList/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobList/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobList/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobList/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/jobList/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/jobList/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/jobList/",
       "rdfData": [],
       "validationPassed": true,
@@ -2392,11 +3399,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.jobList"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.jobList",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "jobList schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.inputDescription",
@@ -2404,7 +3418,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2417,16 +3431,32 @@
       ],
       "name": "inputDescription schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.schema",
-        "ogc.api.processes.v1.schemas.descriptionType"
+        "bblocks://ogc.api.processes.v1.schemas.descriptionType",
+        "bblocks://ogc.api.processes.v1.schemas.schema"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/",
       "rdfData": [],
       "validationPassed": true,
@@ -2444,11 +3474,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputDescription"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inputDescription",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "inputDescription schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.outputDescription",
@@ -2456,7 +3493,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2469,16 +3506,32 @@
       ],
       "name": "outputDescription schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.schema",
-        "ogc.api.processes.v1.schemas.descriptionType"
+        "bblocks://ogc.api.processes.v1.schemas.descriptionType",
+        "bblocks://ogc.api.processes.v1.schemas.schema"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/outputDescription/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/outputDescription/",
       "rdfData": [],
       "validationPassed": true,
@@ -2496,11 +3549,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.outputDescription"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.outputDescription",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "outputDescription schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.swagger.inputDescription",
@@ -2508,7 +3568,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2521,16 +3581,32 @@
       ],
       "name": "inputDescription schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.descriptionType",
-        "ogc.api.processes.v1.schemas.swagger.schema"
+        "bblocks://ogc.api.processes.v1.schemas.descriptionType",
+        "bblocks://ogc.api.processes.v1.schemas.swagger.schema"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/inputDescription/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/inputDescription/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/inputDescription/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/inputDescription/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/inputDescription/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/inputDescription/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/inputDescription/",
       "rdfData": [],
       "validationPassed": true,
@@ -2548,11 +3624,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.inputDescription"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.inputDescription",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "inputDescription schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.swagger.outputDescription",
@@ -2560,7 +3643,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2573,16 +3656,32 @@
       ],
       "name": "outputDescription schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.descriptionType",
-        "ogc.api.processes.v1.schemas.swagger.schema"
+        "bblocks://ogc.api.processes.v1.schemas.descriptionType",
+        "bblocks://ogc.api.processes.v1.schemas.swagger.schema"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/outputDescription/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/outputDescription/",
       "rdfData": [],
       "validationPassed": true,
@@ -2600,11 +3699,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.outputDescription"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.outputDescription",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "outputDescription schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.qualifiedInputValue",
@@ -2612,7 +3718,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2625,16 +3731,32 @@
       ],
       "name": "qualifiedInputValue schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.inputValue",
-        "ogc.api.processes.v1.schemas.format"
+        "bblocks://ogc.api.processes.v1.schemas.format",
+        "bblocks://ogc.api.processes.v1.schemas.inputValue"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/qualifiedInputValue/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/qualifiedInputValue/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/qualifiedInputValue/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/qualifiedInputValue/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/qualifiedInputValue/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/qualifiedInputValue/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/qualifiedInputValue/",
       "rdfData": [],
       "validationPassed": true,
@@ -2652,11 +3774,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.qualifiedInputValue"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.qualifiedInputValue",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "qualifiedInputValue schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.processList",
@@ -2664,7 +3793,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2677,16 +3806,32 @@
       ],
       "name": "processList schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.link",
-        "ogc.api.processes.v1.schemas.processSummary"
+        "bblocks://ogc.api.processes.v1.schemas.processSummary",
+        "bblocks://ogc.api.processes.v1.schemas.link"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/processList/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/processList/",
       "rdfData": [],
       "validationPassed": true,
@@ -2704,11 +3849,80 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processList"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.processList",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "processList schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.processes.v1.paths.LandingPage",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-02T09:00:00.000000",
+      "register": "ogcapi-processes",
+      "version": "0.1",
+      "dateOfLastChange": "2025-12-02",
+      "sources": [
+        {
+          "title": "OGC API Features - Part 1 - Core corrigendum",
+          "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+        }
+      ],
+      "tags": [
+        "ogcapi-processes",
+        "path"
+      ],
+      "name": "LandingPage path",
+      "itemClass": "path",
+      "shaclShapes": null,
+      "dependsOn": [
+        "bblocks://ogc.api.processes.v1.responses.LandingPage",
+        "bblocks://ogc.api.processes.v1.responses.ServerError"
+      ],
+      "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/LandingPage/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/LandingPage/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/LandingPage/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/LandingPage/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/LandingPage/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.LandingPage"
+        }
+      },
+      "@id": "bblocks://ogc.api.processes.v1.paths.LandingPage",
+      "@type": [
+        "bblocks:Path",
+        "skos:Concept",
+        "dcat:Dataset"
+      ],
+      "skos:prefLabel": "LandingPage path",
+      "ldContext": null,
+      "schema": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.JobList",
@@ -2716,7 +3930,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2729,14 +3943,24 @@
       ],
       "name": "JobList response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.jobList"
+        "bblocks://ogc.api.processes.v1.schemas.jobList"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/JobList/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/JobList/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/JobList/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/JobList/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/JobList/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/JobList/",
       "rdfData": [],
@@ -2755,11 +3979,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.JobList"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.JobList",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "JobList response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.process",
@@ -2767,7 +3999,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2780,17 +4012,33 @@
       ],
       "name": "process schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.processSummary",
-        "ogc.api.processes.v1.schemas.inputDescription",
-        "ogc.api.processes.v1.schemas.outputDescription"
+        "bblocks://ogc.api.processes.v1.schemas.processSummary",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/process/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/process/",
       "rdfData": [],
       "validationPassed": true,
@@ -2808,11 +4056,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.process"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.process",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "process schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.swagger.process",
@@ -2820,7 +4075,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2833,17 +4088,33 @@
       ],
       "name": "process schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.processSummary",
-        "ogc.api.processes.v1.schemas.swagger.outputDescription",
-        "ogc.api.processes.v1.schemas.swagger.inputDescription"
+        "bblocks://ogc.api.processes.v1.schemas.processSummary",
+        "bblocks://ogc.api.processes.v1.schemas.swagger.inputDescription",
+        "bblocks://ogc.api.processes.v1.schemas.swagger.outputDescription"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/process/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/process/",
       "rdfData": [],
       "validationPassed": true,
@@ -2861,11 +4132,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.process"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.process",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "process schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.inlineOrRefData",
@@ -2873,7 +4151,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2886,17 +4164,33 @@
       ],
       "name": "inlineOrRefData schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.link",
-        "ogc.api.processes.v1.schemas.inputValueNoObject",
-        "ogc.api.processes.v1.schemas.qualifiedInputValue"
+        "bblocks://ogc.api.processes.v1.schemas.qualifiedInputValue",
+        "bblocks://ogc.api.processes.v1.schemas.link",
+        "bblocks://ogc.api.processes.v1.schemas.inputValueNoObject"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inlineOrRefData/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inlineOrRefData/",
       "rdfData": [],
       "validationPassed": true,
@@ -2914,11 +4208,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inlineOrRefData"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inlineOrRefData",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "inlineOrRefData schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.ProcessList",
@@ -2926,7 +4227,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2939,14 +4240,24 @@
       ],
       "name": "ProcessList response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.processList"
+        "bblocks://ogc.api.processes.v1.schemas.processList"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessList/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessList/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessList/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessList/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ProcessList/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ProcessList/",
       "rdfData": [],
@@ -2965,11 +4276,81 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessList"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.ProcessList",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ProcessList response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.processes.v1.paths.JobList",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-02T09:00:00.000000",
+      "register": "ogcapi-processes",
+      "version": "0.1",
+      "dateOfLastChange": "2025-12-02",
+      "sources": [
+        {
+          "title": "OGC API Features - Part 1 - Core corrigendum",
+          "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+        }
+      ],
+      "tags": [
+        "ogcapi-processes",
+        "path"
+      ],
+      "name": "JobList path",
+      "itemClass": "path",
+      "shaclShapes": null,
+      "dependsOn": [
+        "bblocks://ogc.api.processes.v1.responses.NotFound",
+        "bblocks://ogc.api.processes.v1.responses.JobList"
+      ],
+      "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/JobList/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/JobList/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/JobList/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/JobList/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/JobList/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.JobList"
+        }
+      },
+      "@id": "bblocks://ogc.api.processes.v1.paths.JobList",
+      "@type": [
+        "bblocks:Path",
+        "skos:Concept",
+        "dcat:Dataset"
+      ],
+      "skos:prefLabel": "JobList path",
+      "ldContext": null,
+      "schema": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.ProcessDescription",
@@ -2977,7 +4358,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2990,14 +4371,24 @@
       ],
       "name": "ProcessDescription response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.process"
+        "bblocks://ogc.api.processes.v1.schemas.process"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessDescription/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessDescription/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessDescription/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessDescription/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ProcessDescription/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ProcessDescription/",
       "rdfData": [],
@@ -3016,11 +4407,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessDescription"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.ProcessDescription",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ProcessDescription response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.swagger.ProcessDescription",
@@ -3028,7 +4427,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -3041,14 +4440,24 @@
       ],
       "name": "ProcessDescription response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.swagger.process"
+        "bblocks://ogc.api.processes.v1.schemas.swagger.process"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/swagger/ProcessDescription/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/swagger/ProcessDescription/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/swagger/ProcessDescription/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/swagger/ProcessDescription/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/swagger/ProcessDescription/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/swagger/ProcessDescription/",
       "rdfData": [],
@@ -3067,11 +4476,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.swagger.ProcessDescription"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.swagger.ProcessDescription",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ProcessDescription response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.execute",
@@ -3079,7 +4496,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -3092,17 +4509,33 @@
       ],
       "name": "execute schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.subscriber",
-        "ogc.api.processes.v1.schemas.inlineOrRefData",
-        "ogc.api.processes.v1.schemas.output"
+        "bblocks://ogc.api.processes.v1.schemas.subscriber",
+        "bblocks://ogc.api.processes.v1.schemas.inlineOrRefData",
+        "bblocks://ogc.api.processes.v1.schemas.output"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/execute/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/execute/",
       "rdfData": [],
       "validationPassed": true,
@@ -3120,11 +4553,18 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.execute"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.execute",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "execute schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.schemas.results",
@@ -3132,7 +4572,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -3145,15 +4585,31 @@
       ],
       "name": "results schema",
       "itemClass": "schema",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.inlineOrRefData"
+        "bblocks://ogc.api.processes.v1.schemas.inlineOrRefData"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/results/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/results/",
       "rdfData": [],
       "validationPassed": true,
@@ -3171,11 +4627,79 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.results"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.schemas.results",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "results schema",
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.processes.v1.paths.ProcessList",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-02T09:00:00.000000",
+      "register": "ogcapi-processes",
+      "version": "0.1",
+      "dateOfLastChange": "2025-12-02",
+      "sources": [
+        {
+          "title": "OGC API Features - Part 1 - Core corrigendum",
+          "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+        }
+      ],
+      "tags": [
+        "ogcapi-processes",
+        "path"
+      ],
+      "name": "ProcessList path",
+      "itemClass": "path",
+      "shaclShapes": null,
+      "dependsOn": [
+        "bblocks://ogc.api.processes.v1.responses.ProcessList"
+      ],
+      "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/ProcessList/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/ProcessList/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/ProcessList/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/ProcessList/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/ProcessList/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.ProcessList"
+        }
+      },
+      "@id": "bblocks://ogc.api.processes.v1.paths.ProcessList",
+      "@type": [
+        "bblocks:Path",
+        "skos:Concept",
+        "dcat:Dataset"
+      ],
+      "skos:prefLabel": "ProcessList path",
+      "ldContext": null,
+      "schema": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.ExecuteSync",
@@ -3183,7 +4707,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -3196,14 +4720,24 @@
       ],
       "name": "ExecuteSync response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.results"
+        "bblocks://ogc.api.processes.v1.schemas.results"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ExecuteSync/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/ExecuteSync/",
       "rdfData": [],
@@ -3222,11 +4756,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteSync"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.ExecuteSync",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "ExecuteSync response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.responses.Results",
@@ -3234,7 +4776,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -3247,14 +4789,24 @@
       ],
       "name": "Results response",
       "itemClass": "response",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.results"
+        "bblocks://ogc.api.processes.v1.schemas.results"
       ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Results/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Results/schema.json"
-      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Results/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Results/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/Results/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/responses/Results/",
       "rdfData": [],
@@ -3273,11 +4825,19 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Results"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.responses.Results",
       "@type": [
         "bblocks:Response",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "Results response",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.processes.v1.api",
@@ -3287,7 +4847,7 @@
       "itemClass": "api",
       "register": "ogcapi-features",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-22",
+      "dateOfLastChange": "2025-12-02",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -3300,26 +4860,31 @@
       ],
       "highlighted": true,
       "abstract": "This building block corresponds to OGC API Features",
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.execute",
-        "ogc.api.processes.v1.responses.ExecuteAsync",
-        "ogc.api.processes.v1.parameters.processIdPathParam",
-        "ogc.api.processes.v1.parameters.jobId",
-        "ogc.api.processes.v1.responses.Status",
-        "ogc.api.processes.v1.schemas.results",
-        "ogc.api.processes.v1.responses.ProcessDescription",
-        "ogc.api.processes.v1.responses.ExecuteSync",
-        "ogc.api.processes.v1.responses.JobList",
-        "ogc.api.processes.v1.responses.Results",
-        "ogc.api.processes.v1.responses.ProcessList",
-        "ogc.api.processes.v1.responses.NotFound",
-        "ogc.api.processes.v1.responses.ServerError",
-        "ogc.api.processes.v1.responses.ConformanceDeclaration",
-        "ogc.api.processes.v1.responses.LandingPage"
+        "bblocks://ogc.api.processes.v1.schemas.results",
+        "bblocks://ogc.api.processes.v1.responses.NotFound",
+        "bblocks://ogc.api.processes.v1.responses.Status",
+        "bblocks://ogc.api.processes.v1.responses.Results",
+        "bblocks://ogc.api.processes.v1.responses.ExecuteSync",
+        "bblocks://ogc.api.processes.v1.responses.ProcessDescription",
+        "bblocks://ogc.api.processes.v1.parameters.processIdPathParam",
+        "bblocks://ogc.api.processes.v1.responses.ServerError",
+        "bblocks://ogc.api.processes.v1.schemas.execute",
+        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
+        "bblocks://ogc.api.processes.v1.paths.ProcessList",
+        "bblocks://ogc.api.processes.v1.paths.JobList",
+        "bblocks://ogc.api.processes.v1.paths.LandingPage",
+        "bblocks://ogc.api.processes.v1.parameters.jobId",
+        "bblocks://ogc.api.processes.v1.paths.Conformance"
       ],
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/api/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/api/openapi.yaml",
+      "openAPIDocument": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/api/openapi.yaml",
+        "prof:hasRole": "role:schema",
+        "dct:format": "application/yaml",
+        "dct:conformsTo": "https://spec.openapis.org/oas/v3.1.0.html"
+      },
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/api/",
       "rdfData": [],
       "validationPassed": true,
@@ -3337,11 +4902,225 @@
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.api"
         }
       },
+      "@id": "bblocks://ogc.api.processes.v1.api",
       "@type": [
         "bblocks:Api",
         "skos:Concept",
         "dcat:Dataset"
-      ]
+      ],
+      "skos:prefLabel": "OGC API - Processes: Part 1",
+      "ldContext": null,
+      "schema": null,
+      "profileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks-ogcapi-processes/"
+      }
+    }
+  ],
+  "skos:hasTopConcept": [
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.processIdPathParam"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.jobId"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.datetime"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.limit"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.maxDuration"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.minDuration"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.processIdQueryParam"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.statusCode"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.type"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.confClasses"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.ExecuteSyncRawRef"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.exception"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.additionalParameter"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.bbox"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.binaryInputValue"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.common-core.confClasses"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.common-core.exception"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.metadata"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.subscriber"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.format"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.link"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.jobControlOptions"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.transmissionMode"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.reference"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.timeStamp"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.common-core.landingPage"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.parameters.status"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.ConformanceDeclaration"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.InvalidParameter"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.NotAllowed"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.NotFound"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.NotSupported"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.ServerError"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inputValueNoObject"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.descriptionType"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.landingPage"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.statusInfo"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.output"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.schema"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.schema"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.paths.Conformance"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inputValue"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.processSummary"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.LandingPage"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.ExecuteAsync"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.Status"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.jobList"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inputDescription"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.outputDescription"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.inputDescription"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.outputDescription"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.qualifiedInputValue"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.processList"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.paths.LandingPage"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.JobList"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.process"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.swagger.process"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.inlineOrRefData"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.ProcessList"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.paths.JobList"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.ProcessDescription"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.swagger.ProcessDescription"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.execute"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.schemas.results"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.paths.ProcessList"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.ExecuteSync"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.responses.Results"
+    },
+    {
+      "@id": "bblocks://ogc.api.processes.v1.api"
     }
   ]
 }

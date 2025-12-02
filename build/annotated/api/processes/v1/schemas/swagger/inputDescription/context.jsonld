@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "additionalParameters": {
+      "@context": {
+        "href": {},
+        "role": {},
+        "parameters": {
+          "@context": {
+            "name": {},
+            "value": {}
+          }
+        }
+      }
+    },
+    "description": {},
+    "keywords": {},
+    "metadata": {
+      "@context": {
+        "href": {},
+        "role": {}
+      }
+    },
+    "title": {},
+    "maxOccurs": {},
+    "minOccurs": {},
+    "schema": {},
+    "@version": 1.1
+  }
+}

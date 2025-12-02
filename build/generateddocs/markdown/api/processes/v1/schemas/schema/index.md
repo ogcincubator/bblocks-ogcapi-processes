@@ -147,6 +147,56 @@ Links to the schema:
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "$ref": {},
+    "additionalProperties": {},
+    "allOf": {},
+    "anyOf": {},
+    "contentEncoding": {},
+    "contentMediaType": {},
+    "contentSchema": {},
+    "default": {},
+    "deprecated": {},
+    "description": {},
+    "enum": {},
+    "example": {},
+    "exclusiveMaximum": {},
+    "exclusiveMinimum": {},
+    "format": {},
+    "items": {},
+    "maxItems": {},
+    "maxLength": {},
+    "maxProperties": {},
+    "maximum": {},
+    "minItems": {},
+    "minLength": {},
+    "minProperties": {},
+    "minimum": {},
+    "multipleOf": {},
+    "not": {},
+    "nullable": {},
+    "oneOf": {},
+    "pattern": {},
+    "properties": {},
+    "readOnly": {},
+    "required": {},
+    "title": {},
+    "type": {},
+    "uniqueItems": {},
+    "writeOnly": {},
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/context.jsonld)
+
 ## Sources
 
 * [OGC API Features - Part 1 - Core corrigendum](https://docs.ogc.org/is/17-069r4/17-069r4.html)

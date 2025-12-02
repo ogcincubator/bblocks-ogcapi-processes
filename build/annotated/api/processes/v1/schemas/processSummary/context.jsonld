@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "additionalParameters": {
+      "@context": {
+        "role": {},
+        "parameters": {
+          "@context": {
+            "name": {},
+            "value": {}
+          }
+        }
+      }
+    },
+    "description": {},
+    "keywords": {},
+    "metadata": {
+      "@context": {
+        "role": {}
+      }
+    },
+    "title": {},
+    "id": {},
+    "jobControlOptions": {},
+    "href": {},
+    "hreflang": {},
+    "rel": {},
+    "type": {},
+    "links": {},
+    "outputTransmission": {},
+    "version": {},
+    "@version": 1.1
+  }
+}

@@ -39,6 +39,37 @@ Links to the schema:
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "bbox": {},
+    "crs": {},
+    "encoding": {},
+    "mediaType": {},
+    "schema": {},
+    "value": {},
+    "href": {},
+    "hreflang": {},
+    "rel": {},
+    "title": {},
+    "type": {},
+    "inputs": {},
+    "format": {},
+    "transmissionMode": {},
+    "outputs": {},
+    "response": {},
+    "subscriber": {},
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/context.jsonld)
+
 ## Sources
 
 * [OGC API Features - Part 1 - Core corrigendum](https://docs.ogc.org/is/17-069r4/17-069r4.html)

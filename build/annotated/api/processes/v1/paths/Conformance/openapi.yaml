@@ -1,0 +1,38 @@
+get:
+  summary: information about standards that this API conforms to
+  description: 'A list of all conformance classes, specified in a standard, that the
+    server conforms to.
+
+
+    | Conformance class | URI |
+
+    |-----------|-------|
+
+    |Core|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/core|
+
+    |OGC Process Description|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/ogc-process-description|
+
+    |JSON|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/json|
+
+    |HTML|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/html|
+
+    |OpenAPI Specification 3.0|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/oas30|
+
+    |Job list|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/job-list|
+
+    |Callback|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/callback|
+
+    |Dismiss|http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/dismiss|
+
+
+    For more information, see [Section 7.4](https://docs.ogc.org/is/18-062/18-062.html#sc_conformance_classes).
+
+    '
+  operationId: getConformanceClasses
+  tags:
+  - ConformanceDeclaration
+  responses:
+    200:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ConformanceDeclaration/schema.yaml
+    500:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml

@@ -56,6 +56,35 @@ Links to the schema:
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.yaml)
 
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "created": {},
+    "finished": {},
+    "jobID": {},
+    "href": {},
+    "hreflang": {},
+    "rel": {},
+    "title": {},
+    "type": {},
+    "links": {},
+    "message": {},
+    "processID": {},
+    "progress": {},
+    "started": {},
+    "status": {},
+    "updated": {},
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/context.jsonld)
+
 ## Sources
 
 * [OGC API Features - Part 1 - Core corrigendum](https://docs.ogc.org/is/17-069r4/17-069r4.html)

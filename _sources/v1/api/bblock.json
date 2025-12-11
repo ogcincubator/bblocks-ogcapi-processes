@@ -8,14 +8,14 @@
   "dateOfLastChange": "2024-03-22",
   "sources": [
     {
-      "title": "OGC API Features - Part 1 - Core corrigendum",
+      "title": "OGC API Processes - Part 1 - Core",
       "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
     }
   ],
   "tags": [
-    "ogcapi-features",
-    "features"
+    "ogcapi-processes",
+    "processes"
   ],
   "highlighted": true,
-  "abstract": "This building block corresponds to OGC API Features"
+  "abstract": "This building block corresponds to OGC API Processes"
 }

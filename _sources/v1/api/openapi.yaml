@@ -22,125 +22,19 @@ paths:
     $ref: "bblocks://ogc.api.processes.v1.paths.ProcessList"
 
   /processes/{processID}:
-    get:
-      summary: retrieve a process description
-      description:  |
-         The process description contains information about inputs and outputs and a link to the execution-endpoint for the process. The Core does not mandate the use of a specific process description to specify the interface of a process. That said, the Core requirements class makes the following recommendation:
+    $ref: "bblocks://ogc.api.processes.v1.paths.ProcessDescription"
 
-         Implementations SHOULD consider supporting the OGC process description.
-
-         For more information, see [Section 7.10](https://docs.ogc.org/is/18-062/18-062.html#sc_process_description).
-      operationId: getProcessDescription
-      tags:
-        - ProcessDescription
-      parameters:
-        - $ref: "bblocks://ogc.api.processes.v1.parameters.processIdPathParam"
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ProcessDescription"
-        404:
-          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
   /jobs:
     $ref: "bblocks://ogc.api.processes.v1.paths.JobList"
 
   /processes/{processID}/execution:
-    post:
-      summary: execute a process.
-      description: |
-        Create a new job.
-
-        For more information, see [Section 7.11](https://docs.ogc.org/is/18-062/18-062.html#sc_create_job).
-      operationId: execute
-      tags:
-        - Execute
-      parameters:
-        - $ref: "bblocks://ogc.api.processes.v1.parameters.processIdPathParam"
-      requestBody:
-        description: Mandatory execute request JSON
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "bblocks://ogc.api.processes.v1.schemas.execute"
-      responses:
-        200:
-          $ref: 'bblocks://ogc.api.processes.v1.responses.ExecuteSync'
-        201:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ExecuteAsync"
-        404:
-          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
-        500:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
-      callbacks:
-        jobCompleted:
-          "{$request.body#/subscriber/successUri}":
-            post:
-              requestBody:
-                content:
-                  application/json:
-                    schema:
-                      $ref: "bblocks://ogc.api.processes.v1.schemas.results"
-              responses:
-                200:
-                  description: Results received successfully
+    $ref: "bblocks://ogc.api.processes.v1.paths.Execution"
 
   /jobs/{jobId}:
-    get:
-      summary: retrieve the status of a job
-      description: |
-        Shows the status of a job.
-
-         For more information, see [Section 7.12](https://docs.ogc.org/is/18-062/18-062.html#sc_retrieve_status_info).
-      operationId: getStatus
-      tags:
-        - Status
-      parameters:
-        - $ref: "bblocks://ogc.api.processes.v1.parameters.jobId"
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.Status"
-        404:
-          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
-        500:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
-    delete:
-      summary: cancel a job execution, remove a finished job
-      description: |
-        Cancel a job execution and remove it from the jobs list.
-
-        For more information, see [Section 13](https://docs.ogc.org/is/18-062/18-062.html#Dismiss).
-      operationId: dismiss
-      tags:
-        - Dismiss
-      parameters:
-        - $ref: "bblocks://ogc.api.processes.v1.parameters.jobId"
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.Status"
-        404:
-          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
-        500:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+    $ref: "bblocks://ogc.api.processes.v1.paths.Job"
 
   /jobs/{jobId}/results:
-    get:
-      summary: retrieve the result(s) of a job
-      description: |
-        Lists available results of a job. In case of a failure, lists exceptions instead.
-
-        For more information, see [Section 7.13](https://docs.ogc.org/is/18-062/18-062.html#sc_retrieve_job_results).
-      operationId: getResult
-      tags:
-        - Result
-      parameters:
-        - $ref: "bblocks://ogc.api.processes.v1.parameters.jobId"
-      responses:
-        200:
-          $ref: "bblocks://ogc.api.processes.v1.responses.Results"
-        404:
-          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
-        500:
-          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+    $ref: "bblocks://ogc.api.processes.v1.paths.JobResult"
 
 servers:
   - description: Example server

@@ -14,6 +14,6 @@
     "ogcapi-processes",
     "path"
   ],
-  "name": "ProcessList path",
+  "name": "Execute path",
   "itemClass": "path"
 }

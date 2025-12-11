@@ -31,7 +31,9 @@ paths:
     $ref: "bblocks://ogc.api.processes.v1.paths.Execution"
 
   /jobs/{jobId}:
-    $ref: "bblocks://ogc.api.processes.v1.paths.Job"
+    allOf:
+      - $ref: "bblocks://ogc.api.processes.v1.paths.Job"
+      - $ref: "bblocks://ogc.api.processes.v1.paths.DismissJob"
 
   /jobs/{jobId}/results:
     $ref: "bblocks://ogc.api.processes.v1.paths.JobResult"

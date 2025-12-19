@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.metadata - metadata schema",
   "bblockName": "metadata schema",
   "bblockId": "ogc.api.processes.v1.schemas.metadata",
-  "generated": "2025-12-19T11:47:16.598977+00:00",
+  "generated": "2025-12-19T12:11:11.332808+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

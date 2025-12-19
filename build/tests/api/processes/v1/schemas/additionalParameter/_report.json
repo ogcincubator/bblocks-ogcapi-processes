@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.additionalParameter - additionalParameter schema",
   "bblockName": "additionalParameter schema",
   "bblockId": "ogc.api.processes.v1.schemas.additionalParameter",
-  "generated": "2025-12-19T11:47:16.569657+00:00",
+  "generated": "2025-12-19T12:11:11.303568+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

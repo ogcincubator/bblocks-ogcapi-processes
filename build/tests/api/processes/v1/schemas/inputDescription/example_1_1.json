@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "op": "http://test-data/cafe-walk/observables/"
+  },
+  "@id": "op:areaOfInterest",
+  "title": "BBOX",
+  "description": "BBOX via schema ref",
+  "minOccurs": 1,
+  "schema": {
+    "$ref": "bblocks://ogc.geo.common.parameters.bbox"
+  }
+}

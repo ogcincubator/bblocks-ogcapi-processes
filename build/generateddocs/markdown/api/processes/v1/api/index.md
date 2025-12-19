@@ -3,13 +3,13 @@
 
 `ogc.api.processes.v1.api` *v0.1*
 
-This building block corresponds to OGC API Features
+This building block corresponds to OGC API Processes Part 1
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Sources
 
-* [OGC API Features - Part 1 - Core corrigendum](https://docs.ogc.org/is/17-069r4/17-069r4.html)
+* [OGC API Processes](https://docs.ogc.org/is/18-062r2/18-062r2.html)
 
 # For developers
 

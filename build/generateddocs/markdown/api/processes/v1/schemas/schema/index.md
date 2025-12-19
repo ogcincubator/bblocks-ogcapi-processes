@@ -139,6 +139,7 @@ oneOf:
       default: false
       type: boolean
   type: object
+x-jsonld-vocab: https://w3id.org/ogc/api/schema/
 
 ```
 
@@ -146,6 +147,56 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "@vocab": "https://w3id.org/ogc/api/schema/",
+    "additionalProperties": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "allOf": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "anyOf": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "items": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "not": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "oneOf": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "properties": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/context.jsonld)
 
 ## Sources
 

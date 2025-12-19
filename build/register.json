@@ -2,12 +2,12 @@
   "name": "OGC API Processes",
   "abstract": "Schemas for the OGC API Processes standard\n",
   "description": "Adds a flexible, JSON schema version agnostic documentation to the OGC API Processes standard, supporting further profiling by combining with other Building Blocks.\n",
-  "modified": "2025-12-19T11:47:08.959330",
+  "modified": "2025-12-19T12:11:04.618800",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"ad7634c5e9eb1d223ecdd347861f5a3d62d4d3a0",
       "shortCommitId": "\"ad7634",
-      "date": "2025-12-19T08:47:47+00:00\""
+      "date": "2025-12-19T11:50:51+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-ogcapi-processes",
@@ -21,52 +21,12 @@
   ],
   "bblocks": [
     {
-      "itemIdentifier": "ogc.api.processes.v1.parameters.processIdPathParam",
-      "status": "under-development",
-      "dateTimeAddition": "2025-10-22T15:29:12.178084",
-      "register": "ogcapi-processes",
-      "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
-      "sources": [
-        {
-          "title": "OGC API Features - Part 1 - Core corrigendum",
-          "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
-        }
-      ],
-      "tags": [
-        "ogcapi-processes",
-        "parameter"
-      ],
-      "name": "processIdPathParam parameter",
-      "itemClass": "parameter",
-      "shaclShapes": {},
-      "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/openapi.yaml",
-      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdPathParam/openapi.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/processIdPathParam/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdPathParam/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdPathParam"
-        }
-      }
-    },
-    {
       "itemIdentifier": "ogc.api.processes.v1.parameters.jobId",
       "status": "under-development",
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -102,12 +62,52 @@
       }
     },
     {
+      "itemIdentifier": "ogc.api.processes.v1.parameters.processIdPathParam",
+      "status": "under-development",
+      "dateTimeAddition": "2025-10-22T15:29:12.178084",
+      "register": "ogcapi-processes",
+      "version": "0.1",
+      "dateOfLastChange": "2025-12-19",
+      "sources": [
+        {
+          "title": "OGC API Features - Part 1 - Core corrigendum",
+          "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+        }
+      ],
+      "tags": [
+        "ogcapi-processes",
+        "parameter"
+      ],
+      "name": "processIdPathParam parameter",
+      "itemClass": "parameter",
+      "shaclShapes": {},
+      "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/openapi.yaml",
+      "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdPathParam/openapi.yaml",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/parameters/processIdPathParam/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/processIdPathParam/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdPathParam/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdPathParam"
+        }
+      }
+    },
+    {
       "itemIdentifier": "ogc.api.processes.v1.parameters.datetime",
       "status": "under-development",
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -147,7 +147,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -187,7 +187,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -227,7 +227,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -267,7 +267,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -307,7 +307,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -350,7 +350,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -390,7 +390,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -433,7 +433,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -476,7 +476,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -519,7 +519,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -562,7 +562,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -605,7 +605,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -648,9 +648,9 @@
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "schema",
-      "register": "ogcapi-features",
+      "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -658,7 +658,7 @@
         }
       ],
       "tags": [
-        "ogcapi-features",
+        "ogcapi-processes",
         "features"
       ],
       "schema": {
@@ -694,9 +694,9 @@
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "schema",
-      "register": "ogcapi-features",
+      "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -704,7 +704,7 @@
         }
       ],
       "tags": [
-        "ogcapi-features",
+        "ogcapi-processes",
         "features"
       ],
       "schema": {
@@ -739,7 +739,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -782,7 +782,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -825,7 +825,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -868,7 +868,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -911,7 +911,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -954,7 +954,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -997,7 +997,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1040,9 +1040,9 @@
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "datatype",
-      "register": "ogcapi-features",
+      "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1050,7 +1050,7 @@
         }
       ],
       "tags": [
-        "ogcapi-features",
+        "ogcapi-processes",
         "features"
       ],
       "schema": {
@@ -1085,9 +1085,9 @@
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "schema",
-      "register": "ogcapi-features",
+      "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1095,7 +1095,7 @@
         }
       ],
       "tags": [
-        "ogcapi-features",
+        "ogcapi-processes",
         "features"
       ],
       "abstract": "This building block corresponds to the schema for an OGC API Features landingPage",
@@ -1133,7 +1133,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.178084",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1176,7 +1176,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1222,7 +1222,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1268,7 +1268,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1314,7 +1314,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1360,7 +1360,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1406,7 +1406,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1452,7 +1452,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1467,8 +1467,8 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.binaryInputValue",
-        "ogc.api.processes.v1.schemas.bbox"
+        "ogc.api.processes.v1.schemas.bbox",
+        "ogc.api.processes.v1.schemas.binaryInputValue"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.yaml",
@@ -1499,7 +1499,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1546,7 +1546,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1592,7 +1592,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1639,7 +1639,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1686,7 +1686,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1703,11 +1703,13 @@
       "dependsOn": [
         "ogc.api.processes.v1.schemas.reference"
       ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml",
         "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json"
       },
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/schema/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/schema/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/schema/",
       "rdfData": [],
       "validationPassed": true,
@@ -1732,7 +1734,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1778,7 +1780,7 @@
       "dateTimeAddition": "2025-12-02T09:00:00.000000",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1793,8 +1795,8 @@
       "itemClass": "path",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.responses.ServerError",
-        "ogc.api.processes.v1.responses.ConformanceDeclaration"
+        "ogc.api.processes.v1.responses.ConformanceDeclaration",
+        "ogc.api.processes.v1.responses.ServerError"
       ],
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/Conformance/openapi.yaml",
       "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/Conformance/openapi.yaml",
@@ -1822,7 +1824,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1868,7 +1870,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1883,10 +1885,10 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.descriptionType",
+        "ogc.api.processes.v1.schemas.jobControlOptions",
         "ogc.api.processes.v1.schemas.transmissionMode",
         "ogc.api.processes.v1.schemas.link",
-        "ogc.api.processes.v1.schemas.jobControlOptions"
+        "ogc.api.processes.v1.schemas.descriptionType"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.yaml",
@@ -1917,7 +1919,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -1963,7 +1965,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2009,7 +2011,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2055,7 +2057,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2102,7 +2104,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2120,11 +2122,13 @@
         "ogc.api.processes.v1.schemas.descriptionType",
         "ogc.api.processes.v1.schemas.schema"
       ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml",
         "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.json"
       },
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/",
       "rdfData": [],
       "validationPassed": true,
@@ -2149,7 +2153,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2196,7 +2200,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2243,7 +2247,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2290,7 +2294,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2305,8 +2309,8 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.format",
-        "ogc.api.processes.v1.schemas.inputValue"
+        "ogc.api.processes.v1.schemas.inputValue",
+        "ogc.api.processes.v1.schemas.format"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/qualifiedInputValue/schema.yaml",
@@ -2337,7 +2341,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2352,8 +2356,8 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.processSummary",
-        "ogc.api.processes.v1.schemas.link"
+        "ogc.api.processes.v1.schemas.link",
+        "ogc.api.processes.v1.schemas.processSummary"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.yaml",
@@ -2384,7 +2388,7 @@
       "dateTimeAddition": "2025-12-02T09:00:00.000000",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2428,7 +2432,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2474,7 +2478,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2489,15 +2493,16 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.processSummary",
+        "ogc.api.processes.v1.schemas.outputDescription",
         "ogc.api.processes.v1.schemas.inputDescription",
-        "ogc.api.processes.v1.schemas.outputDescription"
+        "ogc.api.processes.v1.schemas.processSummary"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml",
         "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.json"
       },
       "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/process/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/process/",
       "rdfData": [],
       "validationPassed": true,
@@ -2522,7 +2527,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2537,9 +2542,9 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.processSummary",
+        "ogc.api.processes.v1.schemas.swagger.inputDescription",
         "ogc.api.processes.v1.schemas.swagger.outputDescription",
-        "ogc.api.processes.v1.schemas.swagger.inputDescription"
+        "ogc.api.processes.v1.schemas.processSummary"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/schema.yaml",
@@ -2570,7 +2575,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2585,8 +2590,8 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.inputValueNoObject",
         "ogc.api.processes.v1.schemas.qualifiedInputValue",
+        "ogc.api.processes.v1.schemas.inputValueNoObject",
         "ogc.api.processes.v1.schemas.link"
       ],
       "schema": {
@@ -2618,7 +2623,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2664,7 +2669,7 @@
       "dateTimeAddition": "2025-12-02T09:00:00.000000",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2708,7 +2713,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2754,7 +2759,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2800,7 +2805,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2815,9 +2820,9 @@
       "itemClass": "schema",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.schemas.subscriber",
         "ogc.api.processes.v1.schemas.inlineOrRefData",
-        "ogc.api.processes.v1.schemas.output"
+        "ogc.api.processes.v1.schemas.output",
+        "ogc.api.processes.v1.schemas.subscriber"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml",
@@ -2848,7 +2853,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.046535",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2894,7 +2899,7 @@
       "dateTimeAddition": "2025-12-02T09:00:00.000000",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2937,7 +2942,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -2983,7 +2988,7 @@
       "dateTimeAddition": "2025-10-22T15:29:12.118638",
       "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
           "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -3029,38 +3034,37 @@
       "status": "under-development",
       "dateTimeAddition": "2024-03-22T11:40:00+01:00",
       "itemClass": "api",
-      "register": "ogcapi-features",
+      "register": "ogcapi-processes",
       "version": "0.1",
-      "dateOfLastChange": "2025-12-02",
+      "dateOfLastChange": "2025-12-19",
       "sources": [
         {
-          "title": "OGC API Features - Part 1 - Core corrigendum",
-          "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
+          "title": "OGC API Processes",
+          "link": "https://docs.ogc.org/is/18-062r2/18-062r2.html"
         }
       ],
       "tags": [
-        "ogcapi-features",
-        "features"
+        "ogcapi-processes"
       ],
       "highlighted": true,
-      "abstract": "This building block corresponds to OGC API Features",
+      "abstract": "This building block corresponds to OGC API Processes Part 1",
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.processes.v1.paths.Conformance",
-        "ogc.api.processes.v1.paths.LandingPage",
-        "ogc.api.processes.v1.responses.ProcessDescription",
-        "ogc.api.processes.v1.responses.Results",
-        "ogc.api.processes.v1.parameters.processIdPathParam",
-        "ogc.api.processes.v1.schemas.results",
-        "ogc.api.processes.v1.responses.ExecuteAsync",
-        "ogc.api.processes.v1.responses.Status",
-        "ogc.api.processes.v1.paths.JobList",
-        "ogc.api.processes.v1.responses.NotFound",
         "ogc.api.processes.v1.paths.ProcessList",
         "ogc.api.processes.v1.responses.ExecuteSync",
-        "ogc.api.processes.v1.parameters.jobId",
+        "ogc.api.processes.v1.responses.ServerError",
+        "ogc.api.processes.v1.responses.Status",
+        "ogc.api.processes.v1.responses.Results",
         "ogc.api.processes.v1.schemas.execute",
-        "ogc.api.processes.v1.responses.ServerError"
+        "ogc.api.processes.v1.parameters.jobId",
+        "ogc.api.processes.v1.schemas.results",
+        "ogc.api.processes.v1.paths.Conformance",
+        "ogc.api.processes.v1.responses.ProcessDescription",
+        "ogc.api.processes.v1.responses.NotFound",
+        "ogc.api.processes.v1.paths.LandingPage",
+        "ogc.api.processes.v1.responses.ExecuteAsync",
+        "ogc.api.processes.v1.paths.JobList",
+        "ogc.api.processes.v1.parameters.processIdPathParam"
       ],
       "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/api/openapi.yaml",
       "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/api/openapi.yaml",

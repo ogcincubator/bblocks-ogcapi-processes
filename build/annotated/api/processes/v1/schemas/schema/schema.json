@@ -209,5 +209,6 @@
       },
       "type": "object"
     }
-  ]
+  ],
+  "x-jsonld-vocab": "https://w3id.org/ogc/api/schema/"
 }

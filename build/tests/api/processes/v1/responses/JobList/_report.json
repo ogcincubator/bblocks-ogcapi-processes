@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.responses.JobList - JobList response",
   "bblockName": "JobList response",
   "bblockId": "ogc.api.processes.v1.responses.JobList",
-  "generated": "2025-12-02T08:50:51.010700+00:00",
+  "generated": "2025-12-19T11:47:16.822687+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

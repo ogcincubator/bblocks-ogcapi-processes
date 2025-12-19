@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.paths.JobList - JobList path",
   "bblockName": "JobList path",
   "bblockId": "ogc.api.processes.v1.paths.JobList",
-  "generated": "2025-12-02T08:50:51.042176+00:00",
+  "generated": "2025-12-19T11:47:16.849736+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

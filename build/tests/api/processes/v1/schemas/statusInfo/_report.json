@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.statusInfo - statusInfo schema",
   "bblockName": "statusInfo schema",
   "bblockId": "ogc.api.processes.v1.schemas.statusInfo",
-  "generated": "2025-12-02T08:50:50.878174+00:00",
+  "generated": "2025-12-19T11:47:16.702568+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

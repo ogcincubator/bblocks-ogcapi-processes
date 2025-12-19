@@ -27,10 +27,9 @@
   "shaclShapes": {},
   "remoteCacheDir": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/remote_cache/",
   "sourceSchema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/confClasses.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/common-core/confClasses/",
   "rdfData": [],
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-ogcapi-processes/blob/master/build/tests/api/processes/v1/schemas/common-core/confClasses/",
   "examples": [
     {
@@ -40,16 +39,6 @@
           "language": "json",
           "code": "{\n   \"conformsTo\": [\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson\",\n      \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/gmlsf0\"\n   ]\n}\n",
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/common-core/confClasses/example_1_1.json"
-        },
-        {
-          "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/confClasses/context.jsonld\",\n  \"conformsTo\": [\n    \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core\",\n    \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30\",\n    \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html\",\n    \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson\",\n    \"http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/gmlsf0\"\n  ]\n}",
-          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/common-core/confClasses/example_1_1.jsonld"
-        },
-        {
-          "language": "ttl",
-          "code": "\n",
-          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/common-core/confClasses/example_1_1.ttl"
         }
       ]
     }

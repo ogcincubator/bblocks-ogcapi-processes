@@ -21,16 +21,15 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
+    "ogc.api.processes.v1.schemas.inputValueNoObject",
     "ogc.api.processes.v1.schemas.qualifiedInputValue",
-    "ogc.api.processes.v1.schemas.link",
-    "ogc.api.processes.v1.schemas.inputValueNoObject"
+    "ogc.api.processes.v1.schemas.link"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inlineOrRefData/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inlineOrRefData/",
   "rdfData": [],
   "validationPassed": true,

@@ -3,7 +3,7 @@
   "status": "under-development",
   "dateTimeAddition": "2024-03-22T11:40:00+01:00",
   "itemClass": "schema",
-  "register": "ogcapi-features",
+  "register": "ogcapi-processes",
   "version": "0.1",
   "dateOfLastChange": "2024-03-22",
   "sources": [
@@ -13,7 +13,7 @@
     }
   ],
   "tags": [
-    "ogcapi-features",
+    "ogcapi-processes",
     "features"
   ],
   "schema": "https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/exception.yaml",

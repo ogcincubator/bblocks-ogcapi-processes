@@ -1,0 +1,15 @@
+## Prefixes will be used for all RDF Turtle resources so that they can be omitted from the actual snippets
+# prefixes:
+#   dct: http://purl.org/dc/terms/
+
+## List of examples
+examples:
+
+  - title: Complex object with a reference to a BBlock
+
+    content:
+      In this case clients should determine if they recognise the BBlock identifier and can address it.
+    snippets:
+      - language: json
+
+        ref: examples/complex.json

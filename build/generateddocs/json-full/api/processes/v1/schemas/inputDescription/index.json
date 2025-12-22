@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-19",
+  "dateOfLastChange": "2025-12-22",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -34,6 +34,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputDescription/",
   "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-ogcapi-processes/blob/master/build/tests/api/processes/v1/schemas/inputDescription/",
   "examples": [
     {
       "title": "Complex object with a reference to a BBlock",
@@ -44,6 +45,16 @@
           "ref": "examples/complex.json",
           "code": "{\n  \"@context\": {\n    \"op\": \"http://test-data/cafe-walk/observables/\"\n  },\n  \"@id\": \"op:areaOfInterest\",\n  \"title\": \"BBOX\",\n  \"description\": \"BBOX via schema ref\",\n  \"minOccurs\": 1,\n  \"schema\": {\n    \"$ref\": \"bblocks://ogc.geo.common.parameters.bbox\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/inputDescription/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": [\n    \"https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/context.jsonld\",\n    {\n      \"op\": \"http://test-data/cafe-walk/observables/\"\n    }\n  ],\n  \"@id\": \"op:areaOfInterest\",\n  \"title\": \"BBOX\",\n  \"description\": \"BBOX via schema ref\",\n  \"minOccurs\": 1,\n  \"schema\": {\n    \"$ref\": \"bblocks://ogc.geo.common.parameters.bbox\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/inputDescription/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix op: <http://test-data/cafe-walk/observables/> .\n@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nop:areaOfInterest proc:description \"BBOX via schema ref\" ;\n    proc:minOccurs 1 ;\n    proc:schema [ proc:ref <bblocks://ogc.geo.common.parameters.bbox> ] ;\n    proc:title \"BBOX\" .\n\n",
+          "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/inputDescription/example_1_1.ttl"
         }
       ]
     }

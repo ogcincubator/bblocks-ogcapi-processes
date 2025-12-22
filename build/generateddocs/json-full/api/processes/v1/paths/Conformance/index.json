@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-12-02T09:00:00.000000",
   "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-19",
+  "dateOfLastChange": "2025-12-22",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -21,8 +21,8 @@
   "itemClass": "path",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.responses.ConformanceDeclaration",
-    "ogc.api.processes.v1.responses.ServerError"
+    "ogc.api.processes.v1.responses.ServerError",
+    "ogc.api.processes.v1.responses.ConformanceDeclaration"
   ],
   "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/Conformance/openapi.yaml",
   "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/Conformance/openapi.yaml",

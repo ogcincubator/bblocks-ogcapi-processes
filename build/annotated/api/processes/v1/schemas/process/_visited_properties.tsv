@@ -393,7 +393,7 @@ path	@id
 /outputs/metadata/role	
 /outputs/metadata/title	
 /outputs/title	
-/outputs/schema	
+/outputs/schema	https://w3id.org/ogc/api/processes/schema
 /outputs/schema/$ref	
 /outputs/schema/additionalProperties	
 /outputs/schema/additionalProperties/$ref	

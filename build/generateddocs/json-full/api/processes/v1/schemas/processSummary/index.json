@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-19",
+  "dateOfLastChange": "2025-12-22",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -22,9 +22,9 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.api.processes.v1.schemas.jobControlOptions",
+    "ogc.api.processes.v1.schemas.descriptionType",
     "ogc.api.processes.v1.schemas.transmissionMode",
-    "ogc.api.processes.v1.schemas.link",
-    "ogc.api.processes.v1.schemas.descriptionType"
+    "ogc.api.processes.v1.schemas.link"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processSummary/schema.yaml",

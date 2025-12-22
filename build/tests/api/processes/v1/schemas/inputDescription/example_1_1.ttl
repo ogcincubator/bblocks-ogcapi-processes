@@ -1,0 +1,9 @@
+@prefix op: <http://test-data/cafe-walk/observables/> .
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+op:areaOfInterest proc:description "BBOX via schema ref" ;
+    proc:minOccurs 1 ;
+    proc:schema [ proc:ref <bblocks://ogc.geo.common.parameters.bbox> ] ;
+    proc:title "BBOX" .
+

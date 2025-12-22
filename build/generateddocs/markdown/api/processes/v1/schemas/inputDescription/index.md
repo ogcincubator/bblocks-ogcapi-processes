@@ -27,6 +27,39 @@ In this case clients should determine if they recognise the BBlock identifier an
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/context.jsonld",
+    {
+      "op": "http://test-data/cafe-walk/observables/"
+    }
+  ],
+  "@id": "op:areaOfInterest",
+  "title": "BBOX",
+  "description": "BBOX via schema ref",
+  "minOccurs": 1,
+  "schema": {
+    "$ref": "bblocks://ogc.geo.common.parameters.bbox"
+  }
+}
+```
+
+#### ttl
+```ttl
+@prefix op: <http://test-data/cafe-walk/observables/> .
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+op:areaOfInterest proc:description "BBOX via schema ref" ;
+    proc:minOccurs 1 ;
+    proc:schema [ proc:ref <bblocks://ogc.geo.common.parameters.bbox> ] ;
+    proc:title "BBOX" .
+
+
+```
+
 ## Schema
 
 ```yaml

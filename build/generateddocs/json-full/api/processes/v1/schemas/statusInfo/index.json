@@ -21,8 +21,8 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.link",
-    "ogc.api.processes.v1.schemas.statusCode"
+    "ogc.api.processes.v1.schemas.statusCode",
+    "ogc.api.processes.v1.schemas.link"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/statusInfo/schema.yaml",

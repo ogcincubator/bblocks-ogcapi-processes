@@ -21,8 +21,8 @@
   "itemClass": "path",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.responses.JobList",
-    "ogc.api.processes.v1.responses.NotFound"
+    "ogc.api.processes.v1.responses.NotFound",
+    "ogc.api.processes.v1.responses.JobList"
   ],
   "sourceOpenAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/paths/JobList/openapi.yaml",
   "openAPIDocument": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/JobList/openapi.yaml",

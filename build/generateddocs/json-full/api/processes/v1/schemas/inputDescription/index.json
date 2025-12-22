@@ -21,8 +21,8 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.descriptionType",
-    "ogc.api.processes.v1.schemas.schema"
+    "ogc.api.processes.v1.schemas.schema",
+    "ogc.api.processes.v1.schemas.descriptionType"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/context.jsonld",
   "schema": {

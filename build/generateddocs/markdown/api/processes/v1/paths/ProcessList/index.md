@@ -9,7 +9,7 @@ None
 
 ## Sources
 
-* [OGC API Features - Part 1 - Core corrigendum](https://docs.ogc.org/is/17-069r4/17-069r4.html)
+* [OGC API Processes - Part 1 - Core](https://docs.ogc.org/is/18-062r2/18-062r2.html)
 
 # For developers
 

@@ -1,0 +1,21 @@
+get:
+  summary: retrieve the result(s) of a job
+  description: 'Lists available results of a job. In case of a failure, lists exceptions
+    instead.
+
+
+    For more information, see [Section 7.13](https://docs.ogc.org/is/18-062/18-062.html#sc_retrieve_job_results).
+
+    '
+  operationId: getResult
+  tags:
+  - Result
+  parameters:
+  - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/jobId/openapi.yaml
+  responses:
+    200:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Results/schema.yaml
+    404:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
+    500:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml

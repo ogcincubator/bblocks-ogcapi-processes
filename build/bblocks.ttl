@@ -13,18 +13,18 @@
 
 <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N50053952bcd54de2bf1a18755f3a8477 ;
+    prov:wasAttributedTo _:N331d4a5008854bae93e9364dd6042f9d ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-12-22T10:00:12.989192"^^xsd:dateTime ;
-            prov:startedAtTime "2025-12-22T10:00:12.751360"^^xsd:dateTime ;
+            prov:endedAtTime "2025-12-22T12:24:55.800158"^^xsd:dateTime ;
+            prov:startedAtTime "2025-12-22T12:24:55.573093"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:02dd4dd557f3e3791b10d141c21c3a3fcd614471" ;
-                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/register.json> ] ;
-            prov:wasAssociatedWith _:N50053952bcd54de2bf1a18755f3a8477 ] .
+                    dct:hasVersion "git:7aaab30aff9a6c2294439ff9bf9c8f1c10cb7fa3" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N331d4a5008854bae93e9364dd6042f9d ] .
 
 <bblocks://ogc.api.processes.v1.api> a skos:Concept,
         dcat:Dataset,
@@ -32,12 +32,12 @@
     rdfs:label "OGC API - Processes: Part 1" ;
     dct:abstract "This building block corresponds to OGC API Processes Part 1"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.api> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/api/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/api/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/api/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.api> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
@@ -45,21 +45,15 @@
     skos:prefLabel "OGC API - Processes: Part 1" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     dcat:keyword "ogcapi-processes" ;
-    bblocks:dependsOn <bblocks://ogc.api.processes.v1.parameters.jobId>,
-        <bblocks://ogc.api.processes.v1.parameters.processIdPathParam>,
-        <bblocks://ogc.api.processes.v1.paths.Conformance>,
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.paths.Conformance>,
+        <bblocks://ogc.api.processes.v1.paths.DismissJob>,
+        <bblocks://ogc.api.processes.v1.paths.Execution>,
+        <bblocks://ogc.api.processes.v1.paths.Job>,
         <bblocks://ogc.api.processes.v1.paths.JobList>,
+        <bblocks://ogc.api.processes.v1.paths.JobResult>,
         <bblocks://ogc.api.processes.v1.paths.LandingPage>,
-        <bblocks://ogc.api.processes.v1.paths.ProcessList>,
-        <bblocks://ogc.api.processes.v1.responses.ExecuteAsync>,
-        <bblocks://ogc.api.processes.v1.responses.ExecuteSync>,
-        <bblocks://ogc.api.processes.v1.responses.NotFound>,
-        <bblocks://ogc.api.processes.v1.responses.ProcessDescription>,
-        <bblocks://ogc.api.processes.v1.responses.Results>,
-        <bblocks://ogc.api.processes.v1.responses.ServerError>,
-        <bblocks://ogc.api.processes.v1.responses.Status>,
-        <bblocks://ogc.api.processes.v1.schemas.execute>,
-        <bblocks://ogc.api.processes.v1.schemas.results> ;
+        <bblocks://ogc.api.processes.v1.paths.ProcessDescription>,
+        <bblocks://ogc.api.processes.v1.paths.ProcessList> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -68,12 +62,12 @@
         bblocks:Parameter ;
     rdfs:label "datetime parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.datetime> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/datetime/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/datetime/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/datetime/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.datetime> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -112,12 +106,12 @@
         bblocks:Parameter ;
     rdfs:label "maxDuration parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/maxDuration/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.maxDuration> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/maxDuration/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/maxDuration/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/maxDuration/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -134,12 +128,12 @@
         bblocks:Parameter ;
     rdfs:label "minDuration parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.minDuration> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/minDuration/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/minDuration/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/minDuration/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.minDuration> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -156,12 +150,12 @@
         bblocks:Parameter ;
     rdfs:label "processIdQueryParam parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdQueryParam/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/processIdQueryParam/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdQueryParam> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdQueryParam> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdQueryParam/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -201,10 +195,10 @@
         bblocks:Parameter ;
     rdfs:label "type parameter" ;
     dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.type> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/type/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.type> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/type/index.md> ] ;
     dct:hasVersion "0.1" ;
@@ -223,10 +217,10 @@
         bblocks:Response ;
     rdfs:label "ExecuteSyncRawRef response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteSyncRawRef/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteSyncRawRef> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteSyncRawRef/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ExecuteSyncRawRef/index.md> ] ;
     dct:hasVersion "0.1" ;
@@ -238,12 +232,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSyncRawRef/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSyncRawRef/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSyncRawRef/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -253,12 +247,12 @@
         bblocks:Response ;
     rdfs:label "InvalidParameter response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/InvalidParameter/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.InvalidParameter> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/InvalidParameter/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/InvalidParameter/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/InvalidParameter/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -268,12 +262,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/InvalidParameter/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/InvalidParameter/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/InvalidParameter/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.exception> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -284,12 +278,12 @@
         bblocks:Response ;
     rdfs:label "NotAllowed response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotAllowed/index.md> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotAllowed> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotAllowed/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotAllowed/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotAllowed/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -299,12 +293,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotAllowed/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotAllowed/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotAllowed/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.exception> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -315,12 +309,12 @@
         bblocks:Response ;
     rdfs:label "NotSupported response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotSupported> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotSupported/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotSupported/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotSupported/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotSupported> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -330,12 +324,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotSupported/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotSupported/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotSupported/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.exception> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -346,12 +340,12 @@
         bblocks:Response ;
     rdfs:label "ProcessDescription response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/swagger/ProcessDescription/index.md> ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/swagger/ProcessDescription/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.swagger.ProcessDescription> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/swagger/ProcessDescription/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.swagger.ProcessDescription> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -361,12 +355,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/swagger/ProcessDescription/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/swagger/ProcessDescription/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/swagger/ProcessDescription/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.swagger.process> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -380,10 +374,10 @@
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.confClasses> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/confClasses/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/confClasses/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/confClasses/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/confClasses/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -411,10 +405,10 @@
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/exception/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/exception/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.exception> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.exception> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/exception/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -424,12 +418,12 @@
     dcat:keyword "features",
         "ogcapi-processes" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/exception/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -440,12 +434,12 @@
     rdfs:label "Schema for landingPage schema" ;
     dct:abstract "This building block corresponds to the schema for an OGC API Features landingPage"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/landingPage/index.md> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.common-core.landingPage> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/landingPage/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/common-core/landingPage/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/common-core/landingPage/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -459,12 +453,12 @@
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/common-core/landingPage/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.ogc-utils.json-link> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -478,10 +472,10 @@
     dct:created "2024-03-22T11:40:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.timeStamp> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/timeStamp/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/timeStamp/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/timeStamp/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/timeStamp/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -491,60 +485,13 @@
     dcat:keyword "features",
         "ogcapi-processes" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/timeStamp/schema.json> ;
             prof:hasRole role:schema ] ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
-<https://docs.ogc.org/is/18-062r2/18-062r2.html> rdfs:label "OGC API Processes" .
-
-<bblocks://ogc.api.processes.v1.parameters.jobId> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Parameter ;
-    rdfs:label "jobId parameter" ;
-    dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.jobId> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/jobId/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/jobId/index.md> ],
-        "local identifier of a job"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
-    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    skos:prefLabel "jobId parameter" ;
-    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    dcat:keyword "ogcapi-processes",
-        "parameter" ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
-<bblocks://ogc.api.processes.v1.parameters.processIdPathParam> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Parameter ;
-    rdfs:label "processIdPathParam parameter" ;
-    dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdPathParam/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdPathParam> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/processIdPathParam/index.md> ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
-    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    skos:prefLabel "processIdPathParam parameter" ;
-    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    dcat:keyword "ogcapi-processes",
-        "parameter" ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -572,6 +519,87 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
+<bblocks://ogc.api.processes.v1.paths.DismissJob> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Path ;
+    rdfs:label "Dismiss Job" ;
+    dct:created "2025-12-11T09:00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/DismissJob/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.DismissJob> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/DismissJob/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "Dismiss Job" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "path" ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.parameters.jobId>,
+        <bblocks://ogc.api.processes.v1.responses.NotFound>,
+        <bblocks://ogc.api.processes.v1.responses.ServerError>,
+        <bblocks://ogc.api.processes.v1.responses.Status> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.api.processes.v1.paths.Execution> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Path ;
+    rdfs:label "Execute path" ;
+    dct:created "2025-12-02T09:00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.Execution> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/Execution/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/Execution/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "Execute path" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "path" ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.parameters.processIdPathParam>,
+        <bblocks://ogc.api.processes.v1.responses.ExecuteAsync>,
+        <bblocks://ogc.api.processes.v1.responses.ExecuteSync>,
+        <bblocks://ogc.api.processes.v1.responses.NotFound>,
+        <bblocks://ogc.api.processes.v1.responses.ServerError>,
+        <bblocks://ogc.api.processes.v1.schemas.execute>,
+        <bblocks://ogc.api.processes.v1.schemas.results> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.api.processes.v1.paths.Job> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Path ;
+    rdfs:label "Job path" ;
+    dct:created "2025-12-11T09:00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/Job/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.Job> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/Job/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "Job path" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "path" ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.parameters.jobId>,
+        <bblocks://ogc.api.processes.v1.responses.NotFound>,
+        <bblocks://ogc.api.processes.v1.responses.ServerError>,
+        <bblocks://ogc.api.processes.v1.responses.Status> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
 <bblocks://ogc.api.processes.v1.paths.JobList> a skos:Concept,
         dcat:Dataset,
         bblocks:Path ;
@@ -596,6 +624,32 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
+<bblocks://ogc.api.processes.v1.paths.JobResult> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Path ;
+    rdfs:label "Job result path" ;
+    dct:created "2025-12-11T09:00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/JobResult/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.JobResult> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/JobResult/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "Job result path" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "path" ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.parameters.jobId>,
+        <bblocks://ogc.api.processes.v1.responses.NotFound>,
+        <bblocks://ogc.api.processes.v1.responses.Results>,
+        <bblocks://ogc.api.processes.v1.responses.ServerError> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
 <bblocks://ogc.api.processes.v1.paths.LandingPage> a skos:Concept,
         dcat:Dataset,
         bblocks:Path ;
@@ -603,10 +657,10 @@
     dct:created "2025-12-02T09:00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/LandingPage/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/LandingPage/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.LandingPage> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.LandingPage> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/LandingPage/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -620,20 +674,45 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
+<bblocks://ogc.api.processes.v1.paths.ProcessDescription> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Path ;
+    rdfs:label "ProcessDescription path" ;
+    dct:created "2025-12-11T09:00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/ProcessDescription/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/ProcessDescription/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.ProcessDescription> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "ProcessDescription path" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "path" ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.parameters.processIdPathParam>,
+        <bblocks://ogc.api.processes.v1.responses.NotFound>,
+        <bblocks://ogc.api.processes.v1.responses.ProcessDescription> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
 <bblocks://ogc.api.processes.v1.paths.ProcessList> a skos:Concept,
         dcat:Dataset,
         bblocks:Path ;
     rdfs:label "ProcessList path" ;
     dct:created "2025-12-02T09:00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/ProcessList/index.md> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.ProcessList> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/paths/ProcessList/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.paths.ProcessList> ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/paths/ProcessList/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
-    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
+    dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     skos:prefLabel "ProcessList path" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
@@ -648,12 +727,12 @@
         bblocks:Response ;
     rdfs:label "ConformanceDeclaration response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ConformanceDeclaration/index.json> ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ConformanceDeclaration/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ConformanceDeclaration> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ConformanceDeclaration/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ConformanceDeclaration> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -679,12 +758,12 @@
         bblocks:Response ;
     rdfs:label "ExecuteAsync response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteAsync/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ExecuteAsync> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ExecuteAsync/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ExecuteAsync/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ExecuteAsync/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -694,12 +773,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.statusInfo> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -725,12 +804,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.results> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -741,12 +820,12 @@
         bblocks:Response ;
     rdfs:label "JobList response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/JobList/index.md> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.JobList> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/JobList/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/JobList/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/JobList/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -756,12 +835,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/JobList/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/JobList/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/JobList/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.jobList> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -772,12 +851,12 @@
         bblocks:Response ;
     rdfs:label "LandingPage response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/LandingPage/index.json> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/LandingPage/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.LandingPage> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/LandingPage/index.md> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/LandingPage/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -787,12 +866,12 @@
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/LandingPage/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.landingPage> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -803,12 +882,12 @@
         bblocks:Response ;
     rdfs:label "ProcessDescription response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessDescription> ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ProcessDescription/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessDescription/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessDescription> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessDescription/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -834,12 +913,12 @@
         bblocks:Response ;
     rdfs:label "ProcessList response" ;
     dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ProcessList/index.md> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ProcessList> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessList/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ProcessList/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ProcessList/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -891,46 +970,15 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<bblocks://ogc.api.processes.v1.responses.Status> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Response ;
-    rdfs:label "Status response" ;
-    dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Status> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/Status/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/Status/index.md> ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2025-12-22"^^xsd:date ;
-    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    skos:prefLabel "Status response" ;
-    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    dcat:keyword "ogcapi-processes",
-        "response" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.json> ;
-            prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.statusInfo> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
 <bblocks://ogc.api.processes.v1.schemas.additionalParameter> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "additionalParameter schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/additionalParameter/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/additionalParameter/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/additionalParameter/index.json> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.additionalParameter> ] ;
     dct:hasVersion "0.1" ;
@@ -987,12 +1035,12 @@
         bblocks:Schema ;
     rdfs:label "binaryInputValue schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/binaryInputValue/index.md> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.binaryInputValue> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/binaryInputValue/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/binaryInputValue/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/binaryInputValue/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1002,12 +1050,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/binaryInputValue/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/binaryInputValue/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/binaryInputValue/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -1017,12 +1065,12 @@
         bblocks:Schema ;
     rdfs:label "confClasses schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/confClasses/index.json> ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/confClasses/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.confClasses> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/confClasses/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.confClasses> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1049,10 +1097,10 @@
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/execute/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.execute> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/execute/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/execute/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.execute> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1062,12 +1110,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.inlineOrRefData>,
         <bblocks://ogc.api.processes.v1.schemas.output>,
@@ -1094,17 +1142,17 @@
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     dcat:keyword "ogcapi-processes",
         "schema" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.descriptionType>,
         <bblocks://ogc.api.processes.v1.schemas.schema> ;
@@ -1119,10 +1167,10 @@
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValue> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValue/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inputValue/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inputValue/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValue/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1132,12 +1180,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValue/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.inputValueNoObject> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -1148,10 +1196,10 @@
         bblocks:Schema ;
     rdfs:label "jobControlOptions schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.jobControlOptions> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/jobControlOptions/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.jobControlOptions> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/jobControlOptions/index.json> ] ;
     dct:hasVersion "0.1" ;
@@ -1178,12 +1226,12 @@
         bblocks:Schema ;
     rdfs:label "jobList schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/jobList/index.json> ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/jobList/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.jobList> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/jobList/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.jobList> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1225,12 +1273,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/landingPage/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.link> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -1241,12 +1289,12 @@
         bblocks:Schema ;
     rdfs:label "metadata schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.metadata> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/metadata/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/metadata/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/metadata/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.metadata> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1256,12 +1304,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/metadata/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -1271,12 +1319,12 @@
         bblocks:Schema ;
     rdfs:label "output schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/output/index.md> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.output> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/output/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/output/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/output/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1317,17 +1365,17 @@
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     dcat:keyword "ogcapi-processes",
         "schema" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.descriptionType>,
         <bblocks://ogc.api.processes.v1.schemas.schema> ;
@@ -1340,12 +1388,12 @@
         bblocks:Schema ;
     rdfs:label "process schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/process/index.md> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.process> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/process/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.process> ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/process/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1354,18 +1402,18 @@
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     dcat:keyword "ogcapi-processes",
         "schema" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.json> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.inputDescription>,
         <bblocks://ogc.api.processes.v1.schemas.outputDescription>,
         <bblocks://ogc.api.processes.v1.schemas.processSummary> ;
@@ -1377,12 +1425,12 @@
         bblocks:Schema ;
     rdfs:label "processList schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processList> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/processList/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/processList/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/processList/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processList> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1392,12 +1440,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/processList/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.link>,
         <bblocks://ogc.api.processes.v1.schemas.processSummary> ;
@@ -1409,12 +1457,12 @@
         bblocks:Schema ;
     rdfs:label "qualifiedInputValue schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/qualifiedInputValue/index.md> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.qualifiedInputValue> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/qualifiedInputValue/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/qualifiedInputValue/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/qualifiedInputValue/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1441,12 +1489,12 @@
         bblocks:Schema ;
     rdfs:label "subscriber schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/subscriber/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.subscriber> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/subscriber/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/subscriber/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/subscriber/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1471,12 +1519,12 @@
         bblocks:Schema ;
     rdfs:label "inputDescription schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.inputDescription> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/inputDescription/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/inputDescription/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/inputDescription/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.inputDescription> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1518,12 +1566,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/outputDescription/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.descriptionType>,
         <bblocks://ogc.api.processes.v1.schemas.swagger.schema> ;
@@ -1535,12 +1583,12 @@
         bblocks:Schema ;
     rdfs:label "process schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/process/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/swagger/process/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.process> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.swagger.process> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/swagger/process/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1563,34 +1611,56 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<bblocks://ogc.api.processes.v1.responses.NotFound> a skos:Concept,
+<bblocks://ogc.api.processes.v1.parameters.processIdPathParam> a skos:Concept,
         dcat:Dataset,
-        bblocks:Response ;
-    rdfs:label "NotFound response" ;
-    dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
+        bblocks:Parameter ;
+    rdfs:label "processIdPathParam parameter" ;
+    dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotFound> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotFound/index.md> ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.processIdPathParam> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotFound/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/processIdPathParam/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/processIdPathParam/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    skos:prefLabel "NotFound response" ;
+    skos:prefLabel "processIdPathParam parameter" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "parameter" ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.api.processes.v1.responses.Status> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Response ;
+    rdfs:label "Status response" ;
+    dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/Status/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.Status> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/Status/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "Status response" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     dcat:keyword "ogcapi-processes",
         "response" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.json> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.yaml> ;
             prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.exception> ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.statusInfo> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -1599,10 +1669,10 @@
         bblocks:Schema ;
     rdfs:label "format schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/format/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/format/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/format/index.json> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.format> ] ;
     dct:hasVersion "0.1" ;
@@ -1629,12 +1699,12 @@
         bblocks:Schema ;
     rdfs:label "inlineOrRefData schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inlineOrRefData> ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inlineOrRefData/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inlineOrRefData/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inlineOrRefData> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inlineOrRefData/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1644,12 +1714,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inlineOrRefData/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.inputValueNoObject>,
         <bblocks://ogc.api.processes.v1.schemas.link>,
@@ -1662,12 +1732,12 @@
         bblocks:Schema ;
     rdfs:label "inputValueNoObject schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValueNoObject/index.md> ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/inputValueNoObject/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValueNoObject> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/inputValueNoObject/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.inputValueNoObject> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1677,12 +1747,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.bbox>,
         <bblocks://ogc.api.processes.v1.schemas.binaryInputValue> ;
@@ -1694,12 +1764,12 @@
         bblocks:Schema ;
     rdfs:label "reference schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.reference> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/reference/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/reference/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/reference/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.reference> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1724,10 +1794,10 @@
         bblocks:Schema ;
     rdfs:label "schema schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.schema> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/schema/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.schema> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/schema/index.json> ] ;
     dct:hasVersion "0.1" ;
@@ -1738,17 +1808,17 @@
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     dcat:keyword "ogcapi-processes",
         "schema" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.reference> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/schema/context.jsonld> ;
@@ -1821,12 +1891,12 @@
         bblocks:Schema ;
     rdfs:label "transmissionMode schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.transmissionMode> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/transmissionMode/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/transmissionMode/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/transmissionMode/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.transmissionMode> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1836,44 +1906,36 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/transmissionMode/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<bblocks://ogc.api.processes.v1.responses.ServerError> a skos:Concept,
+<bblocks://ogc.api.processes.v1.parameters.jobId> a skos:Concept,
         dcat:Dataset,
-        bblocks:Response ;
-    rdfs:label "ServerError response" ;
-    dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ServerError/index.md> ],
+        bblocks:Parameter ;
+    rdfs:label "jobId parameter" ;
+    dct:created "2025-10-22T15:29:12.178084"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.parameters.jobId> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ServerError/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ServerError> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/parameters/jobId/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/parameters/jobId/index.md> ],
+        "local identifier of a job"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
-    skos:prefLabel "ServerError response" ;
+    skos:prefLabel "jobId parameter" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     dcat:keyword "ogcapi-processes",
-        "response" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.json> ;
-            prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.exception> ;
+        "parameter" ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -1882,12 +1944,12 @@
         bblocks:Schema ;
     rdfs:label "processSummary schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/processSummary/index.json> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processSummary> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/processSummary/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.processSummary> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/processSummary/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1918,10 +1980,10 @@
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/results/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.results> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/results/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/results/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.results> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1931,12 +1993,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.inlineOrRefData> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -1981,10 +2043,10 @@
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/descriptionType/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/descriptionType/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.descriptionType> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.descriptionType> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/descriptionType/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -1994,12 +2056,12 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.additionalParameter>,
         <bblocks://ogc.api.processes.v1.schemas.metadata> ;
@@ -2011,12 +2073,12 @@
         bblocks:Schema ;
     rdfs:label "exception schema" ;
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.exception> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/exception/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/exception/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/exception/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.exception> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -2036,6 +2098,68 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
+<bblocks://ogc.api.processes.v1.responses.NotFound> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Response ;
+    rdfs:label "NotFound response" ;
+    dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/NotFound/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.NotFound> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/NotFound/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "NotFound response" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "response" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.exception> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.api.processes.v1.responses.ServerError> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Response ;
+    rdfs:label "ServerError response" ;
+    dct:created "2025-10-22T15:29:12.118638"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/responses/ServerError/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/responses/ServerError/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.responses.ServerError> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    skos:prefLabel "ServerError response" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
+    dcat:keyword "ogcapi-processes",
+        "response" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.api.processes.v1.schemas.exception> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
 <bblocks://ogc.api.processes.v1.schemas.link> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
@@ -2043,10 +2167,10 @@
     dct:created "2025-10-22T15:29:12.046535"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/bblock/ogc.api.processes.v1.schemas.link> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/link/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/link/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/markdown/api/processes/v1/schemas/link/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/generateddocs/json-full/api/processes/v1/schemas/link/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-12-22"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
@@ -2056,15 +2180,19 @@
     dcat:keyword "ogcapi-processes",
         "schema" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/link/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
+
+<https://docs.ogc.org/is/18-062r2/18-062r2.html> rdfs:label "OGC API Processes",
+        "OGC API Processes - Part 1 - Core",
+        "OGC API processes - Part 1 - Core" .
 
 <https://docs.ogc.org/is/17-069r4/17-069r4.html> rdfs:label "OGC API Features - Part 1 - Core corrigendum" .
 
@@ -2075,7 +2203,7 @@
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:description """Adds a flexible, JSON schema version agnostic documentation to the OGC API Processes standard, supporting further profiling by combining with other Building Blocks.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2025-12-22T10:00:05.325407"^^xsd:dateTime ;
+    dct:modified "2025-12-22T12:24:46.880841"^^xsd:dateTime ;
     owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://ogc.api.processes.v1.api>,
         <bblocks://ogc.api.processes.v1.parameters.datetime>,
@@ -2088,8 +2216,13 @@
         <bblocks://ogc.api.processes.v1.parameters.status>,
         <bblocks://ogc.api.processes.v1.parameters.type>,
         <bblocks://ogc.api.processes.v1.paths.Conformance>,
+        <bblocks://ogc.api.processes.v1.paths.DismissJob>,
+        <bblocks://ogc.api.processes.v1.paths.Execution>,
+        <bblocks://ogc.api.processes.v1.paths.Job>,
         <bblocks://ogc.api.processes.v1.paths.JobList>,
+        <bblocks://ogc.api.processes.v1.paths.JobResult>,
         <bblocks://ogc.api.processes.v1.paths.LandingPage>,
+        <bblocks://ogc.api.processes.v1.paths.ProcessDescription>,
         <bblocks://ogc.api.processes.v1.paths.ProcessList>,
         <bblocks://ogc.api.processes.v1.responses.ConformanceDeclaration>,
         <bblocks://ogc.api.processes.v1.responses.ExecuteAsync>,
@@ -2149,9 +2282,9 @@
     foaf:homepage <https://ogcincubator.github.io/bblocks-ogcapi-processes/> ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/report.html> .
 
-_:N50053952bcd54de2bf1a18755f3a8477 a prov:Agent,
+_:N331d4a5008854bae93e9364dd6042f9d a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.9" ;
+    dct:hasVersion "0.5.10" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

@@ -23,133 +23,17 @@ paths:
   /processes:
     $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/ProcessList/openapi.yaml
   /processes/{processID}:
-    get:
-      summary: retrieve a process description
-      description: 'The process description contains information about inputs and
-        outputs and a link to the execution-endpoint for the process. The Core does
-        not mandate the use of a specific process description to specify the interface
-        of a process. That said, the Core requirements class makes the following recommendation:
-
-
-        Implementations SHOULD consider supporting the OGC process description.
-
-
-        For more information, see [Section 7.10](https://docs.ogc.org/is/18-062/18-062.html#sc_process_description).
-
-        '
-      operationId: getProcessDescription
-      tags:
-      - ProcessDescription
-      parameters:
-      - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdPathParam/openapi.yaml
-      responses:
-        200:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ProcessDescription/schema.yaml
-        404:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/ProcessDescription/openapi.yaml
   /jobs:
     $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/JobList/openapi.yaml
   /processes/{processID}/execution:
-    post:
-      summary: execute a process.
-      description: 'Create a new job.
-
-
-        For more information, see [Section 7.11](https://docs.ogc.org/is/18-062/18-062.html#sc_create_job).
-
-        '
-      operationId: execute
-      tags:
-      - Execute
-      parameters:
-      - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdPathParam/openapi.yaml
-      requestBody:
-        description: Mandatory execute request JSON
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml
-      responses:
-        200:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.yaml
-        201:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.yaml
-        404:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
-        500:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
-      callbacks:
-        jobCompleted:
-          '{$request.body#/subscriber/successUri}':
-            post:
-              requestBody:
-                content:
-                  application/json:
-                    schema:
-                      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.yaml
-              responses:
-                200:
-                  description: Results received successfully
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/Execution/openapi.yaml
   /jobs/{jobId}:
-    get:
-      summary: retrieve the status of a job
-      description: "Shows the status of a job.\n\n For more information, see [Section
-        7.12](https://docs.ogc.org/is/18-062/18-062.html#sc_retrieve_status_info).\n"
-      operationId: getStatus
-      tags:
-      - Status
-      parameters:
-      - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/jobId/openapi.yaml
-      responses:
-        200:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.yaml
-        404:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
-        500:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
-    delete:
-      summary: cancel a job execution, remove a finished job
-      description: 'Cancel a job execution and remove it from the jobs list.
-
-
-        For more information, see [Section 13](https://docs.ogc.org/is/18-062/18-062.html#Dismiss).
-
-        '
-      operationId: dismiss
-      tags:
-      - Dismiss
-      parameters:
-      - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/jobId/openapi.yaml
-      responses:
-        200:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Status/schema.yaml
-        404:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
-        500:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
+    allOf:
+    - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/Job/openapi.yaml
+    - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/DismissJob/openapi.yaml
   /jobs/{jobId}/results:
-    get:
-      summary: retrieve the result(s) of a job
-      description: 'Lists available results of a job. In case of a failure, lists
-        exceptions instead.
-
-
-        For more information, see [Section 7.13](https://docs.ogc.org/is/18-062/18-062.html#sc_retrieve_job_results).
-
-        '
-      operationId: getResult
-      tags:
-      - Result
-      parameters:
-      - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/jobId/openapi.yaml
-      responses:
-        200:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/Results/schema.yaml
-        404:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
-        500:
-          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/JobResult/openapi.yaml
 servers:
 - description: Example server
   url: http://example.org/ogcapi

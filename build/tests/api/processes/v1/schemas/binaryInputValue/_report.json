@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.binaryInputValue - binaryInputValue schema",
   "bblockName": "binaryInputValue schema",
   "bblockId": "ogc.api.processes.v1.schemas.binaryInputValue",
-  "generated": "2025-12-22T10:00:12.371278+00:00",
+  "generated": "2025-12-22T12:24:55.209510+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.api.processes.v1.paths.JobResult - Job result path",
+  "bblockName": "Job result path",
+  "bblockId": "ogc.api.processes.v1.paths.JobResult",
+  "generated": "2025-12-22T12:24:55.548705+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

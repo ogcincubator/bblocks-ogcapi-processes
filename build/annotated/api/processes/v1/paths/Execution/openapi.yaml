@@ -1,0 +1,41 @@
+post:
+  summary: execute a process.
+  description: 'Create a new job.
+
+
+    For more information, see [Section 7.11](https://docs.ogc.org/is/18-062/18-062.html#sc_create_job).
+
+    '
+  operationId: execute
+  tags:
+  - Execute
+  parameters:
+  - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/processIdPathParam/openapi.yaml
+  requestBody:
+    description: Mandatory execute request JSON
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml
+  responses:
+    200:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteSync/schema.yaml
+    201:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.yaml
+    404:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
+    500:
+      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
+  callbacks:
+    jobCompleted:
+      '{$request.body#/subscriber/successUri}':
+        post:
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/results/schema.yaml
+          responses:
+            200:
+              description: Results received successfully

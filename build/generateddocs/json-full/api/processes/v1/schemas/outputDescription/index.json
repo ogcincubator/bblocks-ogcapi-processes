@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-02",
+  "dateOfLastChange": "2025-12-22",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -24,16 +24,17 @@
     "ogc.api.processes.v1.schemas.descriptionType",
     "ogc.api.processes.v1.schemas.schema"
   ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/outputDescription/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/outputDescription/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/outputDescription/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml\n- properties:\n    schema:\n      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml\n  required:\n  - schema\n  type: object\n",
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/descriptionType/schema.yaml\n- properties:\n    schema:\n      $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/schema/schema.yaml\n      x-jsonld-id: https://w3id.org/ogc/api/processes/schema\n  required:\n  - schema\n  type: object\nx-jsonld-extra-terms:\n  title: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  keywords: https://w3id.org/ogc/api/processes/keywords\n  nullable: https://w3id.org/ogc/api/processes/nullable\n  type: https://w3id.org/ogc/api/processes/type\n  $ref:\n    x-jsonld-id: https://w3id.org/ogc/api/processes/ref\n    x-jsonld-type: '@id'\n  default:\n    x-jsonld-id: https://w3id.org/ogc/api/processes/default\n    x-jsonld-type: '@json'\n  minOccurs: https://w3id.org/ogc/api/processes/minOccurs\n  maxOccurs: https://w3id.org/ogc/api/processes/maxOccurs\n  enum:\n    x-jsonld-id: https://w3id.org/ogc/api/processes/enum\n    x-jsonld-container: '@set'\nx-jsonld-vocab: https://w3id.org/ogc/api/processes/\nx-jsonld-prefixes:\n  dct: http://purl.org/dc/terms/\n  proc: https://w3id.org/ogc/api/processes/\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-ogcapi-processes",
   "gitPath": "_sources/v1/schemas/outputDescription"
 }

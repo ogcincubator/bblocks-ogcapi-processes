@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.common-core.confClasses - Schema for confClasses schema",
   "bblockName": "Schema for confClasses schema",
   "bblockId": "ogc.api.processes.v1.schemas.common-core.confClasses",
-  "generated": "2025-12-02T08:50:50.752772+00:00",
-  "result": false,
+  "generated": "2025-12-22T10:00:12.378195+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -15,7 +15,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -24,25 +24,6 @@
             {
               "isError": false,
               "message": "Using example_1_1.json from examples"
-            },
-            {
-              "op": "jsonld-uplift",
-              "isError": false,
-              "message": "JSON-LD context is present - uplifting"
-            },
-            {
-              "op": "jsonld-create",
-              "filename": "example_1_1.jsonld",
-              "isError": false,
-              "message": "Output JSON-LD example_1_1.jsonld created"
-            },
-            {
-              "op": "ttl-create",
-              "empty": true,
-              "filename": "example_1_1.ttl",
-              "size": 0,
-              "isError": true,
-              "message": "**Empty** output Turtle example_1_1.ttl created"
             }
           ]
         },
@@ -64,7 +45,7 @@
   "globalErrors": {},
   "counts": {
     "total": 1,
-    "passed": 0,
-    "failed": 1
+    "passed": 1,
+    "failed": 0
   }
 }

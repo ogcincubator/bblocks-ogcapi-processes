@@ -34,81 +34,66 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "additionalParameters": {
-      "@context": {
-        "href": {},
-        "role": {},
-        "parameters": {
-          "@context": {
-            "name": {},
-            "value": {}
-          }
-        }
-      }
-    },
-    "description": {},
-    "keywords": {},
-    "metadata": {
-      "@context": {
-        "href": {},
-        "role": {}
-      }
-    },
-    "title": {},
-    "id": {},
-    "jobControlOptions": {},
-    "links": {
-      "@context": {
-        "href": {},
-        "hreflang": {},
-        "rel": {},
-        "type": {}
-      }
-    },
-    "outputTransmission": {},
-    "version": {},
-    "maxOccurs": {},
-    "minOccurs": {},
+    "@vocab": "https://w3id.org/ogc/api/processes/",
+    "maxOccurs": "proc:maxOccurs",
+    "minOccurs": "proc:minOccurs",
     "schema": {
       "@context": {
-        "$ref": {},
-        "additionalProperties": {},
-        "allOf": {},
-        "anyOf": {},
-        "contentEncoding": {},
-        "contentMediaType": {},
-        "contentSchema": {},
-        "default": {},
-        "deprecated": {},
-        "enum": {},
-        "example": {},
-        "exclusiveMaximum": {},
-        "exclusiveMinimum": {},
-        "format": {},
-        "items": {},
-        "maxItems": {},
-        "maxLength": {},
-        "maxProperties": {},
-        "maximum": {},
-        "minItems": {},
-        "minLength": {},
-        "minProperties": {},
-        "minimum": {},
-        "multipleOf": {},
-        "not": {},
-        "nullable": {},
-        "oneOf": {},
-        "pattern": {},
-        "properties": {},
-        "readOnly": {},
-        "required": {},
-        "type": {},
-        "uniqueItems": {},
-        "writeOnly": {}
-      }
+        "@vocab": "https://w3id.org/ogc/api/schema/",
+        "additionalProperties": {
+          "@context": {
+            "@vocab": "https://w3id.org/ogc/api/schema/"
+          }
+        },
+        "allOf": {
+          "@context": {
+            "@vocab": "https://w3id.org/ogc/api/schema/"
+          }
+        },
+        "anyOf": {
+          "@context": {
+            "@vocab": "https://w3id.org/ogc/api/schema/"
+          }
+        },
+        "items": {
+          "@context": {
+            "@vocab": "https://w3id.org/ogc/api/schema/"
+          }
+        },
+        "not": {
+          "@context": {
+            "@vocab": "https://w3id.org/ogc/api/schema/"
+          }
+        },
+        "oneOf": {
+          "@context": {
+            "@vocab": "https://w3id.org/ogc/api/schema/"
+          }
+        },
+        "properties": {
+          "@context": {
+            "@vocab": "https://w3id.org/ogc/api/schema/"
+          }
+        }
+      },
+      "@id": "proc:schema"
     },
-    "inputs": {},
-    "outputs": {},
+    "nullable": "proc:nullable",
+    "type": "proc:type",
+    "$ref": {
+      "@id": "proc:ref",
+      "@type": "@id"
+    },
+    "default": {
+      "@id": "proc:default",
+      "@type": "@json"
+    },
+    "enum": {
+      "@id": "proc:enum",
+      "@container": "@set"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "proc": "https://w3id.org/ogc/api/processes/",
     "@version": 1.1
   }
 }

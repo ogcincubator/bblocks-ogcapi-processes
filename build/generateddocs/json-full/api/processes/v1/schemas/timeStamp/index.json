@@ -6,9 +6,9 @@
   "status": "under-development",
   "dateTimeAddition": "2024-03-22T11:40:00+01:00",
   "itemClass": "datatype",
-  "register": "ogcapi-features",
+  "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-02",
+  "dateOfLastChange": "2025-12-22",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -16,7 +16,7 @@
     }
   ],
   "tags": [
-    "ogcapi-features",
+    "ogcapi-processes",
     "features"
   ],
   "schema": {

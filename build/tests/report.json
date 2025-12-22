@@ -1,16 +1,16 @@
 {
   "summary": {
     "total": 68,
-    "passed": 67,
-    "failed": 1,
-    "result": false
+    "passed": 68,
+    "failed": 0,
+    "result": true
   },
   "bblocks": {
     "ogc.api.processes.v1.parameters.processIdPathParam": {
       "title": "Validation report for ogc.api.processes.v1.parameters.processIdPathParam - processIdPathParam parameter",
       "bblockName": "processIdPathParam parameter",
       "bblockId": "ogc.api.processes.v1.parameters.processIdPathParam",
-      "generated": "2025-12-02T08:50:50.669920+00:00",
+      "generated": "2025-12-22T10:00:12.298224+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -24,7 +24,7 @@
       "title": "Validation report for ogc.api.processes.v1.parameters.jobId - jobId parameter",
       "bblockName": "jobId parameter",
       "bblockId": "ogc.api.processes.v1.parameters.jobId",
-      "generated": "2025-12-02T08:50:50.674113+00:00",
+      "generated": "2025-12-22T10:00:12.302889+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -38,7 +38,7 @@
       "title": "Validation report for ogc.api.processes.v1.parameters.datetime - datetime parameter",
       "bblockName": "datetime parameter",
       "bblockId": "ogc.api.processes.v1.parameters.datetime",
-      "generated": "2025-12-02T08:50:50.677792+00:00",
+      "generated": "2025-12-22T10:00:12.306699+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -52,7 +52,7 @@
       "title": "Validation report for ogc.api.processes.v1.parameters.limit - limit parameter",
       "bblockName": "limit parameter",
       "bblockId": "ogc.api.processes.v1.parameters.limit",
-      "generated": "2025-12-02T08:50:50.681636+00:00",
+      "generated": "2025-12-22T10:00:12.310646+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -66,7 +66,7 @@
       "title": "Validation report for ogc.api.processes.v1.parameters.maxDuration - maxDuration parameter",
       "bblockName": "maxDuration parameter",
       "bblockId": "ogc.api.processes.v1.parameters.maxDuration",
-      "generated": "2025-12-02T08:50:50.685411+00:00",
+      "generated": "2025-12-22T10:00:12.314615+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -80,7 +80,7 @@
       "title": "Validation report for ogc.api.processes.v1.parameters.minDuration - minDuration parameter",
       "bblockName": "minDuration parameter",
       "bblockId": "ogc.api.processes.v1.parameters.minDuration",
-      "generated": "2025-12-02T08:50:50.689131+00:00",
+      "generated": "2025-12-22T10:00:12.318638+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -94,7 +94,7 @@
       "title": "Validation report for ogc.api.processes.v1.parameters.processIdQueryParam - processIdQueryParam parameter",
       "bblockName": "processIdQueryParam parameter",
       "bblockId": "ogc.api.processes.v1.parameters.processIdQueryParam",
-      "generated": "2025-12-02T08:50:50.692794+00:00",
+      "generated": "2025-12-22T10:00:12.322505+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -108,7 +108,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.statusCode - statusCode schema",
       "bblockName": "statusCode schema",
       "bblockId": "ogc.api.processes.v1.schemas.statusCode",
-      "generated": "2025-12-02T08:50:50.698028+00:00",
+      "generated": "2025-12-22T10:00:12.328003+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -122,7 +122,7 @@
       "title": "Validation report for ogc.api.processes.v1.parameters.type - type parameter",
       "bblockName": "type parameter",
       "bblockId": "ogc.api.processes.v1.parameters.type",
-      "generated": "2025-12-02T08:50:50.701795+00:00",
+      "generated": "2025-12-22T10:00:12.332347+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -136,7 +136,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.confClasses - confClasses schema",
       "bblockName": "confClasses schema",
       "bblockId": "ogc.api.processes.v1.schemas.confClasses",
-      "generated": "2025-12-02T08:50:50.707826+00:00",
+      "generated": "2025-12-22T10:00:12.338321+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -150,7 +150,7 @@
       "title": "Validation report for ogc.api.processes.v1.responses.ExecuteSyncRawRef - ExecuteSyncRawRef response",
       "bblockName": "ExecuteSyncRawRef response",
       "bblockId": "ogc.api.processes.v1.responses.ExecuteSyncRawRef",
-      "generated": "2025-12-02T08:50:50.713089+00:00",
+      "generated": "2025-12-22T10:00:12.343633+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -164,7 +164,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.exception - exception schema",
       "bblockName": "exception schema",
       "bblockId": "ogc.api.processes.v1.schemas.exception",
-      "generated": "2025-12-02T08:50:50.720731+00:00",
+      "generated": "2025-12-22T10:00:12.350663+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -178,7 +178,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.additionalParameter - additionalParameter schema",
       "bblockName": "additionalParameter schema",
       "bblockId": "ogc.api.processes.v1.schemas.additionalParameter",
-      "generated": "2025-12-02T08:50:50.729432+00:00",
+      "generated": "2025-12-22T10:00:12.358561+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -192,7 +192,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.bbox - bbox schema",
       "bblockName": "bbox schema",
       "bblockId": "ogc.api.processes.v1.schemas.bbox",
-      "generated": "2025-12-02T08:50:50.736980+00:00",
+      "generated": "2025-12-22T10:00:12.365837+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -206,7 +206,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.binaryInputValue - binaryInputValue schema",
       "bblockName": "binaryInputValue schema",
       "bblockId": "ogc.api.processes.v1.schemas.binaryInputValue",
-      "generated": "2025-12-02T08:50:50.742049+00:00",
+      "generated": "2025-12-22T10:00:12.371278+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -220,8 +220,8 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.common-core.confClasses - Schema for confClasses schema",
       "bblockName": "Schema for confClasses schema",
       "bblockId": "ogc.api.processes.v1.schemas.common-core.confClasses",
-      "generated": "2025-12-02T08:50:50.752772+00:00",
-      "result": false,
+      "generated": "2025-12-22T10:00:12.378195+00:00",
+      "result": true,
       "items": [
         {
           "source": {
@@ -233,7 +233,492 @@
             "snippetIndex": 1,
             "language": "application/json"
           },
-          "result": false,
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.common-core.exception": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.common-core.exception - Schema for exception schema",
+      "bblockName": "Schema for exception schema",
+      "bblockId": "ogc.api.processes.v1.schemas.common-core.exception",
+      "generated": "2025-12-22T10:00:12.384836+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.metadata": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.metadata - metadata schema",
+      "bblockName": "metadata schema",
+      "bblockId": "ogc.api.processes.v1.schemas.metadata",
+      "generated": "2025-12-22T10:00:12.390978+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.subscriber": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.subscriber - subscriber schema",
+      "bblockName": "subscriber schema",
+      "bblockId": "ogc.api.processes.v1.schemas.subscriber",
+      "generated": "2025-12-22T10:00:12.397480+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.format": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.format - format schema",
+      "bblockName": "format schema",
+      "bblockId": "ogc.api.processes.v1.schemas.format",
+      "generated": "2025-12-22T10:00:12.404432+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.link": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.link - link schema",
+      "bblockName": "link schema",
+      "bblockId": "ogc.api.processes.v1.schemas.link",
+      "generated": "2025-12-22T10:00:12.411327+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.jobControlOptions": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.jobControlOptions - jobControlOptions schema",
+      "bblockName": "jobControlOptions schema",
+      "bblockId": "ogc.api.processes.v1.schemas.jobControlOptions",
+      "generated": "2025-12-22T10:00:12.417058+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.transmissionMode": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.transmissionMode - transmissionMode schema",
+      "bblockName": "transmissionMode schema",
+      "bblockId": "ogc.api.processes.v1.schemas.transmissionMode",
+      "generated": "2025-12-22T10:00:12.422502+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.reference": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.reference - reference schema",
+      "bblockName": "reference schema",
+      "bblockId": "ogc.api.processes.v1.schemas.reference",
+      "generated": "2025-12-22T10:00:12.428626+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.timeStamp": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.timeStamp - Schema for timeStamp schema",
+      "bblockName": "Schema for timeStamp schema",
+      "bblockId": "ogc.api.processes.v1.schemas.timeStamp",
+      "generated": "2025-12-22T10:00:12.433861+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.common-core.landingPage": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.common-core.landingPage - Schema for landingPage schema",
+      "bblockName": "Schema for landingPage schema",
+      "bblockId": "ogc.api.processes.v1.schemas.common-core.landingPage",
+      "generated": "2025-12-22T10:00:12.441048+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.parameters.status": {
+      "title": "Validation report for ogc.api.processes.v1.parameters.status - status parameter",
+      "bblockName": "status parameter",
+      "bblockId": "ogc.api.processes.v1.parameters.status",
+      "generated": "2025-12-22T10:00:12.445352+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.ConformanceDeclaration": {
+      "title": "Validation report for ogc.api.processes.v1.responses.ConformanceDeclaration - ConformanceDeclaration response",
+      "bblockName": "ConformanceDeclaration response",
+      "bblockId": "ogc.api.processes.v1.responses.ConformanceDeclaration",
+      "generated": "2025-12-22T10:00:12.450570+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.InvalidParameter": {
+      "title": "Validation report for ogc.api.processes.v1.responses.InvalidParameter - InvalidParameter response",
+      "bblockName": "InvalidParameter response",
+      "bblockId": "ogc.api.processes.v1.responses.InvalidParameter",
+      "generated": "2025-12-22T10:00:12.456140+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.NotAllowed": {
+      "title": "Validation report for ogc.api.processes.v1.responses.NotAllowed - NotAllowed response",
+      "bblockName": "NotAllowed response",
+      "bblockId": "ogc.api.processes.v1.responses.NotAllowed",
+      "generated": "2025-12-22T10:00:12.461339+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.NotFound": {
+      "title": "Validation report for ogc.api.processes.v1.responses.NotFound - NotFound response",
+      "bblockName": "NotFound response",
+      "bblockId": "ogc.api.processes.v1.responses.NotFound",
+      "generated": "2025-12-22T10:00:12.466455+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.NotSupported": {
+      "title": "Validation report for ogc.api.processes.v1.responses.NotSupported - NotSupported response",
+      "bblockName": "NotSupported response",
+      "bblockId": "ogc.api.processes.v1.responses.NotSupported",
+      "generated": "2025-12-22T10:00:12.471635+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.ServerError": {
+      "title": "Validation report for ogc.api.processes.v1.responses.ServerError - ServerError response",
+      "bblockName": "ServerError response",
+      "bblockId": "ogc.api.processes.v1.responses.ServerError",
+      "generated": "2025-12-22T10:00:12.476840+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.inputValueNoObject": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.inputValueNoObject - inputValueNoObject schema",
+      "bblockName": "inputValueNoObject schema",
+      "bblockId": "ogc.api.processes.v1.schemas.inputValueNoObject",
+      "generated": "2025-12-22T10:00:12.483902+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.descriptionType": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.descriptionType - descriptionType schema",
+      "bblockName": "descriptionType schema",
+      "bblockId": "ogc.api.processes.v1.schemas.descriptionType",
+      "generated": "2025-12-22T10:00:12.492144+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.landingPage": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.landingPage - landingPage schema",
+      "bblockName": "landingPage schema",
+      "bblockId": "ogc.api.processes.v1.schemas.landingPage",
+      "generated": "2025-12-22T10:00:12.498800+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.statusInfo": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.statusInfo - statusInfo schema",
+      "bblockName": "statusInfo schema",
+      "bblockId": "ogc.api.processes.v1.schemas.statusInfo",
+      "generated": "2025-12-22T10:00:12.507566+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.output": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.output - output schema",
+      "bblockName": "output schema",
+      "bblockId": "ogc.api.processes.v1.schemas.output",
+      "generated": "2025-12-22T10:00:12.513704+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.schema": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.schema - schema schema",
+      "bblockName": "schema schema",
+      "bblockId": "ogc.api.processes.v1.schemas.schema",
+      "generated": "2025-12-22T10:00:12.534732+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.swagger.schema": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.swagger.schema - schema schema",
+      "bblockName": "schema schema",
+      "bblockId": "ogc.api.processes.v1.schemas.swagger.schema",
+      "generated": "2025-12-22T10:00:12.549617+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.paths.Conformance": {
+      "title": "Validation report for ogc.api.processes.v1.paths.Conformance - Conformance path",
+      "bblockName": "Conformance path",
+      "bblockId": "ogc.api.processes.v1.paths.Conformance",
+      "generated": "2025-12-22T10:00:12.554037+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.inputValue": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.inputValue - inputValue schema",
+      "bblockName": "inputValue schema",
+      "bblockId": "ogc.api.processes.v1.schemas.inputValue",
+      "generated": "2025-12-22T10:00:12.560128+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.processSummary": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.processSummary - processSummary schema",
+      "bblockName": "processSummary schema",
+      "bblockId": "ogc.api.processes.v1.schemas.processSummary",
+      "generated": "2025-12-22T10:00:12.568171+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.LandingPage": {
+      "title": "Validation report for ogc.api.processes.v1.responses.LandingPage - LandingPage response",
+      "bblockName": "LandingPage response",
+      "bblockId": "ogc.api.processes.v1.responses.LandingPage",
+      "generated": "2025-12-22T10:00:12.573157+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.ExecuteAsync": {
+      "title": "Validation report for ogc.api.processes.v1.responses.ExecuteAsync - ExecuteAsync response",
+      "bblockName": "ExecuteAsync response",
+      "bblockId": "ogc.api.processes.v1.responses.ExecuteAsync",
+      "generated": "2025-12-22T10:00:12.578264+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.responses.Status": {
+      "title": "Validation report for ogc.api.processes.v1.responses.Status - Status response",
+      "bblockName": "Status response",
+      "bblockId": "ogc.api.processes.v1.responses.Status",
+      "generated": "2025-12-22T10:00:12.583167+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.jobList": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.jobList - jobList schema",
+      "bblockName": "jobList schema",
+      "bblockId": "ogc.api.processes.v1.schemas.jobList",
+      "generated": "2025-12-22T10:00:12.589955+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.processes.v1.schemas.inputDescription": {
+      "title": "Validation report for ogc.api.processes.v1.schemas.inputDescription - inputDescription schema",
+      "bblockName": "inputDescription schema",
+      "bblockId": "ogc.api.processes.v1.schemas.inputDescription",
+      "generated": "2025-12-22T10:00:12.613015+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/api/processes/v1/schemas/inputDescription/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/inputDescription/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
           "sections": [
             {
               "name": "FILES",
@@ -256,11 +741,11 @@
                 },
                 {
                   "op": "ttl-create",
-                  "empty": true,
+                  "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 0,
-                  "isError": true,
-                  "message": "**Empty** output Turtle example_1_1.ttl created"
+                  "size": 5,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
                 }
               ]
             },
@@ -282,455 +767,7 @@
       "globalErrors": {},
       "counts": {
         "total": 1,
-        "passed": 0,
-        "failed": 1
-      }
-    },
-    "ogc.api.processes.v1.schemas.common-core.exception": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.common-core.exception - Schema for exception schema",
-      "bblockName": "Schema for exception schema",
-      "bblockId": "ogc.api.processes.v1.schemas.common-core.exception",
-      "generated": "2025-12-02T08:50:50.759422+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.metadata": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.metadata - metadata schema",
-      "bblockName": "metadata schema",
-      "bblockId": "ogc.api.processes.v1.schemas.metadata",
-      "generated": "2025-12-02T08:50:50.765651+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.subscriber": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.subscriber - subscriber schema",
-      "bblockName": "subscriber schema",
-      "bblockId": "ogc.api.processes.v1.schemas.subscriber",
-      "generated": "2025-12-02T08:50:50.772152+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.format": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.format - format schema",
-      "bblockName": "format schema",
-      "bblockId": "ogc.api.processes.v1.schemas.format",
-      "generated": "2025-12-02T08:50:50.778852+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.link": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.link - link schema",
-      "bblockName": "link schema",
-      "bblockId": "ogc.api.processes.v1.schemas.link",
-      "generated": "2025-12-02T08:50:50.785804+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.jobControlOptions": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.jobControlOptions - jobControlOptions schema",
-      "bblockName": "jobControlOptions schema",
-      "bblockId": "ogc.api.processes.v1.schemas.jobControlOptions",
-      "generated": "2025-12-02T08:50:50.790896+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.transmissionMode": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.transmissionMode - transmissionMode schema",
-      "bblockName": "transmissionMode schema",
-      "bblockId": "ogc.api.processes.v1.schemas.transmissionMode",
-      "generated": "2025-12-02T08:50:50.795988+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.reference": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.reference - reference schema",
-      "bblockName": "reference schema",
-      "bblockId": "ogc.api.processes.v1.schemas.reference",
-      "generated": "2025-12-02T08:50:50.802000+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.timeStamp": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.timeStamp - Schema for timeStamp schema",
-      "bblockName": "Schema for timeStamp schema",
-      "bblockId": "ogc.api.processes.v1.schemas.timeStamp",
-      "generated": "2025-12-02T08:50:50.806747+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.common-core.landingPage": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.common-core.landingPage - Schema for landingPage schema",
-      "bblockName": "Schema for landingPage schema",
-      "bblockId": "ogc.api.processes.v1.schemas.common-core.landingPage",
-      "generated": "2025-12-02T08:50:50.814329+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.parameters.status": {
-      "title": "Validation report for ogc.api.processes.v1.parameters.status - status parameter",
-      "bblockName": "status parameter",
-      "bblockId": "ogc.api.processes.v1.parameters.status",
-      "generated": "2025-12-02T08:50:50.818202+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.ConformanceDeclaration": {
-      "title": "Validation report for ogc.api.processes.v1.responses.ConformanceDeclaration - ConformanceDeclaration response",
-      "bblockName": "ConformanceDeclaration response",
-      "bblockId": "ogc.api.processes.v1.responses.ConformanceDeclaration",
-      "generated": "2025-12-02T08:50:50.823030+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.InvalidParameter": {
-      "title": "Validation report for ogc.api.processes.v1.responses.InvalidParameter - InvalidParameter response",
-      "bblockName": "InvalidParameter response",
-      "bblockId": "ogc.api.processes.v1.responses.InvalidParameter",
-      "generated": "2025-12-02T08:50:50.827902+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.NotAllowed": {
-      "title": "Validation report for ogc.api.processes.v1.responses.NotAllowed - NotAllowed response",
-      "bblockName": "NotAllowed response",
-      "bblockId": "ogc.api.processes.v1.responses.NotAllowed",
-      "generated": "2025-12-02T08:50:50.832736+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.NotFound": {
-      "title": "Validation report for ogc.api.processes.v1.responses.NotFound - NotFound response",
-      "bblockName": "NotFound response",
-      "bblockId": "ogc.api.processes.v1.responses.NotFound",
-      "generated": "2025-12-02T08:50:50.837763+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.NotSupported": {
-      "title": "Validation report for ogc.api.processes.v1.responses.NotSupported - NotSupported response",
-      "bblockName": "NotSupported response",
-      "bblockId": "ogc.api.processes.v1.responses.NotSupported",
-      "generated": "2025-12-02T08:50:50.842605+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.ServerError": {
-      "title": "Validation report for ogc.api.processes.v1.responses.ServerError - ServerError response",
-      "bblockName": "ServerError response",
-      "bblockId": "ogc.api.processes.v1.responses.ServerError",
-      "generated": "2025-12-02T08:50:50.847313+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.inputValueNoObject": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.inputValueNoObject - inputValueNoObject schema",
-      "bblockName": "inputValueNoObject schema",
-      "bblockId": "ogc.api.processes.v1.schemas.inputValueNoObject",
-      "generated": "2025-12-02T08:50:50.854500+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.descriptionType": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.descriptionType - descriptionType schema",
-      "bblockName": "descriptionType schema",
-      "bblockId": "ogc.api.processes.v1.schemas.descriptionType",
-      "generated": "2025-12-02T08:50:50.862970+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.landingPage": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.landingPage - landingPage schema",
-      "bblockName": "landingPage schema",
-      "bblockId": "ogc.api.processes.v1.schemas.landingPage",
-      "generated": "2025-12-02T08:50:50.869702+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.statusInfo": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.statusInfo - statusInfo schema",
-      "bblockName": "statusInfo schema",
-      "bblockId": "ogc.api.processes.v1.schemas.statusInfo",
-      "generated": "2025-12-02T08:50:50.878174+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.output": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.output - output schema",
-      "bblockName": "output schema",
-      "bblockId": "ogc.api.processes.v1.schemas.output",
-      "generated": "2025-12-02T08:50:50.884622+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.schema": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.schema - schema schema",
-      "bblockName": "schema schema",
-      "bblockId": "ogc.api.processes.v1.schemas.schema",
-      "generated": "2025-12-02T08:50:50.904792+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.swagger.schema": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.swagger.schema - schema schema",
-      "bblockName": "schema schema",
-      "bblockId": "ogc.api.processes.v1.schemas.swagger.schema",
-      "generated": "2025-12-02T08:50:50.919307+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.paths.Conformance": {
-      "title": "Validation report for ogc.api.processes.v1.paths.Conformance - Conformance path",
-      "bblockName": "Conformance path",
-      "bblockId": "ogc.api.processes.v1.paths.Conformance",
-      "generated": "2025-12-02T08:50:50.923440+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.inputValue": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.inputValue - inputValue schema",
-      "bblockName": "inputValue schema",
-      "bblockId": "ogc.api.processes.v1.schemas.inputValue",
-      "generated": "2025-12-02T08:50:50.929650+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.processSummary": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.processSummary - processSummary schema",
-      "bblockName": "processSummary schema",
-      "bblockId": "ogc.api.processes.v1.schemas.processSummary",
-      "generated": "2025-12-02T08:50:50.938004+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.LandingPage": {
-      "title": "Validation report for ogc.api.processes.v1.responses.LandingPage - LandingPage response",
-      "bblockName": "LandingPage response",
-      "bblockId": "ogc.api.processes.v1.responses.LandingPage",
-      "generated": "2025-12-02T08:50:50.942989+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.ExecuteAsync": {
-      "title": "Validation report for ogc.api.processes.v1.responses.ExecuteAsync - ExecuteAsync response",
-      "bblockName": "ExecuteAsync response",
-      "bblockId": "ogc.api.processes.v1.responses.ExecuteAsync",
-      "generated": "2025-12-02T08:50:50.948051+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.responses.Status": {
-      "title": "Validation report for ogc.api.processes.v1.responses.Status - Status response",
-      "bblockName": "Status response",
-      "bblockId": "ogc.api.processes.v1.responses.Status",
-      "generated": "2025-12-02T08:50:50.952816+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.jobList": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.jobList - jobList schema",
-      "bblockName": "jobList schema",
-      "bblockId": "ogc.api.processes.v1.schemas.jobList",
-      "generated": "2025-12-02T08:50:50.959512+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
-        "failed": 0
-      }
-    },
-    "ogc.api.processes.v1.schemas.inputDescription": {
-      "title": "Validation report for ogc.api.processes.v1.schemas.inputDescription - inputDescription schema",
-      "bblockName": "inputDescription schema",
-      "bblockId": "ogc.api.processes.v1.schemas.inputDescription",
-      "generated": "2025-12-02T08:50:50.967437+00:00",
-      "result": true,
-      "items": [],
-      "globalErrors": {},
-      "counts": {
-        "total": 0,
-        "passed": 0,
+        "passed": 1,
         "failed": 0
       }
     },
@@ -738,7 +775,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.outputDescription - outputDescription schema",
       "bblockName": "outputDescription schema",
       "bblockId": "ogc.api.processes.v1.schemas.outputDescription",
-      "generated": "2025-12-02T08:50:50.974175+00:00",
+      "generated": "2025-12-22T10:00:12.621080+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -752,7 +789,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.swagger.inputDescription - inputDescription schema",
       "bblockName": "inputDescription schema",
       "bblockId": "ogc.api.processes.v1.schemas.swagger.inputDescription",
-      "generated": "2025-12-02T08:50:50.981895+00:00",
+      "generated": "2025-12-22T10:00:12.628646+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -766,7 +803,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.swagger.outputDescription - outputDescription schema",
       "bblockName": "outputDescription schema",
       "bblockId": "ogc.api.processes.v1.schemas.swagger.outputDescription",
-      "generated": "2025-12-02T08:50:50.988736+00:00",
+      "generated": "2025-12-22T10:00:12.635431+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -780,7 +817,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.qualifiedInputValue - qualifiedInputValue schema",
       "bblockName": "qualifiedInputValue schema",
       "bblockId": "ogc.api.processes.v1.schemas.qualifiedInputValue",
-      "generated": "2025-12-02T08:50:50.995275+00:00",
+      "generated": "2025-12-22T10:00:12.642031+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -794,7 +831,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.processList - processList schema",
       "bblockName": "processList schema",
       "bblockId": "ogc.api.processes.v1.schemas.processList",
-      "generated": "2025-12-02T08:50:51.002228+00:00",
+      "generated": "2025-12-22T10:00:12.648564+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -808,7 +845,7 @@
       "title": "Validation report for ogc.api.processes.v1.paths.LandingPage - LandingPage path",
       "bblockName": "LandingPage path",
       "bblockId": "ogc.api.processes.v1.paths.LandingPage",
-      "generated": "2025-12-02T08:50:51.006024+00:00",
+      "generated": "2025-12-22T10:00:12.652424+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -822,7 +859,7 @@
       "title": "Validation report for ogc.api.processes.v1.responses.JobList - JobList response",
       "bblockName": "JobList response",
       "bblockId": "ogc.api.processes.v1.responses.JobList",
-      "generated": "2025-12-02T08:50:51.010700+00:00",
+      "generated": "2025-12-22T10:00:12.657414+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -836,7 +873,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.process - process schema",
       "bblockName": "process schema",
       "bblockId": "ogc.api.processes.v1.schemas.process",
-      "generated": "2025-12-02T08:50:51.018528+00:00",
+      "generated": "2025-12-22T10:00:12.665081+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -850,7 +887,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.swagger.process - process schema",
       "bblockName": "process schema",
       "bblockId": "ogc.api.processes.v1.schemas.swagger.process",
-      "generated": "2025-12-02T08:50:51.026626+00:00",
+      "generated": "2025-12-22T10:00:12.672184+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -864,7 +901,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.inlineOrRefData - inlineOrRefData schema",
       "bblockName": "inlineOrRefData schema",
       "bblockId": "ogc.api.processes.v1.schemas.inlineOrRefData",
-      "generated": "2025-12-02T08:50:51.033416+00:00",
+      "generated": "2025-12-22T10:00:12.678247+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -878,7 +915,7 @@
       "title": "Validation report for ogc.api.processes.v1.responses.ProcessList - ProcessList response",
       "bblockName": "ProcessList response",
       "bblockId": "ogc.api.processes.v1.responses.ProcessList",
-      "generated": "2025-12-02T08:50:51.038465+00:00",
+      "generated": "2025-12-22T10:00:12.683172+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -892,7 +929,7 @@
       "title": "Validation report for ogc.api.processes.v1.paths.JobList - JobList path",
       "bblockName": "JobList path",
       "bblockId": "ogc.api.processes.v1.paths.JobList",
-      "generated": "2025-12-02T08:50:51.042176+00:00",
+      "generated": "2025-12-22T10:00:12.687152+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -906,7 +943,7 @@
       "title": "Validation report for ogc.api.processes.v1.responses.ProcessDescription - ProcessDescription response",
       "bblockName": "ProcessDescription response",
       "bblockId": "ogc.api.processes.v1.responses.ProcessDescription",
-      "generated": "2025-12-02T08:50:51.047110+00:00",
+      "generated": "2025-12-22T10:00:12.692382+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -920,7 +957,7 @@
       "title": "Validation report for ogc.api.processes.v1.responses.swagger.ProcessDescription - ProcessDescription response",
       "bblockName": "ProcessDescription response",
       "bblockId": "ogc.api.processes.v1.responses.swagger.ProcessDescription",
-      "generated": "2025-12-02T08:50:51.052080+00:00",
+      "generated": "2025-12-22T10:00:12.697537+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -934,7 +971,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.execute - execute schema",
       "bblockName": "execute schema",
       "bblockId": "ogc.api.processes.v1.schemas.execute",
-      "generated": "2025-12-02T08:50:51.061307+00:00",
+      "generated": "2025-12-22T10:00:12.705168+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -948,7 +985,7 @@
       "title": "Validation report for ogc.api.processes.v1.schemas.results - results schema",
       "bblockName": "results schema",
       "bblockId": "ogc.api.processes.v1.schemas.results",
-      "generated": "2025-12-02T08:50:51.067558+00:00",
+      "generated": "2025-12-22T10:00:12.710631+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -962,7 +999,7 @@
       "title": "Validation report for ogc.api.processes.v1.paths.ProcessList - ProcessList path",
       "bblockName": "ProcessList path",
       "bblockId": "ogc.api.processes.v1.paths.ProcessList",
-      "generated": "2025-12-02T08:50:51.071554+00:00",
+      "generated": "2025-12-22T10:00:12.714461+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -976,7 +1013,7 @@
       "title": "Validation report for ogc.api.processes.v1.responses.ExecuteSync - ExecuteSync response",
       "bblockName": "ExecuteSync response",
       "bblockId": "ogc.api.processes.v1.responses.ExecuteSync",
-      "generated": "2025-12-02T08:50:51.076510+00:00",
+      "generated": "2025-12-22T10:00:12.719358+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -990,7 +1027,7 @@
       "title": "Validation report for ogc.api.processes.v1.responses.Results - Results response",
       "bblockName": "Results response",
       "bblockId": "ogc.api.processes.v1.responses.Results",
-      "generated": "2025-12-02T08:50:51.081826+00:00",
+      "generated": "2025-12-22T10:00:12.724440+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -1004,7 +1041,7 @@
       "title": "Validation report for ogc.api.processes.v1.api - OGC API - Processes: Part 1",
       "bblockName": "OGC API - Processes: Part 1",
       "bblockId": "ogc.api.processes.v1.api",
-      "generated": "2025-12-02T08:50:51.085806+00:00",
+      "generated": "2025-12-22T10:00:12.728613+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},

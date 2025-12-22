@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-02",
+  "dateOfLastChange": "2025-12-22",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -21,15 +21,14 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.binaryInputValue",
-    "ogc.api.processes.v1.schemas.bbox"
+    "ogc.api.processes.v1.schemas.bbox",
+    "ogc.api.processes.v1.schemas.binaryInputValue"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputValueNoObject/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputValueNoObject/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/inputValueNoObject/",
   "rdfData": [],
   "validationPassed": true,

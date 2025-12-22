@@ -1,41 +1,41 @@
 {
   "@context": {
-    "$ref": {},
-    "additionalProperties": {},
-    "allOf": {},
-    "anyOf": {},
-    "contentEncoding": {},
-    "contentMediaType": {},
-    "contentSchema": {},
-    "default": {},
-    "deprecated": {},
-    "description": {},
-    "enum": {},
-    "example": {},
-    "exclusiveMaximum": {},
-    "exclusiveMinimum": {},
-    "format": {},
-    "items": {},
-    "maxItems": {},
-    "maxLength": {},
-    "maxProperties": {},
-    "maximum": {},
-    "minItems": {},
-    "minLength": {},
-    "minProperties": {},
-    "minimum": {},
-    "multipleOf": {},
-    "not": {},
-    "nullable": {},
-    "oneOf": {},
-    "pattern": {},
-    "properties": {},
-    "readOnly": {},
-    "required": {},
-    "title": {},
-    "type": {},
-    "uniqueItems": {},
-    "writeOnly": {},
+    "@vocab": "https://w3id.org/ogc/api/schema/",
+    "additionalProperties": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "allOf": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "anyOf": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "items": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "not": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "oneOf": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
+    "properties": {
+      "@context": {
+        "@vocab": "https://w3id.org/ogc/api/schema/"
+      }
+    },
     "@version": 1.1
   }
 }

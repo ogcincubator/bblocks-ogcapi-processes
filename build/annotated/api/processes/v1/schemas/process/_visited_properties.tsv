@@ -38,9 +38,9 @@ path	@id
 /inputs/metadata/role	
 /inputs/metadata/title	
 /inputs/title	
-/inputs/maxOccurs	
-/inputs/minOccurs	
-/inputs/schema	
+/inputs/maxOccurs	https://w3id.org/ogc/api/processes/maxOccurs
+/inputs/minOccurs	https://w3id.org/ogc/api/processes/minOccurs
+/inputs/schema	https://w3id.org/ogc/api/processes/schema
 /inputs/schema/$ref	
 /inputs/schema/additionalProperties	
 /inputs/schema/additionalProperties/$ref	
@@ -393,7 +393,7 @@ path	@id
 /outputs/metadata/role	
 /outputs/metadata/title	
 /outputs/title	
-/outputs/schema	
+/outputs/schema	https://w3id.org/ogc/api/processes/schema
 /outputs/schema/$ref	
 /outputs/schema/additionalProperties	
 /outputs/schema/additionalProperties/$ref	

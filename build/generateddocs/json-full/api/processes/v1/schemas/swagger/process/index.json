@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-02",
+  "dateOfLastChange": "2025-12-22",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -21,8 +21,8 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.processSummary",
     "ogc.api.processes.v1.schemas.swagger.inputDescription",
+    "ogc.api.processes.v1.schemas.processSummary",
     "ogc.api.processes.v1.schemas.swagger.outputDescription"
   ],
   "schema": {
@@ -30,7 +30,6 @@
     "application/json": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/process/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/swagger/process/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-ogcapi-processes/_sources/v1/schemas/swagger/process/",
   "rdfData": [],
   "validationPassed": true,

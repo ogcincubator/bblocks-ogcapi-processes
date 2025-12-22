@@ -1,0 +1,13 @@
+Validation report for ogc.api.processes.v1.schemas.inputDescription - inputDescription schema
+Generated 2025-12-22T10:00:12.612937+00:00
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

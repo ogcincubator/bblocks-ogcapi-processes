@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.v1.schemas.processList - processList schema",
   "bblockName": "processList schema",
   "bblockId": "ogc.api.processes.v1.schemas.processList",
-  "generated": "2025-12-22T12:24:55.457414+00:00",
+  "generated": "2026-01-13T22:28:28.086434+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

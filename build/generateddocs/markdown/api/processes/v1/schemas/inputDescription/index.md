@@ -48,14 +48,15 @@ In this case clients should determine if they recognise the BBlock identifier an
 
 #### ttl
 ```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix op: <http://test-data/cafe-walk/observables/> .
 @prefix proc: <https://w3id.org/ogc/api/processes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-op:areaOfInterest proc:description "BBOX via schema ref" ;
+op:areaOfInterest dct:description "BBOX via schema ref" ;
+    dct:title "BBOX" ;
     proc:minOccurs 1 ;
-    proc:schema [ proc:ref <bblocks://ogc.geo.common.parameters.bbox> ] ;
-    proc:title "BBOX" .
+    proc:schema [ proc:ref <bblocks://ogc.geo.common.parameters.bbox> ] .
 
 
 ```
@@ -122,45 +123,13 @@ Links to the schema:
     "minOccurs": "proc:minOccurs",
     "schema": {
       "@context": {
-        "@vocab": "https://w3id.org/ogc/api/schema/",
-        "additionalProperties": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "allOf": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "anyOf": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "items": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "not": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "oneOf": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "properties": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        }
+        "@vocab": "https://w3id.org/ogc/api/schema/"
       },
       "@id": "proc:schema"
     },
+    "title": "dct:title",
+    "description": "dct:description",
+    "keywords": "proc:keywords",
     "nullable": "proc:nullable",
     "type": "proc:type",
     "$ref": {

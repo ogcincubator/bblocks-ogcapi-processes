@@ -34,47 +34,15 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "description": "dct:description",
+    "keywords": "proc:keywords",
+    "title": "dct:title",
     "@vocab": "https://w3id.org/ogc/api/processes/",
     "maxOccurs": "proc:maxOccurs",
     "minOccurs": "proc:minOccurs",
     "schema": {
       "@context": {
-        "@vocab": "https://w3id.org/ogc/api/schema/",
-        "additionalProperties": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "allOf": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "anyOf": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "items": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "not": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "oneOf": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        },
-        "properties": {
-          "@context": {
-            "@vocab": "https://w3id.org/ogc/api/schema/"
-          }
-        }
+        "@vocab": "https://w3id.org/ogc/api/schema/"
       },
       "@id": "proc:schema"
     },

@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "0.1",
-  "dateOfLastChange": "2025-12-22",
+  "dateOfLastChange": "2026-01-13",
   "sources": [
     {
       "title": "OGC API Features - Part 1 - Core corrigendum",
@@ -21,8 +21,8 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.schema",
-    "ogc.api.processes.v1.schemas.descriptionType"
+    "ogc.api.processes.v1.schemas.descriptionType",
+    "ogc.api.processes.v1.schemas.schema"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/context.jsonld",
   "schema": {
@@ -53,7 +53,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix op: <http://test-data/cafe-walk/observables/> .\n@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nop:areaOfInterest proc:description \"BBOX via schema ref\" ;\n    proc:minOccurs 1 ;\n    proc:schema [ proc:ref <bblocks://ogc.geo.common.parameters.bbox> ] ;\n    proc:title \"BBOX\" .\n\n",
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix op: <http://test-data/cafe-walk/observables/> .\n@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nop:areaOfInterest dct:description \"BBOX via schema ref\" ;\n    dct:title \"BBOX\" ;\n    proc:minOccurs 1 ;\n    proc:schema [ proc:ref <bblocks://ogc.geo.common.parameters.bbox> ] .\n\n",
           "url": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/tests/api/processes/v1/schemas/inputDescription/example_1_1.ttl"
         }
       ]

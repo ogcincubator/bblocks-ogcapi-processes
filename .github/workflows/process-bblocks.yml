@@ -5,12 +5,10 @@ on:
     branches:
       - master
       - main
-
 permissions:
   contents: write
   pages: write
   id-token: write
-
 jobs:
   validate-and-process:
     # Avoid running the workflow on template clone
